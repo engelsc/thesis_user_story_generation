@@ -1,0 +1,3 @@
+"model_name","prompt"
+"test_implementation","this is a dummy prompt that doesn't actually do anything"
+"llama","from the following textual description of a requirement please create a well formed user story in the form of 'As a <role>, I want to <action>, so that <benefit>'. Make sure to follow the INVEST criteria. ONLY CREATE THE USER STORY. DO NOT ANSWER WITH ANYTHING ELSE!"

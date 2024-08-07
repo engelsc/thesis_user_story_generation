@@ -1,0 +1,9 @@
+pandas==2.2.2
+bs4==4.12.3
+requests==2.32.3
+openai==1.39.0
+beautifulsoup4==4.12.3
+bs4==0.0.2
+
+aiohttp==3.10.1
+aiofiles==24.1.0
