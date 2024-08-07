@@ -1,0 +1,26 @@
+[
+    {
+        "requirement_id": 0,
+        "requirement_text": "We need an option for users to easily reset forgotten passwords, possibly through a security question or email verification.",
+        "source": "app_review",
+        "user_stories": [
+            {
+                "story_id": 1,
+                "user_story": "As a registered user, I want to be able to reset my forgotten password using either a security question or email verification, so that I can regain access to my account when I forget my password.",
+                "defects": []
+            }
+        ]
+    },
+    {
+        "requirement_id": 1,
+        "requirement_text": "The app should support gestures for navigation to make it easier and more intuitive to use on touchscreen devices.",
+        "source": "business_case",
+        "user_stories": [
+            {
+                "story_id": 2,
+                "user_story": "As a mobile app user, I want to be able to navigate through the app using gestures, so that I can easily and intuitively interact with the app on touchscreen devices.",
+                "defects": []
+            }
+        ]
+    }
+]

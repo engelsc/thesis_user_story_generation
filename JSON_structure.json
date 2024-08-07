@@ -1,0 +1,43 @@
+[
+	{
+		"requirement_id": 0,
+		"requirement_text": "raw requirement text",
+		"source": "business_case",
+		"user_stories": [
+			{
+				"story_id": 1,
+				"user_story": "As a story, I want to be flawless, so I can be used with confidence.",
+				"defects": [
+					{
+						"defect_type": "unique",
+						"sub_type": "identical",
+						"message": "Remove all duplicate stories."
+					}
+				]
+			},
+			{
+				"story_id": 2,
+				"user_story": "As a story, I want to adhere to my requirements and be flawles, so that I can be used without issues.",
+				"defects": [
+					{
+						"defect_type": "atomic",
+						"sub_type": "conjunctions",
+						"message": "As a story, I want to adhere to my requirements [* and *] be flawles, so that I can be used without issues."
+					}
+				]
+			}
+		]
+	},
+	{
+		"requirement_id": 1,
+		"requirement_text": "Raw requirement text 2",
+		"source": "business_case",
+		"user_stories": [
+			{
+				"story_id": 3,
+				"user_story": "As a patient, I want to book, reschedule, or cancel my medical appointments online so that I can manage my healthcare schedule conveniently.",
+				"defects": []
+			}
+		]
+	}
+]
