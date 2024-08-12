@@ -1,2 +1,5 @@
 input/user_stories.txt
-merged_requirements*
+__pycache__/*
+_temp/*
+pyrightconfig.json
+*.pyc
