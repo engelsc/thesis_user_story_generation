@@ -1,2 +1,0 @@
-As a registered user, I want to be able to reset my forgotten password using either a security question or email verification, so that I can regain access to my account when I forget my password.
-As a mobile app user, I want to be able to navigate through the app using gestures, so that I can easily and intuitively interact with the app on touchscreen devices.
