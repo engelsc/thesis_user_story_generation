@@ -34,8 +34,6 @@ class MODEL_TYPES(Enum):
 
 
 class ModelType(ABC):
-    # MODEL_ID: Final[MODEL_TYPES]
-
     def __init__(self, model_id: str) -> None:
         if MODEL_TYPES.is_member(model_id):
             self.MODEL_ID: Final[MODEL_TYPES] = MODEL_TYPES(model_id)
@@ -79,18 +77,24 @@ class Llama31Free(ModelType):
             base_url="https://openrouter.ai/api/v1", api_key=OPENROUTER_API_KEY
         ) as client:
             final_prompts = self.create_final_prompts(raw_data, model_prompt)
-            # TODO: include run_amount into call for responses -> run_amount of stories per datapoint
 
-            operations = [self.post_request(prompt, client) for prompt in final_prompts]
+            operations = []
+            for prompt in final_prompts:
+                for _ in range(run_amount):
+                    operations.append(self.post_request(prompt, client))
+            # operations = [self.post_request(prompt, client) for prompt in final_prompts]
             responses: list[str] = await asyncio.gather(*operations)
 
-        # TODO: enrich response data with data from responses for each created story for run_amount
         response_data = raw_data.copy()
+
+        story_index: int = 0
         for id, _ in response_data.iterrows():
             id = cast(int, id)
-            response_data.at[id, "story_1"] = responses[id]
+            for i in range(1, run_amount + 1):
+                response_data.at[id, f"story_{i}"] = responses[story_index]
+                story_index += 1
 
-        # print("LLM RESPONSES:\n" + str(responses))
+        print("LLM RESPONSES:\n" + str(responses))
         return response_data
 
     async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
