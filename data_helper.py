@@ -56,7 +56,10 @@ def merge_data(
 
             story_dict = {
                 "story_id": story_id,
-                "user_story": str(req_row[f"story_{i}"]),
+                "user_story": str(req_row[f"story_{i}"])
+                .replace('"', "")
+                .replace("'", "")
+                .replace("\n", " "),
                 "defects": [],
             }
 
