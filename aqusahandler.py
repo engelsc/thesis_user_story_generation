@@ -2,6 +2,7 @@ import subprocess
 import os
 from bs4 import BeautifulSoup
 import pandas as pd
+import re
 
 
 def run_aqusacore(input_file: str, output_file: str, format: str) -> None:
@@ -41,11 +42,29 @@ def prepare_user_stories(
     with open(file_path, "w") as file:
         for _, entry in response_data.iterrows():
             if count >= 1:
-                file.write(entry["story_1"] + "\n")
+                cleaned_story = (
+                    entry["story_1"]
+                    .replace('"', "")
+                    .replace("'", "")
+                    .replace("\n", " ")
+                )
+                file.write(cleaned_story + "\n")
             if count >= 2:
-                file.write(entry["story_2"] + "\n")
+                cleaned_story = (
+                    entry["story_2"]
+                    .replace('"', "")
+                    .replace("'", "")
+                    .replace("\n", " ")
+                )
+                file.write(cleaned_story + "\n")
             if count == 3:
-                file.write(entry["story_3"] + "\n")
+                cleaned_story = (
+                    entry["story_3"]
+                    .replace('"', "")
+                    .replace("'", "")
+                    .replace("\n", " ")
+                )
+                file.write(cleaned_story + "\n")
 
 
 def parse_user_stories_html(file_path: str) -> pd.DataFrame:
@@ -65,6 +84,57 @@ def parse_user_stories_html(file_path: str) -> pd.DataFrame:
         message = cols[4].text
         data.append([story_id, user_story, defect_type, sub_type, message])
 
+    df = pd.DataFrame(
+        data, columns=["story_id", "user_story", "defect_type", "sub_type", "message"]
+    )
+    return df
+
+
+def parse_user_stories_txt(file_path: str) -> pd.DataFrame:
+    data = []
+
+    with open(file_path, "r") as file:
+        current_story_id = None
+        current_user_story = None
+        defect_type = None
+        sub_type = None
+        message = None
+
+        for line in file:
+            # Match the story ID and user story
+            story_match = re.match(r'^Story #(\d+): "(.*)"$', line.strip())
+            if story_match:
+                current_story_id = story_match.group(1)
+                current_user_story = story_match.group(2)
+                continue
+
+            # Match the defect type and sub_type
+            defect_match = re.match(
+                r"^\s*Defect type: ([^\.]+)\.([^ ]+)$", line.strip()
+            )
+            # print("defect: " + str(defect_match))
+            if defect_match:
+                defect_type = defect_match.group(1)
+                sub_type = defect_match.group(2)
+                continue
+
+            # Match the message
+            message_match = re.match(r"^\s*Message: (.*)$", line.strip())
+            # print("message: " + str(message_match))
+            if message_match:
+                message = message_match.group(1)
+
+                data.append(
+                    [
+                        current_story_id,
+                        current_user_story,
+                        defect_type,
+                        sub_type,
+                        message,
+                    ]
+                )
+
+    # Create a DataFrame
     df = pd.DataFrame(
         data, columns=["story_id", "user_story", "defect_type", "sub_type", "message"]
     )
