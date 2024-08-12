@@ -1,5 +1,6 @@
 input/user_stories.txt
 __pycache__/*
 _temp/*
+deprecated/*
 pyrightconfig.json
 *.pyc
