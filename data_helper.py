@@ -1,11 +1,11 @@
 import pandas as pd
 import csv
 import json
-from typing import cast
+from typing import Any, cast
 
 
 def load_requirements(file_path: str) -> pd.DataFrame:
-    df = pd.read_csv(file_path, quotechar='"', delimiter=",")
+    df: pd.DataFrame = pd.read_csv(file_path, quotechar='"', delimiter=",")
     if "index" in df.columns:
         df = df.drop(columns=["index"])
     return df
@@ -21,9 +21,9 @@ def load_prompt_depr(model_id: str, file_path: str) -> str:
 
 
 def load_prompt(model_id: str, file_path: str) -> str:
-    df = pd.read_csv(file_path, quotechar='"', delimiter=",")
+    df: pd.DataFrame = pd.read_csv(file_path, quotechar='"', delimiter=",")
 
-    prompt_row = df[df["model_name"] == model_id]
+    prompt_row: pd.DataFrame = df[df["model_name"] == model_id]
 
     if not prompt_row.empty:
         return prompt_row["prompt"].values[0]
@@ -35,9 +35,9 @@ def merge_data(
     response_data: pd.DataFrame,
     user_stories_parsed: pd.DataFrame,
     generated_stories_count: int,
-) -> list:
+) -> list[Any]:
     # Initialize an empty list to store the nested data
-    nested_data = []
+    nested_data: list[Any] = []
 
     # Iterate over each requirement in response_data
     for req_id, req_row in response_data.iterrows():
@@ -52,7 +52,7 @@ def merge_data(
 
         for i in range(1, generated_stories_count + 1):
             id: int = cast(int, requirement_dict["requirement_id"])
-            story_id = (id * generated_stories_count) + i
+            story_id: int = (id * generated_stories_count) + i
 
             story_dict = {
                 "story_id": story_id,
@@ -64,7 +64,7 @@ def merge_data(
             }
 
             # Filter the user_stories_parsed DataFrame to get the relevant user story by story_id
-            stories_with_defect = user_stories_parsed[
+            stories_with_defect: pd.DataFrame = user_stories_parsed[
                 user_stories_parsed["story_id"].astype(int) == story_id
             ]
 
@@ -87,8 +87,8 @@ def merge_data(
     return nested_data
 
 
-def save_to_json(data: list, file_path: str) -> str:
-    json_data = json.dumps(data, indent=4)
+def save_to_json(data: list[Any], file_path: str) -> str:
+    json_data: str = json.dumps(data, indent=4)
     with open(file_path, "w") as f:
         f.write(json_data)
     return json_data
