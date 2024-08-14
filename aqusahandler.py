@@ -1,5 +1,6 @@
 import subprocess
 import os
+from typing import cast
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
@@ -9,7 +10,7 @@ def run_aqusacore(input_file: str, output_file: str, format: str) -> None:
     # Path to the Python 3.8 interpreter for compatibility
     python_interpreter = ".venv3.8/bin/python"
 
-    command = [
+    command: list[str] = [
         python_interpreter,
         "aqusa-core/aqusacore.py",
         "-i",
@@ -41,9 +42,10 @@ def prepare_user_stories(
 
     with open(file_path, "w") as file:
         for _, entry in response_data.iterrows():
+            cleaned_story: str = ""
             if count >= 1:
                 cleaned_story = (
-                    entry["story_1"]
+                    str(entry["story_1"])
                     .replace('"', "")
                     .replace("'", "")
                     .replace("\n", " ")
@@ -51,7 +53,7 @@ def prepare_user_stories(
                 file.write(cleaned_story + "\n")
             if count >= 2:
                 cleaned_story = (
-                    entry["story_2"]
+                    str(entry["story_2"])
                     .replace('"', "")
                     .replace("'", "")
                     .replace("\n", " ")
@@ -59,7 +61,7 @@ def prepare_user_stories(
                 file.write(cleaned_story + "\n")
             if count == 3:
                 cleaned_story = (
-                    entry["story_3"]
+                    str(entry["story_3"])
                     .replace('"', "")
                     .replace("'", "")
                     .replace("\n", " ")
@@ -94,8 +96,8 @@ def parse_user_stories_txt(file_path: str) -> pd.DataFrame:
     data = []
 
     with open(file_path, "r") as file:
-        current_story_id = None
-        current_user_story = None
+        story_id = None
+        user_story = None
         defect_type = None
         sub_type = None
         message = None
@@ -104,8 +106,8 @@ def parse_user_stories_txt(file_path: str) -> pd.DataFrame:
             # Match the story ID and user story
             story_match = re.match(r'^Story #(\d+): "(.*)"$', line.strip())
             if story_match:
-                current_story_id = story_match.group(1)
-                current_user_story = story_match.group(2)
+                story_id = cast(int, story_match.group(1))
+                user_story = str(story_match.group(2))
                 continue
 
             # Match the defect type and sub_type
@@ -114,20 +116,20 @@ def parse_user_stories_txt(file_path: str) -> pd.DataFrame:
             )
             # print("defect: " + str(defect_match))
             if defect_match:
-                defect_type = defect_match.group(1)
-                sub_type = defect_match.group(2)
+                defect_type = str(defect_match.group(1))
+                sub_type = str(defect_match.group(2))
                 continue
 
             # Match the message
             message_match = re.match(r"^\s*Message: (.*)$", line.strip())
             # print("message: " + str(message_match))
             if message_match:
-                message = message_match.group(1)
+                message = str(message_match.group(1))
 
                 data.append(
                     [
-                        current_story_id,
-                        current_user_story,
+                        story_id,
+                        user_story,
                         defect_type,
                         sub_type,
                         message,
