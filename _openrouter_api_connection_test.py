@@ -1,13 +1,13 @@
 ## DEPRECATED!
 
 # %% run everything
-from ModelTypes import Llama31Free
+from ModelTypes import ModelType
+from ModelsOpenRouter import Mistral7BFree
 import data_helper as dh
-import pandas as pd
 import aqusahandler
 
 # %% run second
-model = Llama31Free()
+model: ModelType = Mistral7BFree()
 generated_stories_count: int = 1
 
 raw_requirements = dh.load_requirements("dummy_requirements.csv")

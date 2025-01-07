@@ -1,19 +1,20 @@
 # %% imports
 # import asyncio
-from ModelTypes import Llama31Free
+from ModelTypes import ModelType
+from ModelsOpenRouter import Mistral7BFree
 import data_helper as dh
 import pandas as pd
 import aqusahandler
 
 # %% build requisites
-model = Llama31Free()
+model: ModelType = Mistral7BFree()
 generated_stories_count: int = 2
 
 raw_requirements: pd.DataFrame = dh.load_requirements("dummy_requirements.csv")
 user_prompt: str = dh.load_prompt(model.get_id(), "prompts.csv")
 
 # %% truncate requirements
-requirements_subset: pd.DataFrame = raw_requirements.iloc[:2]
+requirements_subset: pd.DataFrame = raw_requirements.iloc[:4]
 # print(requirements_subset)
 
 
@@ -35,7 +36,7 @@ aqusahandler.prepare_user_stories(
 )
 
 # %% hand over to AQUSA-core
-aqusahandler.run_aqusacore("user_stories.txt", "user_stories_evaluated", "html")
+# aqusahandler.run_aqusacore("user_stories.txt", "user_stories_evaluated", "html")
 aqusahandler.run_aqusacore("user_stories.txt", "user_stories_evaluated", "txt")
 
 # %% Extract story output from aqusa_core merge with requirements data and save as JSON

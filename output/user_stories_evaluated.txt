@@ -1,0 +1,12 @@
+Story #2: "As a user, I want to be able to reset my password using either a security question or email verification, so that I can regain access to my account when I have forgotten my password."
+   Defect type: unique.identical
+   Message: Remove all duplicate user stories
+Story #4: "As a mobile app user, I want to be able to swipe left and right for navigation, so that I can easily navigate through the app without needing to use the touchscreen buttons."
+   Defect type: unique.identical
+   Message: Remove all duplicate user stories
+Story #6: "As a user, I want to have an undo feature, so that I can prevent accidental mistakes like deleting important files."
+   Defect type: unique.identical
+   Message: Remove all duplicate user stories
+Story #8: "As a registered user, I want to create and manage groups, so that I can collaborate and communicate more effectively with other users."
+   Defect type: unique.identical
+   Message: Remove all duplicate user stories

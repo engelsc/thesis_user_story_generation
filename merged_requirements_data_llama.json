@@ -6,7 +6,12 @@
         "user_stories": [
             {
                 "story_id": 1,
-                "user_story": "As a registered user, I want to be able to reset my forgotten password using either a security question or email verification, so that I can regain access to my account when I forget my password.",
+                "user_story": "As a user, I want to receive an email with a password reset link, so that I can regain access to my account when Ive forgotten my password.",
+                "defects": []
+            },
+            {
+                "story_id": 2,
+                "user_story": "As a user, I want to reset my password through either a security question or email verification, so that I can regain access to my account after forgetting my password.",
                 "defects": []
             }
         ]
@@ -17,8 +22,13 @@
         "source": "business_case",
         "user_stories": [
             {
-                "story_id": 2,
-                "user_story": "As a mobile app user, I want to be able to navigate through the app using gestures, so that I can easily and intuitively interact with the app on touchscreen devices.",
+                "story_id": 3,
+                "user_story": "As a mobile app user, I want to navigate through the app using gestures, so that I can easily and intuitively use the app on touchscreen devices.",
+                "defects": []
+            },
+            {
+                "story_id": 4,
+                "user_story": "As a mobile app user, I want to be able to navigate through the app using gestures, so that I can interact with the app more efficiently and intuitively on touchscreen devices.",
                 "defects": []
             }
         ]
