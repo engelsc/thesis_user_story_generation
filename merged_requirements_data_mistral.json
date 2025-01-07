@@ -1,0 +1,94 @@
+[
+    {
+        "requirement_id": 0,
+        "requirement_text": "We need an option for users to easily reset forgotten passwords, possibly through a security question or email verification.",
+        "source": "app_review",
+        "user_stories": [
+            {
+                "story_id": 1,
+                "user_story": " As a user, I want to be able to reset my password using either a security question or email verification, so that I can regain access to my account when I have forgotten my password.",
+                "defects": []
+            },
+            {
+                "story_id": 2,
+                "user_story": " As a user, I want to be able to reset my password using either a security question or email verification, so that I can regain access to my account when I have forgotten my password.",
+                "defects": [
+                    {
+                        "defect_type": "unique",
+                        "sub_type": "identical",
+                        "message": "Remove all duplicate user stories"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "requirement_id": 1,
+        "requirement_text": "The app should support gestures for navigation to make it easier and more intuitive to use on touchscreen devices.",
+        "source": "business_case",
+        "user_stories": [
+            {
+                "story_id": 3,
+                "user_story": " As a mobile app user, I want to be able to swipe left and right for navigation, so that I can easily navigate through the app without needing to use the touchscreen buttons.",
+                "defects": []
+            },
+            {
+                "story_id": 4,
+                "user_story": " As a mobile app user, I want to be able to swipe left and right for navigation, so that I can easily navigate through the app without needing to use the touchscreen buttons.",
+                "defects": [
+                    {
+                        "defect_type": "unique",
+                        "sub_type": "identical",
+                        "message": "Remove all duplicate user stories"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "requirement_id": 2,
+        "requirement_text": "Users need an option to undo actions to prevent accidental mistakes, such as deleting an important file.",
+        "source": "app_review",
+        "user_stories": [
+            {
+                "story_id": 5,
+                "user_story": " As a user, I want to have an undo feature, so that I can prevent accidental mistakes like deleting important files.",
+                "defects": []
+            },
+            {
+                "story_id": 6,
+                "user_story": " As a user, I want to have an undo feature, so that I can prevent accidental mistakes like deleting important files.",
+                "defects": [
+                    {
+                        "defect_type": "unique",
+                        "sub_type": "identical",
+                        "message": "Remove all duplicate user stories"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "requirement_id": 3,
+        "requirement_text": "A feature to create and manage groups would help users collaborate and communicate more effectively.",
+        "source": "business_case",
+        "user_stories": [
+            {
+                "story_id": 7,
+                "user_story": " As a registered user, I want to create and manage groups, so that I can collaborate and communicate more effectively with other users.",
+                "defects": []
+            },
+            {
+                "story_id": 8,
+                "user_story": " As a registered user, I want to create and manage groups, so that I can collaborate and communicate more effectively with other users.",
+                "defects": [
+                    {
+                        "defect_type": "unique",
+                        "sub_type": "identical",
+                        "message": "Remove all duplicate user stories"
+                    }
+                ]
+            }
+        ]
+    }
+]

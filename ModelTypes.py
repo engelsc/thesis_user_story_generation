@@ -44,6 +44,19 @@ class ModelType(ABC):
         # print("Final prompts: " + str(final_prompts))
         return final_prompts
 
+    def add_stories_to_raw_data(
+        self, responses: list[str], raw_data: pd.DataFrame, run_amount: int
+    ) -> pd.DataFrame:
+        response_data: pd.DataFrame = raw_data.copy()
+
+        story_index: int = 0
+        for id, _ in response_data.iterrows():
+            id = cast(int, id)
+            for i in range(1, run_amount + 1):
+                response_data.at[id, f"story_{i}"] = responses[story_index]
+                story_index += 1
+        return response_data
+
     @abstractmethod
     async def generate_responses(
         self, raw_data: pd.DataFrame, model_prompt: str, run_amount: int
@@ -51,7 +64,7 @@ class ModelType(ABC):
         pass
 
 
-# TESTIMPLEMENNTATION
+# TEST IMPLEMENTATION
 class TestImplementation(ModelType):
     user_stories: list[str] = [
         "As a customer, I want to filter products by price range, brand, and customer ratings so that I can find the products that best match my preferences and budget.",

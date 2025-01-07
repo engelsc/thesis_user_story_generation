@@ -1,5 +1,4 @@
 import pandas as pd
-import csv
 import json
 from typing import Any, cast
 
@@ -9,15 +8,6 @@ def load_requirements(file_path: str) -> pd.DataFrame:
     if "index" in df.columns:
         df = df.drop(columns=["index"])
     return df
-
-
-def load_prompt_depr(model_id: str, file_path: str) -> str:
-    with open(file_path, newline="") as prompts:
-        reader = csv.reader(prompts, delimiter=",")
-        for row in reader:
-            if row[0] == model_id:
-                return row[1]
-        raise ValueError(f"No prompt found for model_id: {model_id}")
 
 
 def load_prompt(model_id: str, file_path: str) -> str:

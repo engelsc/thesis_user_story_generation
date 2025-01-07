@@ -1,4 +1,5 @@
 pandas==2.2.2
+matplotlib==3.10.0
 bs4==4.12.3
 requests==2.32.3
 openai==1.39.0
@@ -7,3 +8,6 @@ bs4==0.0.2
 
 aiohttp==3.10.1
 aiofiles==24.1.0
+
+langdetect==1.0.9
+langid==1.1.6
