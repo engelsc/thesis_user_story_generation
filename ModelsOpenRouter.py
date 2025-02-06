@@ -1,5 +1,6 @@
 from openai.types.chat import ChatCompletion
 from ModelTypes import ModelType
+from abc import abstractmethod
 from os import getenv
 import pandas as pd
 from typing import override, Any
@@ -15,11 +16,9 @@ if OPENROUTER_API_KEY is None:
     )
 
 
-class Mistral7BFree(ModelType):
-    # Free model provided on OpenRouter via openrouter api and OpenAI package
-    def __init__(self) -> None:
-        super().__init__("mistral")
-
+class OpenRouterModelType(ModelType):
+# Base class for all async handling of multiple prompts via the OpenRouterAPI
+# Builds prompts, instantiates OpenAI client
     @override
     async def generate_responses(self, raw_data: pd.DataFrame, model_prompt: str, run_amount: int) -> pd.DataFrame:
 
@@ -46,7 +45,18 @@ class Mistral7BFree(ModelType):
             responses: list[str] = await asyncio.gather(*requests)
         return responses
 
+    @abstractmethod
+    async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        pass
 
+
+class Mistral7BFree(OpenRouterModelType):
+    # Free model provided on OpenRouter via openrouter api and OpenAI package
+    def __init__(self) -> None:
+        super().__init__("mistral")
+
+
+    @override
     async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
         completion: ChatCompletion = await client.chat.completions.create(
             model="mistralai/mistral-7b-instruct:free",
@@ -56,3 +66,89 @@ class Mistral7BFree(ModelType):
             }],
         )
         return str(completion.choices[0].message.content)
+
+
+class Llama318BFree(OpenRouterModelType):
+    # Free model provided on OpenRouter via openrouter api and OpenAI package
+    def __init__(self) -> None:
+        super().__init__("llama")
+
+
+    @override
+    async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        completion: ChatCompletion = await client.chat.completions.create(
+            model="meta-llama/llama-3.1-8b-instruct:free",
+            messages=[{
+                "role": "user",
+                "content": prompt,
+            }],
+        )
+        return str(completion.choices[0].message.content)
+
+
+class Gemini15Pro(OpenRouterModelType):
+    # Premium model provided on OpenRouter via openrouter api and OpenAI package
+    # API reference: https://openrouter.ai/google/gemini-pro-1.5-exp/api
+    def __init__(self) -> None:
+        super().__init__("gemini")
+
+
+    @override
+    async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        try:
+            completion: ChatCompletion = await client.chat.completions.create(
+                model="google/gemini-pro-1.5",
+                messages=[{
+                    "role": "user",
+                    "content": [{"type": "text", "text": prompt}]
+                }],
+            )
+
+            # DEBUGGING: Print API response to check its structure
+            #print("API Response:", completion)
+
+            if not completion.choices:
+                raise ValueError("No choices returned from API.")
+
+            if not completion.choices[0].message:
+                raise ValueError("No message returned in first choice.")
+
+            return str(completion.choices[0].message.content)
+
+        except Exception as e:
+            print(f"Error in API call: {e}")
+            return "ERROR: No response"
+
+
+class GPT4oMini(OpenRouterModelType):
+    # Premium model provided on OpenRouter via openrouter api and OpenAI package
+    # API reference: https://openrouter.ai/openai/gpt-4o-mini/api
+    def __init__(self) -> None:
+        super().__init__("gpt")
+
+
+    @override
+    async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        try:
+            completion: ChatCompletion = await client.chat.completions.create(
+                model="openai/gpt-4o-mini",
+                messages=[{
+                    "role": "user",
+                    "content": [{"type": "text", "text": prompt}]
+                }],
+            )
+
+            # DEBUGGING: Print API response to check its structure
+            #print("API Response:", completion)
+
+            if not completion.choices:
+                raise ValueError("No choices returned from API.")
+
+            if not completion.choices[0].message:
+                raise ValueError("No message returned in first choice.")
+
+            return str(completion.choices[0].message.content)
+
+        except Exception as e:
+            print(f"Error in API call: {e}")
+            return "ERROR: No response"
