@@ -6,93 +6,114 @@ import pandas as pd
 import re
 
 
-def run_aqusacore(input_file: str, output_file: str, format: str) -> None:
-    # Path to the Python 3.8 interpreter for compatibility
-    python_interpreter = ".venv3.8/bin/python"
+DEFAULT_AQUSA_SCRIPT_PATH = "./aqusa-core/aqusacore.py"
+DEFAULT_PYTHON_EXECUTABLE = "./.venv3.8/bin/python"
+
+
+######################
+# MAIN ORCHESTRATOR FUNCTION
+######################
+def process_with_aqusacore(
+    response_data: pd.DataFrame,
+    run_amount: int = 1,
+    aqusa_format: str = "txt",
+    tmp_stories_path: str = "user_stories.txt",
+    tmp_output_path: str = "user_stories_evaluated",
+
+) -> pd.DataFrame:
+    prepare_user_stories(response_data, f"input/{tmp_stories_path}", run_amount)
+
+    run_aqusacore(tmp_stories_path, tmp_output_path, aqusa_format)
+
+    user_stories_parsed: pd.DataFrame
+    if aqusa_format.lower() == "txt":
+        user_stories_parsed = parse_user_stories_txt(f"output/{tmp_output_path}.txt")
+    else:
+        user_stories_parsed = parse_user_stories_html(f"output/{tmp_output_path}.html")
+
+    return user_stories_parsed
+
+
+######################
+# HELPER FUNCTIONS
+######################
+def run_aqusacore(
+    input_file: str,
+    output_file: str,
+    output_format: str = "txt",
+    python_executable : str = DEFAULT_PYTHON_EXECUTABLE,
+    aqusa_path: str = DEFAULT_AQUSA_SCRIPT_PATH,
+) -> None:
+    """
+    Runs the aqusa-core script via a subprocess call.
+    :param input_file: Path to the text file containing user stories.
+    :param output_file: Path where the aqusa-core will write its output.
+    :param output_format: 'txt' or 'html'.
+    :param python_executable: Path to the Python interpreter that has the dependencies installed.
+    :param aqusa_path: The path to the aqusa-core script.
+    """
 
     command: list[str] = [
-        python_interpreter,
-        "aqusa-core/aqusacore.py",
-        "-i",
-        input_file,
-        "-o",
-        output_file,
-        "-f",
-        format,
+        python_executable,
+        aqusa_path,
+        "-i", input_file,
+        "-o", output_file,
+        "-f", output_format,
     ]
-    print(f"Running command: {' '.join(command)}")
-    result = subprocess.run(
-        command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
-    )
 
-    if result.returncode != 0:
-        print("Error running aqusacore.py:")
-        print("Standard Output:\n", result.stdout)
-        print("Standard Error:\n", result.stderr)
-    else:
+    try:
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
         print("Command ran successfully:")
         print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"Error running aqusa-core: {e}")
+        raise
 
 
 def prepare_user_stories(
-    response_data: pd.DataFrame, file_path: str, count: int
+    response: pd.DataFrame,
+    output_path: str,
+    run_amount: int = 1,
+    story_prefix: str = "story_",
 ) -> None:
-    if os.path.exists(file_path):
-        os.remove(file_path)
+    """
+    Extracts user story columns from the given DataFrame (story_1, story_2, etc.)
+    and writes them to a plain text file line-by-line, suitable for AQUSA input.
+    :param response: DataFrame containing user story columns.
+    :param output_path: File path to write the user stories.
+    :param run_amount: The number of user stories generated per row.
+    :param story_prefix: The column prefix used for user stories.
+    """
 
-    with open(file_path, "w") as file:
-        for _, entry in response_data.iterrows():
-            cleaned_story: str = ""
-            if count >= 1:
-                cleaned_story = (
-                    str(entry["story_1"])
-                    .replace('"', "")
-                    .replace("'", "")
-                    .replace("\n", " ")
-                )
-                file.write(cleaned_story + "\n")
-            if count >= 2:
-                cleaned_story = (
-                    str(entry["story_2"])
-                    .replace('"', "")
-                    .replace("'", "")
-                    .replace("\n", " ")
-                )
-                file.write(cleaned_story + "\n")
-            if count == 3:
-                cleaned_story = (
-                    str(entry["story_3"])
-                    .replace('"', "")
-                    .replace("'", "")
-                    .replace("\n", " ")
-                )
-                file.write(cleaned_story + "\n")
+    if os.path.exists(output_path):
+        os.remove(output_path)
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        # for each row in response, gather the user stories.
+        # each story is written on its own line in a text file.
+        for _, row in response.iterrows():
+            for i in range(run_amount):
+                col = f"{story_prefix}{i+1}" # -> column name = story_1
+                if col in row and pd.notna(row[col]):
+                    # remove extra quotes/newlines
+                    user_story = str(row[col]).replace('"', "").replace("'", "").replace("\n", " ").replace("\r", " ").strip()
+                    file.write(f"{user_story}\n")
 
 
-def parse_user_stories_html(file_path: str) -> pd.DataFrame:
-    with open(file_path, "r") as file:
-        soup = BeautifulSoup(file, "html.parser")
+def parse_user_stories_txt(
+	file_path: str
+) -> pd.DataFrame:
+    """
+    Parser that reads a TXT file generated by AQUSA and extracts:
+      - story_id
+      - user_story
+      - defect_type
+      - sub_type
+      - message
+    :param file_path: The path to the TXT file.
+    :return: DataFrame of parsed results.
+    """
 
-    data = []
-    table = soup.find("table", {"class": "sortable"})
-    rows = table.find_all("tr")[1:]  # Skip header row
-
-    for row in rows:
-        cols = row.find_all("td")
-        story_id = cols[0].text
-        user_story = cols[1].text
-        defect_type = cols[2].text
-        sub_type = cols[3].text
-        message = cols[4].text
-        data.append([story_id, user_story, defect_type, sub_type, message])
-
-    df = pd.DataFrame(
-        data, columns=["story_id", "user_story", "defect_type", "sub_type", "message"]
-    )
-    return df
-
-
-def parse_user_stories_txt(file_path: str) -> pd.DataFrame:
     data = []
 
     with open(file_path, "r") as file:
@@ -137,6 +158,42 @@ def parse_user_stories_txt(file_path: str) -> pd.DataFrame:
                 )
 
     # Create a DataFrame
+    df = pd.DataFrame(
+        data, columns=["story_id", "user_story", "defect_type", "sub_type", "message"]
+    )
+    return df
+
+
+def parse_user_stories_html(
+	file_path: str
+) -> pd.DataFrame:
+    """
+    Parser that reads an HTML file generated by AQUSA and extracts:
+      - story_id
+      - user_story
+      - defect_type
+      - sub_type
+      - message
+    :param file_path: The path to the HTML file.
+    :return: DataFrame of parsed results.
+    """
+
+    with open(file_path, "r") as file:
+        soup = BeautifulSoup(file, "html.parser")
+
+    data = []
+    table = soup.find("table", {"class": "sortable"})
+    rows = table.find_all("tr")[1:]  # Skip header row
+
+    for row in rows:
+        cols = row.find_all("td")
+        story_id = cols[0].text
+        user_story = cols[1].text
+        defect_type = cols[2].text
+        sub_type = cols[3].text
+        message = cols[4].text
+        data.append([story_id, user_story, defect_type, sub_type, message])
+
     df = pd.DataFrame(
         data, columns=["story_id", "user_story", "defect_type", "sub_type", "message"]
     )
