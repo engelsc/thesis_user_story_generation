@@ -110,6 +110,7 @@ def parse_user_stories_txt(
       - defect_type
       - sub_type
       - message
+    Prefer this over HTML parsing if possible.
     :param file_path: The path to the TXT file.
     :return: DataFrame of parsed results.
     """
@@ -174,6 +175,7 @@ def parse_user_stories_html(
       - defect_type
       - sub_type
       - message
+    If possible, choose TXT parser.
     :param file_path: The path to the HTML file.
     :return: DataFrame of parsed results.
     """
