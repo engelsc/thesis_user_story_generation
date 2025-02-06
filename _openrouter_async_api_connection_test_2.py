@@ -1,15 +1,16 @@
 # %% imports
 # import asyncio
 from ModelTypes import ModelType
-from ModelsOpenRouter import Mistral7BFree, Llama318BFree
+from ModelsOpenRouter import Mistral7BFree, Llama318BFree, Llama318B
 import data_helper as dh
 import pandas as pd
 import aqusahandler
 
 # %% build requisites
 #model: ModelType = Mistral7BFree()
-model: ModelType = Llama318BFree()
-generated_stories_count: int = 3
+#model: ModelType = Llama318BFree()
+model: ModelType = Llama318B()
+generated_stories_count: int = 1
 
 raw_requirements: pd.DataFrame = dh.load_requirements("dummy_requirements.csv")
 user_prompt: str = dh.load_prompt(model.get_id(), "prompts.csv")

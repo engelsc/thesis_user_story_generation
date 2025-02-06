@@ -6,23 +6,7 @@
         "user_stories": [
             {
                 "story_id": 1,
-                "user_story": "As a registered user, I want to be able to reset my password through a process that allows me to either verify through a pre-set security question or receive a verification email to ensure that the person attempting the reset has a legitimate interest in accessing my account.",
-                "defects": [
-                    {
-                        "defect_type": "atomic",
-                        "sub_type": "conjunctions",
-                        "message": "As a registered user, I want to be able to reset my password through a process that allows me to either verify through a pre-set security question [* or *] receive a verification email to ensure that the person attempting the reset has a legitimate interest in accessing my account."
-                    }
-                ]
-            },
-            {
-                "story_id": 2,
-                "user_story": "As a user, I want to be able to reset my password using either a security question or email verification so that I can regain access to the system when I forget my current password.",
-                "defects": []
-            },
-            {
-                "story_id": 3,
-                "user_story": "As a user, I want to be able to reset my forgotten password easily through either a security question verification or email verification, so that I can quickly regain access to the application.",
+                "user_story": "As a user, I want to have a straightforward mechanism to reset my forgotten password, allowing me to recover access to the system using either a security question or email verification.",
                 "defects": []
             }
         ]
@@ -33,37 +17,9 @@
         "source": "business_case",
         "user_stories": [
             {
-                "story_id": 4,
-                "user_story": "As a mobile app user, I want the app to support gestures for navigation, so I can move through the app with ease and without having to rely on physical buttons, reducing the complexity and improving overall user experience.",
-                "defects": [
-                    {
-                        "defect_type": "uniform",
-                        "sub_type": "uniform",
-                        "message": "Use the most common template: As a, I want to, So that"
-                    }
-                ]
-            },
-            {
-                "story_id": 5,
-                "user_story": "As a user, I want to be able to navigate the app using intuitive gestures, so I can easily access and explore different screens and features on my touchscreen device.",
-                "defects": [
-                    {
-                        "defect_type": "uniform",
-                        "sub_type": "uniform",
-                        "message": "Use the most common template: As a, I want to, So that"
-                    }
-                ]
-            },
-            {
-                "story_id": 6,
-                "user_story": "As a mobile app user, I want the application to respond to intuitive gestures for navigation, so that I can effortlessly move through the app on my touchscreen device.",
-                "defects": [
-                    {
-                        "defect_type": "uniform",
-                        "sub_type": "uniform",
-                        "message": "Use the most common template: As a, I want to, So that"
-                    }
-                ]
+                "story_id": 2,
+                "user_story": "As a user, I want to navigate through the app using intuitive touchscreen gestures, so that I can access information and features quickly and easily.",
+                "defects": []
             }
         ]
     },
@@ -73,37 +29,9 @@
         "source": "app_review",
         "user_stories": [
             {
-                "story_id": 7,
-                "user_story": "As an end user, I want to be able to undo actions, so that in the event of an unintended deletion of a file or other irreversible action, I can restore the previous version of the data.",
-                "defects": [
-                    {
-                        "defect_type": "minimal",
-                        "sub_type": "indicator_repetition",
-                        "message": "As an end user, [* I want to *] be able to undo actions, so that in the event of an unintended deletion of a file or other irreversible action, [* I can *] restore the previous version of the data."
-                    }
-                ]
-            },
-            {
-                "story_id": 8,
-                "user_story": "As a user, I want to be able to undo recent actions, so I can prevent accidental mistakes and restore previously working state.",
-                "defects": [
-                    {
-                        "defect_type": "uniform",
-                        "sub_type": "uniform",
-                        "message": "Use the most common template: As a, I want to, So that"
-                    }
-                ]
-            },
-            {
-                "story_id": 9,
-                "user_story": "As a user, I want the system to allow me to undo actions that I previously performed, so that I can recover from accidental mistakes such as deleting an important file.",
-                "defects": [
-                    {
-                        "defect_type": "uniform",
-                        "sub_type": "uniform",
-                        "message": "Use the most common template: As a, I want to, So that"
-                    }
-                ]
+                "story_id": 3,
+                "user_story": "  As a user, I want to be able to undo the deletion of a file, so that I can easily correct accidental mistakes and maintain the integrity of my data.",
+                "defects": []
             }
         ]
     },
@@ -113,18 +41,8 @@
         "source": "business_case",
         "user_stories": [
             {
-                "story_id": 10,
-                "user_story": "As a user, I want to be able to create groups, so that I can efficiently collaborate and communicate with other users who share similar interests or goals.",
-                "defects": []
-            },
-            {
-                "story_id": 11,
-                "user_story": "As a user, I want to be able to create and manage groups, so that I can collaborate and communicate effectively with others.",
-                "defects": []
-            },
-            {
-                "story_id": 12,
-                "user_story": "As a user, I want to be able to create and manage groups within the system, so that I can collaborate and communicate more effectively with others.",
+                "story_id": 4,
+                "user_story": "As a user, I want to be able to create and manage groups, so that I can easily collaborate and communicate with others.",
                 "defects": []
             }
         ]
