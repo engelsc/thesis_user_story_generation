@@ -129,8 +129,8 @@ cleaned_data.to_csv(cleaned_data_path, index=False)
 
 data = pd.read_csv(cleaned_data_path)
 
-# test sampling for 4 LLMs and 3 prompts each -> 12 sets of non-repeating data
-amount_sample_sets = 12
+# test sampling for 4 LLMs and 3 prompts each -> 16 sets of non-repeating data + 200 for experiments
+amount_sample_sets = 17
 sample_size = 200
 random_state = 42
 sub_folder = 'sample_sets'
