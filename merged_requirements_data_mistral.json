@@ -12,13 +12,12 @@
             {
                 "story_id": 2,
                 "user_story": " As a user, I want to be able to reset my password using either a security question or email verification, so that I can regain access to my account when I have forgotten my password.",
-                "defects": [
-                    {
-                        "defect_type": "unique",
-                        "sub_type": "identical",
-                        "message": "Remove all duplicate user stories"
-                    }
-                ]
+                "defects": []
+            },
+            {
+                "story_id": 3,
+                "user_story": "As a user, I want to receive an email with a link to reset my password, so that I can regain access to my account when Ive forgotten my password.",
+                "defects": []
             }
         ]
     },
@@ -28,20 +27,19 @@
         "source": "business_case",
         "user_stories": [
             {
-                "story_id": 3,
-                "user_story": " As a mobile app user, I want to be able to swipe left and right for navigation, so that I can easily navigate through the app without needing to use the touchscreen buttons.",
+                "story_id": 4,
+                "user_story": "As a mobile user, I want to navigate through the app using gestures, so that I can easily and intuitively interact with the app on touchscreen devices.",
                 "defects": []
             },
             {
-                "story_id": 4,
-                "user_story": " As a mobile app user, I want to be able to swipe left and right for navigation, so that I can easily navigate through the app without needing to use the touchscreen buttons.",
-                "defects": [
-                    {
-                        "defect_type": "unique",
-                        "sub_type": "identical",
-                        "message": "Remove all duplicate user stories"
-                    }
-                ]
+                "story_id": 5,
+                "user_story": "As a touchscreen device user, I want to be able to navigate the app using gestures, so that I can find and interact with the content more easily and intuitively.",
+                "defects": []
+            },
+            {
+                "story_id": 6,
+                "user_story": "As a user, I want to be able to navigate through the app using gestures, so that I can easily and intuitively interact with the app on touchscreen devices.",
+                "defects": []
             }
         ]
     },
@@ -51,20 +49,25 @@
         "source": "app_review",
         "user_stories": [
             {
-                "story_id": 5,
-                "user_story": " As a user, I want to have an undo feature, so that I can prevent accidental mistakes like deleting important files.",
+                "story_id": 7,
+                "user_story": "As a user, I want a undo option, so that I can correct accidental mistakes, especially in situations like deleting important files.",
+                "defects": [
+                    {
+                        "defect_type": "uniform",
+                        "sub_type": "uniform",
+                        "message": "Use the most common template: As a, I want to, So that"
+                    }
+                ]
+            },
+            {
+                "story_id": 8,
+                "user_story": "As a user, I want to have an undo functionality, so that I can recover from accidental mistakes like deleting an important file.",
                 "defects": []
             },
             {
-                "story_id": 6,
+                "story_id": 9,
                 "user_story": " As a user, I want to have an undo feature, so that I can prevent accidental mistakes like deleting important files.",
-                "defects": [
-                    {
-                        "defect_type": "unique",
-                        "sub_type": "identical",
-                        "message": "Remove all duplicate user stories"
-                    }
-                ]
+                "defects": []
             }
         ]
     },
@@ -74,13 +77,13 @@
         "source": "business_case",
         "user_stories": [
             {
-                "story_id": 7,
+                "story_id": 10,
                 "user_story": " As a registered user, I want to create and manage groups, so that I can collaborate and communicate more effectively with other users.",
                 "defects": []
             },
             {
-                "story_id": 8,
-                "user_story": " As a registered user, I want to create and manage groups, so that I can collaborate and communicate more effectively with other users.",
+                "story_id": 11,
+                "user_story": "As a registered user, I want to create and manage groups, so that I can collaborate and communicate effectively with other users.",
                 "defects": [
                     {
                         "defect_type": "unique",
@@ -88,6 +91,11 @@
                         "message": "Remove all duplicate user stories"
                     }
                 ]
+            },
+            {
+                "story_id": 12,
+                "user_story": "As a registered user, I want to be able to create and manage groups, so that I can collaborate and communicate effectively with other users.",
+                "defects": []
             }
         ]
     }
