@@ -1,0 +1,47 @@
+1: | # Basis Prompt
+    Please create a user story from the following app review:
+    "{review}"
+    Only output the user story and nothing else!
+
+2: | # Zero-Shot
+    Act as an experienced Requirements Engineer with 15+ years of experience and create a clear, formally sound user story based on user feedback from app reviews.
+    The app in question is the Threads app by Meta, a social media app designed for real-time text-based conversations and sharing updates.
+    The reviews given are app user reviews on the Google App Store for Android.
+
+    Please create a user story from the following app review:
+    "{review}"
+
+    Structure the user story using the following template exactly, replacing the text in [] with the relevant information:
+    As a [type of user], I want [to do something], so that [some goal is met].
+    Provide the output following this format exactly:
+    """USER STORY: [user story] """
+
+3: | # Zero-Shot CoT
+    Act as an experienced Requirements Engineer with 15+ years of experience and create a clear, formally sound user story based on user feedback from app reviews.
+    The app in question is the Threads app by Meta, a social media app designed for real-time text-based conversations and sharing updates.
+    The reviews given are app user reviews on the Google App Store for Android.
+
+    Please create a user story from the following app review:
+    "{review}"
+
+    Structure the user story using the following template exactly, replacing the text in [] with the relevant information:
+    As a [type of user], I want [to do something], so that [some goal is met].
+    Provide the output following this format exactly:
+    """USER STORY: [user story] """
+    Let's think step by step.
+
+4: | # Zero-Shot Decomposition
+    Act as an experienced Requirements Engineer with 15+ years of experience and create a clear, formally sound user story based on user feedback from app reviews.
+    The app in question is the Threads app by Meta, a social media app designed for real-time text-based conversations and sharing updates.
+    The reviews given are app user reviews on the Google App Store for Android.
+
+    Here is the app review:
+    "{review}"
+
+    Follow these steps to generate the user story:
+
+    1. Identify the type of user providing the feedback.
+    2. Identify what the user wants to do based on the feedback.
+    3. Identify the user's goal or desired outcome.
+    4. Combine the identified information into the following user story format exactly:
+    """USER STORY: As a [type of user], I want [to do something], so that [some goal is met]. """
