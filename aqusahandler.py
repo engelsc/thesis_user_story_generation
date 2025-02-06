@@ -1,5 +1,4 @@
 import subprocess
-import os
 from typing import cast
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -66,7 +65,8 @@ def run_aqusacore(
         print("Command ran successfully:")
         print(result.stdout)
     except subprocess.CalledProcessError as e:
-        print(f"Error running aqusa-core: {e}")
+        error_message = e.stderr if e.stderr else "Unknown error (no stderr output)"
+        print(f"Error running aqusa-core: {error_message}")
         raise
 
 
@@ -84,9 +84,6 @@ def prepare_user_stories(
     :param run_amount: The number of user stories generated per row.
     :param story_prefix: The column prefix used for user stories.
     """
-
-    if os.path.exists(output_path):
-        os.remove(output_path)
 
     with open(output_path, "w", encoding="utf-8") as file:
         # for each row in response, gather the user stories.
@@ -117,7 +114,7 @@ def parse_user_stories_txt(
 
     data = []
 
-    with open(file_path, "r") as file:
+    with open(file_path, "r", encoding="utf-8") as file:
         story_id = None
         user_story = None
         defect_type = None
@@ -128,25 +125,26 @@ def parse_user_stories_txt(
             # Match the story ID and user story
             story_match = re.match(r'^Story #(\d+): "(.*)"$', line.strip())
             if story_match:
-                story_id = cast(int, story_match.group(1))
-                user_story = str(story_match.group(2))
+                try:
+                    story_id = cast(int, story_match.group(1)) if story_match else None
+                except ValueError:
+                    story_id = None # Handles malformed input, not castable into int
+                user_story = str(story_match.group(2)) if story_match else None
                 continue
 
             # Match the defect type and sub_type
             defect_match = re.match(
                 r"^\s*Defect type: ([^\.]+)\.([^ ]+)$", line.strip()
             )
-            # print("defect: " + str(defect_match))
             if defect_match:
-                defect_type = str(defect_match.group(1))
-                sub_type = str(defect_match.group(2))
+                defect_type = str(defect_match.group(1)) if defect_match else "Unknown"
+                sub_type = str(defect_match.group(2)) if defect_match else "Unknown"
                 continue
 
             # Match the message
             message_match = re.match(r"^\s*Message: (.*)$", line.strip())
-            # print("message: " + str(message_match))
             if message_match:
-                message = str(message_match.group(1))
+                message = str(message_match.group(1)) if message_match else "No message"
 
                 data.append(
                     [
@@ -185,6 +183,10 @@ def parse_user_stories_html(
 
     data = []
     table = soup.find("table", {"class": "sortable"})
+    if not table:
+        print(f"Warning: No table found in {file_path}. Returning empty DataFrame.")
+        return pd.DataFrame(columns=["story_id", "user_story", "defect_type", "sub_type", "message"])
+
     rows = table.find_all("tr")[1:]  # Skip header row
 
     for row in rows:
