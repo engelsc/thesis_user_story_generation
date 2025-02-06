@@ -8,6 +8,9 @@ from openai import AsyncOpenAI
 import asyncio
 
 
+# Maximum amount of simultaneous requests to the API
+MAX_SEMAPHORES: int = 10
+
 # Retrieve the API key from the environment variable
 OPENROUTER_API_KEY = getenv("OPEN_ROUTER_API_KEY")
 if OPENROUTER_API_KEY is None:
@@ -19,6 +22,12 @@ if OPENROUTER_API_KEY is None:
 class OpenRouterModelType(ModelType):
 # Base class for all async handling of multiple prompts via the OpenRouterAPI
 # Builds prompts, instantiates OpenAI client
+
+    # Add semaphore to limit concurrent API requests
+    # Rate limits on OpenRouter are dependant on model type and credits remaining.
+    # Source: https://openrouter.ai/docs/api-reference/limits
+    _semaphore: asyncio.Semaphore = asyncio.Semaphore(MAX_SEMAPHORES)
+
     @override
     async def generate_responses(self, raw_data: pd.DataFrame, model_prompt: str, run_amount: int) -> pd.DataFrame:
 
@@ -41,9 +50,19 @@ class OpenRouterModelType(ModelType):
             requests: list[Any] = []
             for prompt in prompts:
                 for _ in range(run_amount):
-                    requests.append(self.post_request(prompt, client))
+                    requests.append(asyncio.create_task(self._bounded_post_request(prompt, client)))
+
             responses: list[str] = await asyncio.gather(*requests)
         return responses
+
+
+    async def _bounded_post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        async with self._semaphore:
+            try:
+                return await self.post_request(prompt, client)
+            except Exception as e:
+                print(f"Error sending request: {e}")
+                return "ERROR: No response"
 
     @abstractmethod
     async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
@@ -55,17 +74,21 @@ class Mistral7BFree(OpenRouterModelType):
     def __init__(self) -> None:
         super().__init__("mistral")
 
-
     @override
     async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
-        completion: ChatCompletion = await client.chat.completions.create(
-            model="mistralai/mistral-7b-instruct:free",
-            messages=[{
-                "role": "user",
-                "content": prompt,
-            }],
-        )
-        return str(completion.choices[0].message.content)
+        try:
+            completion: ChatCompletion = await client.chat.completions.create(
+                model="mistralai/mistral-7b-instruct:free",
+                messages=[{
+                    "role": "user",
+                    "content": prompt,
+                }],
+            )
+            return str(completion.choices[0].message.content)
+
+        except Exception as e:
+            print(f"Error in API call: {e}")
+            return "ERROR: No response"
 
 
 class Llama318BFree(OpenRouterModelType):
@@ -73,17 +96,43 @@ class Llama318BFree(OpenRouterModelType):
     def __init__(self) -> None:
         super().__init__("llama")
 
+    @override
+    async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        try:
+            completion: ChatCompletion = await client.chat.completions.create(
+                model="meta-llama/llama-3.1-8b-instruct:free",
+                messages=[{
+                    "role": "user",
+                    "content": prompt,
+                }],
+            )
+            return str(completion.choices[0].message.content)
+
+        except Exception as e:
+            print(f"Error in API call: {e}")
+            return "ERROR: No response"
+
+
+class Llama318B(OpenRouterModelType):
+    # Free model provided on OpenRouter via openrouter api and OpenAI package
+    def __init__(self) -> None:
+        super().__init__("llama")
 
     @override
     async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
-        completion: ChatCompletion = await client.chat.completions.create(
-            model="meta-llama/llama-3.1-8b-instruct:free",
-            messages=[{
-                "role": "user",
-                "content": prompt,
-            }],
-        )
-        return str(completion.choices[0].message.content)
+        try:
+            completion: ChatCompletion = await client.chat.completions.create(
+                model="meta-llama/llama-3.1-8b-instruct",
+                messages=[{
+                    "role": "user",
+                    "content": prompt,
+                }],
+            )
+            return str(completion.choices[0].message.content)
+
+        except Exception as e:
+            print(f"Error in API call: {e}")
+            return "ERROR: No response"
 
 
 class Gemini15Pro(OpenRouterModelType):
@@ -91,7 +140,6 @@ class Gemini15Pro(OpenRouterModelType):
     # API reference: https://openrouter.ai/google/gemini-pro-1.5-exp/api
     def __init__(self) -> None:
         super().__init__("gemini")
-
 
     @override
     async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
@@ -125,7 +173,6 @@ class GPT4oMini(OpenRouterModelType):
     # API reference: https://openrouter.ai/openai/gpt-4o-mini/api
     def __init__(self) -> None:
         super().__init__("gpt")
-
 
     @override
     async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
