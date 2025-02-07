@@ -82,3 +82,17 @@ def save_to_json(data: list[Any], file_path: str) -> str:
     with open(file_path, "w") as f:
         f.write(json_data)
     return json_data
+
+
+def add_stories_to_raw_data(
+        responses: list[str], raw_data: pd.DataFrame, run_amount: int
+    ) -> pd.DataFrame:
+        response_data: pd.DataFrame = raw_data.copy()
+
+        story_index: int = 0
+        for id, _ in response_data.iterrows():
+            id = cast(int, id)
+            for i in range(1, run_amount + 1):
+                response_data.at[id, f"story_{i}"] = responses[story_index]
+                story_index += 1
+        return response_data

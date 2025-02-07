@@ -32,7 +32,7 @@ def create_batch_prompt(reviews: List[str]) -> str:
     return PROMPT_TEMPLATE.format(reviews=" ".join(reviews))
 
 # Query LLMs asynchronously
-async def query_llm(model_id: str, prompt: str) -> List[str]:
+async def query_llm(model_id: str, formatted_prompt: str) -> List[str]:
     model = (
             Mistral7BFree() if model_id == "mistral" else
             Llama318BFree() if model_id == "llama" else
@@ -43,9 +43,8 @@ async def query_llm(model_id: str, prompt: str) -> List[str]:
     if not model:
         raise ValueError(f"Model {model_id} not implemented yet.")
 
-    raw_data = pd.DataFrame({"text_description": [prompt]})
-    responses_df = await model.generate_responses(raw_data, "", 1)
-    return responses_df["story_1"].tolist()
+    responses = await model.generate_responses([formatted_prompt])
+    return responses
 
 # Run the experiment across all LLMs and datasets
 async def run_experiment() -> Dict[str, Any]:
