@@ -2,7 +2,6 @@ from openai.types.chat import ChatCompletion
 from ModelTypes import ModelType
 from abc import abstractmethod
 from os import getenv
-import pandas as pd
 from typing import override, Any
 from openai import AsyncOpenAI
 import asyncio
@@ -20,8 +19,9 @@ if OPENROUTER_API_KEY is None:
 
 
 class OpenRouterModelType(ModelType):
-# Base class for all async handling of multiple prompts via the OpenRouterAPI
-# Builds prompts, instantiates OpenAI client
+    # Base class for all OpenRouter model implementations
+    # async handling of multiple prompts via the OpenRouterAPI
+    # instantiates OpenAI client, handles concurrent post requests
 
     # Add semaphore to limit concurrent API requests
     # Rate limits on OpenRouter are dependant on model type and credits remaining.
@@ -29,18 +29,6 @@ class OpenRouterModelType(ModelType):
     _semaphore: asyncio.Semaphore = asyncio.Semaphore(MAX_SEMAPHORES)
 
     @override
-    async def generate_responses(self, raw_data: pd.DataFrame, model_prompt: str, run_amount: int) -> pd.DataFrame:
-
-        final_prompts: list[str] = self.create_final_prompts(raw_data, model_prompt)
-
-        responses: list[str] = await self.request_api_responses(final_prompts, run_amount)
-        # print("LLM RESPONSES:\n" + str(responses))
-
-        response_df: pd.DataFrame = self.add_stories_to_raw_data(responses, raw_data, run_amount)
-
-        return response_df
-
-
     async def request_api_responses(self, prompts: list[str], run_amount: int) -> list[str]:
 
         async with AsyncOpenAI(
