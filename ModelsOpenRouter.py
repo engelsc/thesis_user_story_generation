@@ -71,6 +71,30 @@ class Mistral7BFree(OpenRouterModelType):
                     "role": "user",
                     "content": prompt,
                 }],
+                max_tokens=1000,
+            )
+            return str(completion.choices[0].message.content)
+
+        except Exception as e:
+            print(f"Error in API call: {e}")
+            return "ERROR: No response"
+
+
+class Mistral7B(OpenRouterModelType):
+    # Free model provided on OpenRouter via openrouter api and OpenAI package
+    def __init__(self) -> None:
+        super().__init__("mistral")
+
+    @override
+    async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        try:
+            completion: ChatCompletion = await client.chat.completions.create(
+                model="mistralai/mistral-7b-instruct",
+                messages=[{
+                    "role": "user",
+                    "content": prompt,
+                }],
+                max_tokens=1000,
             )
             return str(completion.choices[0].message.content)
 
@@ -93,6 +117,7 @@ class Llama318BFree(OpenRouterModelType):
                     "role": "user",
                     "content": prompt,
                 }],
+                max_tokens=1000,
             )
             return str(completion.choices[0].message.content)
 
@@ -115,6 +140,30 @@ class Llama318B(OpenRouterModelType):
                     "role": "user",
                     "content": prompt,
                 }],
+                max_tokens=1000,
+            )
+            return str(completion.choices[0].message.content)
+
+        except Exception as e:
+            print(f"Error in API call: {e}")
+            return "ERROR: No response"
+
+
+class Llama323B(OpenRouterModelType):
+    # Free model provided on OpenRouter via openrouter api and OpenAI package
+    def __init__(self) -> None:
+        super().__init__("llama")
+
+    @override
+    async def post_request(self, prompt: str, client: AsyncOpenAI) -> str:
+        try:
+            completion: ChatCompletion = await client.chat.completions.create(
+                model="meta-llama/llama-3.2-3b-instruct",
+                messages=[{
+                    "role": "user",
+                    "content": prompt,
+                }],
+                max_tokens=1000,
             )
             return str(completion.choices[0].message.content)
 
@@ -138,6 +187,7 @@ class Gemini15Pro(OpenRouterModelType):
                     "role": "user",
                     "content": [{"type": "text", "text": prompt}]
                 }],
+                max_tokens=1000,
             )
 
             # DEBUGGING: Print API response to check its structure
@@ -171,6 +221,7 @@ class GPT4oMini(OpenRouterModelType):
                     "role": "user",
                     "content": [{"type": "text", "text": prompt}]
                 }],
+                max_tokens=1000,
             )
 
             # DEBUGGING: Print API response to check its structure
