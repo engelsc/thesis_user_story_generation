@@ -108,7 +108,7 @@ print(data_no_overly_positive.shape)
 # %% remove CEO related or hateful reviews
 data = data_no_overly_positive
 keywords = ['mark', 'zuck', 'zuckerberg', 'zucky', "zuck's", 'elon', "elon's", 'musk', 'treason', 'facebook',
-			'free speech', 'twitter', 'useless', 'worst']
+			'free speech', 'twitter', 'useless', 'worst', 'e*on', 'm*sk', 'kerberg']
 
 def is_polarized(text: str):
 	words = text.lower().split()
@@ -130,7 +130,7 @@ cleaned_data.to_csv(cleaned_data_path, index=False)
 data = pd.read_csv(cleaned_data_path)
 
 # test sampling for 4 LLMs and 3 prompts each -> 16 sets of non-repeating data + 200 for experiments
-amount_sample_sets = 17
+amount_sample_sets = 16 # changed because 17 had already been generated at this point
 sample_size = 200
 random_state = 42
 sub_folder = 'sample_sets'
