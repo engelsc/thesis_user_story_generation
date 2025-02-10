@@ -81,7 +81,8 @@ class Mistral7BFree(OpenRouterModelType):
 
 
 class Mistral7B(OpenRouterModelType):
-    # Free model provided on OpenRouter via openrouter api and OpenAI package
+	# Premium model provided on OpenRouter via openrouter api and OpenAI package
+    # API reference: https://openrouter.ai/mistralai/mistral-7b-instruct/api
     def __init__(self) -> None:
         super().__init__("mistral")
 
@@ -127,7 +128,8 @@ class Llama318BFree(OpenRouterModelType):
 
 
 class Llama318B(OpenRouterModelType):
-    # Free model provided on OpenRouter via openrouter api and OpenAI package
+	# Premium model provided on OpenRouter via openrouter api and OpenAI package
+    # API reference: https://openrouter.ai/meta-llama/llama-3.1-8b-instruct/api
     def __init__(self) -> None:
         super().__init__("llama")
 
@@ -150,7 +152,8 @@ class Llama318B(OpenRouterModelType):
 
 
 class Llama323B(OpenRouterModelType):
-    # Free model provided on OpenRouter via openrouter api and OpenAI package
+	# Premium model provided on OpenRouter via openrouter api and OpenAI package
+    # API reference: https://openrouter.ai/meta-llama/llama-3.2-3b-instruct/api
     def __init__(self) -> None:
         super().__init__("llama")
 
