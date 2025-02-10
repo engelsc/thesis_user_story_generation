@@ -13,14 +13,18 @@ DEFAULT_PYTHON_EXECUTABLE = "./.venv3.8/bin/python"
 # MAIN ORCHESTRATOR FUNCTION
 ######################
 def process_with_aqusacore(
-    response_data: pd.DataFrame,
+    user_stories: pd.DataFrame,
     run_amount: int = 1,
     aqusa_format: str = "txt",
     tmp_stories_path: str = "user_stories.txt",
     tmp_output_path: str = "user_stories_evaluated",
 
 ) -> pd.DataFrame:
-    prepare_user_stories(response_data, f"input/{tmp_stories_path}", run_amount)
+    """
+    Writes user stories from given DataFrame to a plain text file, runs AQUSA core
+    and then parses the results.
+    """
+    prepare_user_stories(user_stories, f"input/{tmp_stories_path}", run_amount)
 
     run_aqusacore(tmp_stories_path, tmp_output_path, aqusa_format)
 
@@ -71,30 +75,24 @@ def run_aqusacore(
 
 
 def prepare_user_stories(
-    response: pd.DataFrame,
+	user_stories: pd.DataFrame,
     output_path: str,
     run_amount: int = 1,
-    story_prefix: str = "story_",
 ) -> None:
-    """
-    Extracts user story columns from the given DataFrame (story_1, story_2, etc.)
-    and writes them to a plain text file line-by-line, suitable for AQUSA input.
-    :param response: DataFrame containing user story columns.
+	"""
+    Writes user stories from a DataFrame to a text file for AQUSA processing.
+    Expects a DataFrame where the first column contains the user stories.
+    :param user_stories: DataFrame containing user stories in first column.
     :param output_path: File path to write the user stories.
-    :param run_amount: The number of user stories generated per row.
-    :param story_prefix: The column prefix used for user stories.
+    :param run_amount: (Optional) The number of user stories generated per row.
     """
 
-    with open(output_path, "w", encoding="utf-8") as file:
-        # for each row in response, gather the user stories.
-        # each story is written on its own line in a text file.
-        for _, row in response.iterrows():
-            for i in range(run_amount):
-                col = f"{story_prefix}{i+1}" # -> column name = story_1
-                if col in row and pd.notna(row[col]):
-                    # remove extra quotes/newlines
-                    user_story = str(row[col]).replace('"', "").replace("'", "").replace("\n", " ").replace("\r", " ").strip()
-                    file.write(f"{user_story}\n")
+	pattern = re.compile(r"[\"'\n\r]")
+	with open(output_path, "w", encoding="utf-8") as file:
+		for story in user_stories.iloc[:,0]:
+			cleaned_story = re.sub(pattern, "", story).strip()
+			file.write(f"{cleaned_story}\n")
+
 
 
 def parse_user_stories_txt(
@@ -187,7 +185,8 @@ def parse_user_stories_html(
         print(f"Warning: No table found in {file_path}. Returning empty DataFrame.")
         return pd.DataFrame(columns=["story_id", "user_story", "defect_type", "sub_type", "message"])
 
-    rows = table.find_all("tr")[1:]  # Skip header row
+	# Skip header row
+    rows = table.find_all("tr")[1:]  # type: ignore
 
     for row in rows:
         cols = row.find_all("td")
