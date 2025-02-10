@@ -1,4 +1,5 @@
 input/user_stories.txt
+output/user_stories_evaluated.txt
 __pycache__/*
 _temp/*
 deprecated/*
