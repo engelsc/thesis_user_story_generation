@@ -132,7 +132,7 @@ data = pd.read_csv(cleaned_data_path)
 # test sampling for 4 LLMs and 3 prompts each -> 16 sets of non-repeating data + 200 for experiments
 amount_sample_sets = 16 # changed because 17 had already been generated at this point
 sample_size = 200
-random_state = 42
+random_state = 42 # random seed for reproducibility
 sub_folder = 'sample_sets'
 
 shuffled_data = data.sample(frac = 1, random_state = random_state) # shuffles the entire dataframe with random seed

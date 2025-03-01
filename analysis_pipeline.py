@@ -11,7 +11,7 @@ from scipy.stats import kruskal #type:ignore <- disables parsing from basedpyrig
 from scipy.stats import chi2_contingency #type:ignore
 
 
-TEST_RUN = True
+TEST_RUN = False
 
 
 DATA_PATH = "_temp/" if TEST_RUN else "_tmp/"  # USE THESE IN FINAL RUNS
@@ -234,7 +234,7 @@ plt.show()
 pivot_mean = df_story_level.pivot_table(index='model', columns='prompt_level', values='defect_count', aggfunc='mean')
 plt.figure(figsize=(5, 3))
 sns.heatmap(pivot_mean, annot=True, fmt=".2f", cmap="YlGnBu")
-plt.title("Defekt Anzahl Mittelwert nach Modell und Prompt Level")
+plt.title("Mittelwert Defekt Anzahl pro Story")
 plt.xlabel("Prompt Level")
 plt.ylabel("")
 plt.savefig(f"{OUTPUT_PATH}heatmap_mean_defect_count_modelprompt.png")
@@ -526,6 +526,10 @@ defect_types_subtypes = df_defect_level.groupby(['defect_type', 'sub_type']).siz
 
 # Pivot the data to create a matrix where rows are defect types and columns are subtypes.
 pivot_defect_subtype = defect_types_subtypes.pivot(index='defect_type', columns='sub_type', values='count').fillna(0)
+
+# Manually set column order to better represent the order or defect types for readability
+desired_order = ['conjunctions', 'brackets', 'indicator_repetition', 'punctuation', 'uniform', 'identical', 'no_means']
+pivot_defect_subtype = pivot_defect_subtype.reindex(columns=desired_order)
 
 # Plot the heatmap.
 plt.figure(figsize=(5, 3))

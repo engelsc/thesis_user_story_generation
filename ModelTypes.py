@@ -26,6 +26,7 @@ class ModelType(ABC):
             raise ValueError(f"'{model_id}' is not a valid MODEL_TYPE")
 
     def get_id(self) -> str:
+    	# no longer necessary
         return self.MODEL_ID.value
 
     async def generate_responses(
