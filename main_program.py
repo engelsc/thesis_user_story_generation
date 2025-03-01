@@ -4,41 +4,49 @@ import pandas as pd
 import asyncio
 import data_helper
 import aqusahandler
-import json
-import os
-from typing import Dict, Any, List
-from ModelsOpenRouter import GPT4oMini, Gemini15Pro, Llama318B, Mistral7B, Llama318BFree, Mistral7BFree, Llama323B
+from typing import Dict, List
+from ModelsOpenRouter import GPT4oMini, Gemini15Pro, Llama318B, Mistral7B, Mistral7BFree, Llama323B, Llama318BFree, Ministral8B, Gemini15Flash8B
+from data_helper import save_results
 
 
-TEST_RUN = True
-TEST_STORIES = 30
+TEST_RUN = False
+'''Toggles test run behaviour.\nChanges output folder and file name. Also limits amount of data to generate.'''
+TEST_STORIES = 15
+'''Sets amount of reviews to use from sample set. Only applies during TEST_RUN.
+Max value: 200 (max reviews per sample set)'''
+FIX_UNIFORM_ISSUES = True
+'''Runs find-replace logic on all cleaned stories to fix the main culprits of uniform-uniform defects. Malformed "I want to" and "so that" chunks.'''
 
 # Define models analogous to experiment_multiple.py
-MODELS = ["mistral", "llama32", "gemini", "gpt"]
+MODELS = ["ministral", "llama31", "geminiflash", "gpt"]
 PROMPT_LEVELS = [1, 2, 3, 4]
-#MODELS = ["mistral"]
-#PROMPT_LEVELS = [1]
 DATA_SETS_PATH = "data_sources/sample_sets/"
 PROMPTS_LOCATION = "prompts.yaml"
-TEMP_GEN_OUTPUT_FOLDER = "_temp/" if not TEST_RUN else "_tmp/"
-TEMP_GEN_OUTPUT_PREFIX = "testgen_output_" if not TEST_RUN else ""
+TEMP_GEN_OUTPUT_FOLDER = "_temp/" if TEST_RUN else "_tmp/"
+TEMP_GEN_OUTPUT_PREFIX = "testgen_output_" if TEST_RUN else ""
+GEN_CHUNK_SIZE = 20
+'''Sets amount of LLM responses to generate before writing them to file.'''
 
-# Dynamically assign dataset IDs to (model, prompt) combinations based on MODELS and PROMPT_LEVELS
 dataset_mappings = {
     dataset_id: (model, prompt_level)  # Ensures dataset IDs are zero-padded
     for dataset_id, (model, prompt_level) in enumerate(product(MODELS, PROMPT_LEVELS), start=1)
 }
+'''Dynamically assigns dataset IDs to (model, prompt) combinations based on MODELS and PROMPT_LEVELS'''
 print(dataset_mappings)
 
 
 async def query_llm(model_id: str, formatted_prompts: List[str]) -> List[str]:
+    '''Chooses model based on string model_id and calls generate_responses() with given list of prompts.
+    :return: All LLM responses as List[str]'''
     model = (
         Mistral7BFree() if model_id == "mistralfree" else
-        Llama318BFree() if model_id == "llamafree" else
+        Llama318BFree() if model_id == "llamafree" else # defunct
         Mistral7B() if model_id == "mistral" else
+        Ministral8B() if model_id == "ministral" else
         Llama318B() if model_id == "llama31" else
         Llama323B() if model_id == "llama32" else
         Gemini15Pro() if model_id == "gemini" else
+        Gemini15Flash8B() if model_id == "geminiflash" else
         GPT4oMini() if model_id == "gpt" else
         None  # Extend for other models
         )
@@ -50,7 +58,7 @@ async def query_llm(model_id: str, formatted_prompts: List[str]) -> List[str]:
 
 
 async def run_generation(model_name: str, batch_size: int = 25) -> None:
-	"""Generates user stories and saves results per model-prompt combination"""
+	'''Generates user stories and saves results per model-prompt combination'''
 	prompts : Dict[int, str] = data_helper.load_prompts(PROMPTS_LOCATION)
 
 	for dataset_id, (model, prompt_level) in dataset_mappings.items():
@@ -73,32 +81,8 @@ async def run_generation(model_name: str, batch_size: int = 25) -> None:
 				batch_prompts = formatted_prompts[i: i + batch_size]
 				batch_responses = await query_llm(model, batch_prompts)
 
-				save_results({f"{model}_prompt_{prompt_level}": batch_responses}, output_file, append=not first_batch)
+				save_results(TEMP_GEN_OUTPUT_FOLDER, {f"{model}_prompt_{prompt_level}": batch_responses}, output_file, append=not first_batch)
 				first_batch = False
-
-
-def save_results(results: Dict[str, Any], output_file: str, append: bool = False):
-	"""Saves results to JSON, either appending or overwriting based on mode."""
-	# Ensure the output directory exists
-	directory = os.path.dirname(TEMP_GEN_OUTPUT_FOLDER)
-	if directory:
-		os.makedirs(directory, exist_ok=True)
-
-	if append and os.path.exists(output_file):
-		# Load existing data if appending
-		with open(output_file, "r", encoding="utf-8") as file:
-			existing_data = json.load(file)
-	else:
-		existing_data = {}
-
-	# Append new responses to existing data
-	for key, new_responses in results.items():
-		existing_data.setdefault(key, []).extend(new_responses)
-
-	with open(output_file, "w", encoding="utf-8") as file:
-		json.dump(existing_data, file, indent=4)
-
-	#print(f"{'Appended' if append else 'Saved'}: {output_file}")
 
 
 def clean_output_files() -> None:
@@ -107,7 +91,17 @@ def clean_output_files() -> None:
 			output_path = f"{TEMP_GEN_OUTPUT_FOLDER}{TEMP_GEN_OUTPUT_PREFIX}{model}_prompt{prompt_level}.json"
 			cleaned_path = f"{TEMP_GEN_OUTPUT_FOLDER}clean_{TEMP_GEN_OUTPUT_PREFIX}{model}_prompt{prompt_level}.json"
 			cleaned_stories = data_helper.clean_model_outputs(output_path)
-			save_results(cleaned_stories, cleaned_path)
+			save_results(TEMP_GEN_OUTPUT_FOLDER, cleaned_stories, cleaned_path)
+
+
+def replace_uniform_issues() -> None:
+	for model in MODELS:
+		for prompt_level in PROMPT_LEVELS:
+			cleaned_path = f"{TEMP_GEN_OUTPUT_FOLDER}clean_{TEMP_GEN_OUTPUT_PREFIX}{model}_prompt{prompt_level}.json"
+			find_strings = ["I want the", "so I"]
+			replace_strings = ["I want to the", "so that I"]
+			replaced_stories = data_helper.find_replace(find_strings, replace_strings, cleaned_path)
+			save_results(TEMP_GEN_OUTPUT_FOLDER, replaced_stories, cleaned_path)
 
 
 def run_aqusa_on_cleaned() -> None:
@@ -125,22 +119,32 @@ def run_aqusa_on_cleaned() -> None:
 # Main execution
 async def main() -> None:
 	for model in MODELS:
-		await run_generation(model)
+		await run_generation(model, GEN_CHUNK_SIZE)
 
 	clean_output_files()
+	if FIX_UNIFORM_ISSUES:
+		replace_uniform_issues() # OPTIONAL
 	run_aqusa_on_cleaned()
 
-# %% generate stories
-#for model in MODELS:
-#	await run_generation(model, 5) # type: ignore # noqa
-
-# %% clean user stories
-#clean_output_files()
-# %% run aqusa on cleaned stories
-#run_aqusa_on_cleaned()
-
-
-# %% Main call: DO NOT RUN
 # Run on execution
 if __name__ == "__main__":
 	asyncio.run(main())
+
+
+######################################
+# Only used for testing/debugging
+######################################
+
+# %% generate stories
+#for model in MODELS:
+#	await run_generation(model, GEN_CHUNK_SIZE) # type: ignore # noqa
+
+# %% clean user stories
+clean_output_files()
+
+# %% run find-replace to fix uniform-uniform issues
+replace_uniform_issues()
+
+
+# %% run aqusa on cleaned stories
+run_aqusa_on_cleaned()

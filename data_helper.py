@@ -38,6 +38,19 @@ def load_app_reviews(dataset_id: int, base_path: str) -> pd.DataFrame:
         return pd.DataFrame(columns=["review_description"])
 
 
+def find_replace(find: List[str], replace: List[str], json_path: str) -> Dict[str, List[str]]:
+	with open(json_path, "r", encoding="utf-8") as file:
+		raw_data = json.load(file)
+
+	replaced_data : Dict[str, List[str]] = {}
+	for key, responses in raw_data.items():
+		for f, r in zip(find, replace):
+			responses = [response.replace(f, r) for response in responses]
+
+		replaced_data[key] = responses
+	return replaced_data
+
+
 def clean_model_outputs(json_path: str) -> Dict[str, List[str]]:
 	"""Loads generated outputs, extracts user stories, and structures them for AQUSA."""
 	with open(json_path, "r", encoding="utf-8") as file:
@@ -52,31 +65,38 @@ def clean_model_outputs(json_path: str) -> Dict[str, List[str]]:
 
 
 def extract_user_story(response_text: str) -> str:
-    """Extracts a clean user story from a model-generated response, handling variations and unwanted text."""
+    """Extracts a clean user story from an LLM-generated response, handling variations and unwanted text."""
+    allowed = r'(?:(?:e\.g\.|i\.e\.)|[^.]|(?<=\w)\.(?=\w))*?'
 
-    # Normalize text: remove extra spaces, newlines, markdown symbols, and special characters
+
+    # remove extra spaces, newlines, markdown syntax, and special characters
     response_text = response_text.strip().replace("\n", " ")
     response_text = re.sub(r'[\*"#`\[\]]', '', response_text).strip() # Remove markdown or special characters
     response_text = re.sub(r'\s+', ' ', response_text).strip()  # Remove remaining double spaces
 
     # Look for an explicit "USER STORY:" section first and extract full user story after it
-    match = re.search(r'USER STORY[:\-]*\s*(As (?:a|an) .*?, I want .*?, so .*?[.!?])', response_text, re.IGNORECASE)
+    match = re.search(rf'USER STORY[:\-]*\s*(As (?:a|an) {allowed}, I want {allowed}, so {allowed}[.!?])', response_text, re.IGNORECASE)
     if match:
         response_text = match.group(1).strip()
         return re.sub(r'USER STORY[:\-]*\s*', '', response_text)
 
     # If no explicit "USER STORY:" Extract a full user story format, ensuring it captures the complete "so" clause
-    match = re.search(r'(As (?:a|an) .*?, I want .*?, so .*?[.!?])', response_text)
+    match = re.search(rf'(As (?:a|an) {allowed}, I want {allowed}, so {allowed}[.!?])', response_text)
     if match:
         return match.group(1).strip()
 
     # Extract incomplete user story without "so" clause
-    match = re.search(r'(As (?:a|an) .*?, I want .*?[.!?])', response_text)
+    match = re.search(rf'(As (?:a|an) {allowed}, I want {allowed}[.!?])', response_text)
     if match:
         return match.group(1).strip()
 
     # Extract very incomplete user story without "I want" or "so" clause
-    match = re.search(r'(As (?:a|an) .*?[.!?])', response_text)
+    match = re.search(rf'(As (?:a|an) {allowed}[.!?])', response_text)
+    if match:
+        return match.group(1).strip()
+
+    # Special case: Extract when everything else fails and there is no period at the end
+    match = re.search(rf'(As (?:a|an) {allowed}, I want {allowed}, so {allowed}(?:[.!?]|$))', response_text)
     if match:
         return match.group(1).strip()
 
@@ -135,9 +155,33 @@ def save_to_json(data: list[Any], file_path: str) -> str:
     return json_data
 
 
-###########################################################
-#  LEGACY FUNCTIONS: for compatibility with test code only
-###########################################################
+def save_results(output_folder: str, results: Dict[str, Any], output_file: str, append: bool = False):
+	"""Saves results to JSON, either appending or overwriting based on boolean flag."""
+	# Ensure the output directory exists
+	directory = os.path.dirname(output_folder)
+	if directory:
+		os.makedirs(directory, exist_ok=True)
+
+	if append and os.path.exists(output_file):
+		# Load existing data if appending
+		with open(output_file, "r", encoding="utf-8") as file:
+			existing_data = json.load(file)
+	else:
+		existing_data = {}
+
+	# Append new responses to existing data
+	for key, new_responses in results.items():
+		existing_data.setdefault(key, []).extend(new_responses)
+
+	with open(output_file, "w", encoding="utf-8") as file:
+		json.dump(existing_data, file, indent=4)
+
+	#print(f"{'Appended' if append else 'Saved'}: {output_file}")
+
+
+###############################################################
+#  DEPRECATED FUNCTIONS: for compatibility with test code only
+###############################################################
 def load_requirements(file_path: str) -> pd.DataFrame:
     df: pd.DataFrame = pd.read_csv(file_path, quotechar='"', delimiter=",")
     if "index" in df.columns:

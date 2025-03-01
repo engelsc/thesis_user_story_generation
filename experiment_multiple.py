@@ -19,7 +19,7 @@ PROMPT_TEMPLATE = (
     "each on a new line."
     "\"\"\"\n\n"
     "REVIEWS:\n"
-    "{reviews}"  # Placeholder for concatenated reviews
+    "{review}"  # Placeholder for concatenated reviews
 )
 
 # Load reviews dataset
@@ -29,7 +29,7 @@ def load_reviews(file_path: str) -> List[str]:
 
 # Prepare the prompt for batch processing
 def create_batch_prompt(reviews: List[str]) -> str:
-    return PROMPT_TEMPLATE.format(reviews=" ".join(reviews))
+    return PROMPT_TEMPLATE.format(review=" ".join(reviews))
 
 # Query LLMs asynchronously
 async def query_llm(model_id: str, formatted_prompt: str) -> List[str]:

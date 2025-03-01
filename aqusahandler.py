@@ -82,8 +82,8 @@ def prepare_user_stories(
 	"""
     Writes user stories from a DataFrame to a text file for AQUSA processing.
     Expects a DataFrame where the first column contains the user stories.
-    :param user_stories: DataFrame containing user stories in first column.
-    :param output_path: File path to write the user stories.
+    :param user_stories: DataFrame containing user stories in first column.\n
+    :param output_path: File path to write the user stories.\n
     :param run_amount: (Optional) The number of user stories generated per row.
     """
 
