@@ -28,7 +28,7 @@ GEN_CHUNK_SIZE = 20
 '''Sets amount of LLM responses to generate before writing them to file.'''
 
 dataset_mappings = {
-    dataset_id: (model, prompt_level)  # Ensures dataset IDs are zero-padded
+    dataset_id: (model, prompt_level)
     for dataset_id, (model, prompt_level) in enumerate(product(MODELS, PROMPT_LEVELS), start=1)
 }
 '''Dynamically assigns dataset IDs to (model, prompt) combinations based on MODELS and PROMPT_LEVELS'''
