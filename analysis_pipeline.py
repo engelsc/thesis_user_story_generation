@@ -145,9 +145,9 @@ defect_details = pd.json_normalize(df_exploded["defects"]) # type: ignore
 df_exploded = df_exploded.drop(columns=["defects"]).reset_index(drop=True)
 df_exploded = pd.concat([df_exploded, defect_details], axis=1)
 
-print(f"Total defects: {len(df_defect_level_allstories)}")
+#print(f"Total defects: {len(df_defect_level_allstories)}")
 df_defect_level = df_exploded
-print(f"Total defects of valid stories onl: {len(df_defect_level)}")
+print(f"Total defects of valid stories: {len(df_defect_level[df_defect_level['defect_count'] > 0])}")
 
 # %%
 ###########################################################################
@@ -317,7 +317,8 @@ defect_counts = df_defect_level.groupby(['model', 'prompt_level', 'defect_type']
 #defect_counts = df_defect_level.groupby(['model', 'prompt_level', 'defect_type']).size() #type:ignore
 
 print_header("Defect Type Counts:")
-print(defect_counts.head(10))
+#print(defect_counts.head(10))
+print(defect_counts)
 
 # %% Bar Chart for Defect Types by Model and Prompt Level
 g = sns.catplot(x='prompt_level', y='count', hue='defect_type', col='model',
