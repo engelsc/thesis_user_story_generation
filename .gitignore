@@ -9,3 +9,4 @@ pyrightconfig.json
 _analysis_*
 _analysis/.bak
 backup-repo.git/*
+backup-repo.tar.gz
