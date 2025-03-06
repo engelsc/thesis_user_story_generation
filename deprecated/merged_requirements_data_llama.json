@@ -1,0 +1,50 @@
+[
+    {
+        "requirement_id": 0,
+        "requirement_text": "We need an option for users to easily reset forgotten passwords, possibly through a security question or email verification.",
+        "source": "app_review",
+        "user_stories": [
+            {
+                "story_id": 1,
+                "user_story": "As a user, I want to have a straightforward mechanism to reset my forgotten password, allowing me to recover access to the system using either a security question or email verification.",
+                "defects": []
+            }
+        ]
+    },
+    {
+        "requirement_id": 1,
+        "requirement_text": "The app should support gestures for navigation to make it easier and more intuitive to use on touchscreen devices.",
+        "source": "business_case",
+        "user_stories": [
+            {
+                "story_id": 2,
+                "user_story": "As a user, I want to navigate through the app using intuitive touchscreen gestures, so that I can access information and features quickly and easily.",
+                "defects": []
+            }
+        ]
+    },
+    {
+        "requirement_id": 2,
+        "requirement_text": "Users need an option to undo actions to prevent accidental mistakes, such as deleting an important file.",
+        "source": "app_review",
+        "user_stories": [
+            {
+                "story_id": 3,
+                "user_story": "  As a user, I want to be able to undo the deletion of a file, so that I can easily correct accidental mistakes and maintain the integrity of my data.",
+                "defects": []
+            }
+        ]
+    },
+    {
+        "requirement_id": 3,
+        "requirement_text": "A feature to create and manage groups would help users collaborate and communicate more effectively.",
+        "source": "business_case",
+        "user_stories": [
+            {
+                "story_id": 4,
+                "user_story": "As a user, I want to be able to create and manage groups, so that I can easily collaborate and communicate with others.",
+                "defects": []
+            }
+        ]
+    }
+]
