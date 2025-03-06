@@ -1,0 +1,1735 @@
+[
+    {
+        "story_id": 1,
+        "user_story": "As a user, I want to be able to opt out of linking my existing social media accounts and create a new account without any association with my existing account, so that I can use the app anonymously or with a separate identity.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to opt out of linking my existing social media accounts [* and *] create a new account without any association with my existing account, so that I can use the app anonymously [* or *] with a separate identity."
+            }
+        ]
+    },
+    {
+        "story_id": 2,
+        "user_story": "As a user, I want to receive notifications from all users Im following, including those who have posted new content, so that I can stay up-to-date with their latest updates.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 3,
+        "user_story": "As a user, I want to the Threads app to accurately separate posts, followers, and account details into distinct tabs, so that I can easily navigate and access the information I need without confusion.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 4,
+        "user_story": "As a user, I want to the app to be stable and free from bugs so that I can continue to use it confidently.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 5,
+        "user_story": "As a user, I want to the app to clearly display the posts from people I follow in a way that makes them easily discoverable, so that I can find and engage with the content of my selected accounts without having to sift through a large list of irrelevant posts.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 6,
+        "user_story": "As a user, I want to receive responses to my posts and comments on the social media app, so that I can engage with others and get a sense of interaction and community.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 7,
+        "user_story": "As a user, I want to visualise the app interface without any bugs or overlapping text, so that I can access the apps features and functionality without being hindered by technical issues.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to visualise the app interface without any bugs [* or *] overlapping text, so that I can access the apps features [* and *] functionality without being hindered by technical issues."
+            }
+        ]
+    },
+    {
+        "story_id": 8,
+        "user_story": "As a user, I want to the option to turn off auto-playing videos, particularly when using mobile phone data, so that I can conserve mobile data and have more control over my app usage.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 9,
+        "user_story": "As a user, I want to download the app without experiencing glitches and overlapping elements, so that I can use the app seamlessly and efficiently.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to download the app without experiencing glitches [* and *] overlapping elements, so that I can use the app seamlessly and efficiently."
+            }
+        ]
+    },
+    {
+        "story_id": 10,
+        "user_story": "As a user, I want to see all the posts from people I have explicitly followed in my feed, without clutter from un-followed individuals, so that I can easily keep up with the content Im interested in.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 11,
+        "user_story": "As a user, I want to be able to login with my Instagram account without experiencing a unknown network error so that I can access the apps features seamlessly.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 12,
+        "user_story": "As a user, I want to be able to customize my posts with multimedia content and filters, so that I can share more engaging and visually appealing updates on the social media platform.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 13,
+        "user_story": "As a user, I want to the app to introduce new features and improvements that differentiate it from the competition, so that I can achieve my goals and have a better experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the app to introduce new features [* and *] improvements that differentiate it from the competition, so that I can achieve my goals and have a better experience."
+            }
+        ]
+    },
+    {
+        "story_id": 14,
+        "user_story": "As a user, when I try to delete my Threads account, I want to be able to do so without deleting my entire Instagram account, so that I can maintain separate and distinct experiences for each app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As a user, when I try to delete my Threads account, I want to be able to do [* so *] without deleting my entire Instagram account, [* so that *] I can maintain separate and distinct experiences for each app."
+            }
+        ]
+    },
+    {
+        "story_id": 15,
+        "user_story": "As a user, I want to see replies in a thread sorted by oldest first, so that I can easily follow a narrative of replies within a thread by viewing the most recent responses at the bottom of the thread.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 16,
+        "user_story": "As a new user, I want to be able to create a new account separately from signing into an existing Instagram account, so that I can sign up for the app without having to navigate away to the login page.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 17,
+        "user_story": "As a social media user, I want to the Thread app to include clear and direct information about its purpose and features comparable to Twitter, so that I understand the apps capabilities and can decide whether it is suitable for my needs.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 18,
+        "user_story": "As a user, I want to be able to view a thread accounts recent activity, including threads they have liked or saved, when visiting their thread account from an Instagram link, so that I can see their last interactions and understand their interest in the thread.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to view a thread accounts recent activity, including threads they have liked [* or *] saved, when visiting their thread account from an Instagram link, so that I can see their last interactions [* and *] understand their interest in the thread."
+            }
+        ]
+    },
+    {
+        "story_id": 19,
+        "user_story": "As a new user, I want to have clear instructions on linking multiple Instagram profiles to Threads so that I can easily integrate all my social media presence within the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 20,
+        "user_story": "As a user, I want to be able to install the Threads app on my computer so that I can use it seamlessly across all my devices.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 21,
+        "user_story": "As a user, I want to be able to customize my speaking options to my liking, so that I can have a personalized experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 22,
+        "user_story": "As a user, I want to be able to log in to the Threads app immediately, without being presented with a temporary error that requires me to wait and try again, so that I can access my account and use the app without frustration.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 23,
+        "user_story": "As an app user, I want to see an option to minimize the padding between threads within a conversation, so that I can view more content on my screen without excessive white space.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 24,
+        "user_story": "As a user, I want to be able to log in to the application using my preferred social media accounts so that I can access the application without being restricted.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 25,
+        "user_story": "As a user, I want to the threads app to render non-overlapping pages even after uninstalling and reinstalling the app so that I can efficiently navigate and use the application without frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the threads app to render non-overlapping pages even after uninstalling [* and *] reinstalling the app so that I can efficiently navigate and use the application without frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 26,
+        "user_story": "As a user, I want to see a translation option in the app that can automatically translate text for me, so that I can easily understand and use the app in my native language.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 27,
+        "user_story": "As a user, I want to be able to use the app without it being too addictive like Instagram, so that I can have a better experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 28,
+        "user_story": "As a user, I want to clearly distinguish between the posts I am following and the recommended posts in the news feed, so that I can easily identify and continue where I left off after refreshing the page.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 29,
+        "user_story": "As a social media user, I want to the app to reflect and maintain the correct relationship changes after I refresh the screen, so that I can trust the app to accurately display my follow status with other users.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a social media user, I want to the app to reflect [* and *] maintain the correct relationship changes after I refresh the screen, so that I can trust the app to accurately display my follow status with other users."
+            }
+        ]
+    },
+    {
+        "story_id": 30,
+        "user_story": "As a user, I want to the app to function without crashing, so that I can use it to its full potential without interruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 31,
+        "user_story": "As a user, I want to be able to navigate through the Threads app without experiencing any flickering or disconnections, so that I can efficiently access and use the apps features.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 32,
+        "user_story": "As a user, I want to be able to filter content on the app, such that I can quickly and easily view only the most relevant and useful information, so that I can efficiently navigate the app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As a user, [* I want to *] be able to filter content on the app, such that [* I can *] quickly and easily view only the most relevant and useful information, so that I can efficiently navigate the app."
+            }
+        ]
+    },
+    {
+        "story_id": 33,
+        "user_story": "As a user, I want to be able to enable dark mode and messaging within the same app that allows me to share stories.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to enable dark mode [* and *] messaging within the same app that allows me to share stories."
+            }
+        ]
+    },
+    {
+        "story_id": 34,
+        "user_story": "As a user, It would be beneficial to utilize a feature that allows me to view my followed users content (threads) without having to search for and navigate to their profiles.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user, It would be beneficial to utilize a feature that allows me to view my followed users content  [*(threads)*]  without having to search for and navigate to their profiles."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 35,
+        "user_story": "As a user, I want to be able to use the app without experiencing any technical issues and glitches, so that I can successfully navigate and interact with the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 36,
+        "user_story": "As a content creator, I want to have a seamless user experience within the app, so that I can efficiently manage my content creation process.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 37,
+        "user_story": "As a user, I want to the app to be more feature-rich and user-friendly, so that I can increase my engagement and satisfaction with the application.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 38,
+        "user_story": "As a user, I want to the app to respond promptly and load content without freezing or overlapping, so that I can easily navigate and use the apps features.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the app to respond promptly [* and *] load content without freezing [* or *] overlapping, so that I can easily navigate and use the apps features."
+            }
+        ]
+    },
+    {
+        "story_id": 39,
+        "user_story": "As a user of the photo sharing app, I want to be able to post photos without the app crashing, so that I can share my moments without technical issues.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 40,
+        "user_story": "As a user of the app, I want to be able to view timelines in a way that shows only threads I am following or creates a custom list view, so that I can quickly and easily find relevant information without being overwhelmed by unnecessary data.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user of the app, I want to be able to view timelines in a way that shows only threads I am following [* or *] creates a custom list view, so that I can quickly [* and *] easily find relevant information without being overwhelmed by unnecessary data."
+            }
+        ]
+    },
+    {
+        "story_id": 41,
+        "user_story": "As a user, I want to the app to have a dark theme option so that I can switch to a dark background in low-light environments and reduce eye strain.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 42,
+        "user_story": "As a user, I want to the thread color to be updated to match Instagrams color scheme, so that the apps visual identity is consistent with another popular social media platform.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 43,
+        "user_story": "As a Meta Threads user, I want to be able to seamlessly switch between multiple accounts with a single feature, enabling fast and intuitive navigation, just like on Instagram.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 44,
+        "user_story": "As an end-user, I want to the app to have a simple and visually appealing user interface, so that I can easily navigate through it without any confusion and have a seamless user experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an end-user, I want to the app to have a simple [* and *] visually appealing user interface, so that I can easily navigate through it without any confusion and have a seamless user experience."
+            }
+        ]
+    },
+    {
+        "story_id": 45,
+        "user_story": "As a user, I want to be able to use the app without requiring an Instagram account, because being forced to create an account in order to use the app causes frustration and results in issues with account suspension.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 46,
+        "user_story": "As a user, I want to the app to display stable and clear UI on different screens without any clutter, so that I can efficiently navigate through the app and achieve my goals without frustration.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 47,
+        "user_story": "As a user, I want to be able to customize my feed to show only content from the people I follow, excluding irrelevant content, so that I can see a feed that is tailored to my interests.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 48,
+        "user_story": "As a user, I want to successfully download and install the app on my Pixel phone, even when storage is ample, so that I can access the apps features and functionality without frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to successfully download [* and *] install the app on my Pixel phone, even when storage is ample, so that I can access the apps features and functionality without frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 49,
+        "user_story": "As a user, I want to be able to view the latest news and updates within the app, so that I can stay informed and connected with the world.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 50,
+        "user_story": "As a user, I want to the app to function without crashing after successful login, so that I can use it to its full potential.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 51,
+        "user_story": "As a user, I want to be able to log into my newly created account without being prompted to enter login credentials multiple times, so that I can use the app without frustration.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 52,
+        "user_story": "As a user, I want to type posts without the keyboard switching or modifying special characters, so that I can easily input and share my thoughts without frustration or misinterpreted content.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to type posts without the keyboard switching [* or *] modifying special characters, so that I can easily input [* and *] share my thoughts without frustration or misinterpreted content."
+            }
+        ]
+    },
+    {
+        "story_id": 53,
+        "user_story": "As a social network user, I want to the app to have a text-only option, so that I can easily read and respond to messages without being overwhelmed by photos and videos, and feel that Im using a social network that aligns with my communication preferences.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 54,
+        "user_story": "As a user, I want to be able to scroll through the app without experiencing a blurring or glitch effect on the font and images, so that I can navigate the app smoothly and view its content without any visual disturbances.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to scroll through the app without experiencing a blurring [* or *] glitch effect on the font [* and *] images, so that I can navigate the app smoothly and view its content without any visual disturbances."
+            }
+        ]
+    },
+    {
+        "story_id": 55,
+        "user_story": "As a user, I want to the app to be free from dark politics content to have a comfortable and safe user experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 56,
+        "user_story": "As a user, I want to the ability to save individual posts in my library, so that I can access them later and also have the option to customize my feed to only display posts from people and organizations I follow.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 57,
+        "user_story": "As a user, I need data collection mechanisms that clearly explain what user information is being requested and why, so that I can make an informed decision about providing my personal data.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 58,
+        "user_story": "As a user, I want to the app to handle unexpected errors and technical issues on the screen, so that I can continue using the app safely and expect to see the normal UI display instead of seeing repeated icons.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 59,
+        "user_story": "As a user, I want to be able to pin important feedback for easy reference, so that I can quickly access and engage with valuable comments in the application.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 60,
+        "user_story": "As a consumer, I want to the app to be compatible with older android versions and devices, such as a Redmi Note 5 with Android 9, so that I can view my feeds without experiencing bugs and access the full functionality of the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 61,
+        "user_story": "As a casual user, I want to be able to save photos from the app for later access, so that I can keep my favourite memories and refer back to them easily.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 62,
+        "user_story": "As an app developer, I want to implement moderation to handle inappropriate user comments and ensure a safe user experience, so that users are not exposed to abusive or threatening language.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an app developer, I want to implement moderation to handle inappropriate user comments [* and *] ensure a safe user experience, so that users are not exposed to abusive [* or *] threatening language."
+            }
+        ]
+    },
+    {
+        "story_id": 63,
+        "user_story": "As a user, I want to be able to navigate the application smoothly without it crashing or freezing, so that I can scroll through notifications and engage with content without distractions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 64,
+        "user_story": "As a user, I want to be able to view the feed in chronological order so that I can easily see recent posts, including posts from accounts I follow.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 65,
+        "user_story": "As a user, I want to be able to view the posts from the people I follow on my timeline, without seeing irrelevant posts from other sources, so that I can stay up-to-date with the content that interests me most.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 66,
+        "user_story": "As a user, I want to be able to send and receive private messages through an inbox/DM feature, so that I can communicate with other users efficiently and have a streamlined conversation history.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to send [* and *] receive private messages through an inbox [*/*] DM feature, so that I can communicate with other users efficiently and have a streamlined conversation history."
+            }
+        ]
+    },
+    {
+        "story_id": 67,
+        "user_story": "As a mobile app user, I want to be able to translate text within the app, so that I can understand content written in other languages in real-time.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 68,
+        "user_story": "As a user, I want to be able to enter my password into the app without it being removed, so that I can log into my account without frustration.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 69,
+        "user_story": "As a user, I want to the app title to clearly indicate its purpose or functionality, so that I can easily understand its relevance to my needs and interests, reducing confusion and improving user experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 70,
+        "user_story": "As a concerned user, I want to be able to share my concerns about an apps content and data practices so that I can warn others about its reputation and make informed decisions about using it.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 71,
+        "user_story": "As a user, I want to be able to adjust the camera zoom or field of view so that I can comfortably view content without feeling like its invading my personal space.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 72,
+        "user_story": "As a user, I want to the ability to select specific albums from my gallery to upload to the app, so that I can easily upload specific content, like my artwork, without having to manually scroll through my entire gallery to find it.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 73,
+        "user_story": "As a user, I want to the app to not crash and function smoothly, especially when creating a new thread, so that I can use the app without interruptions and frustration, and continue to engage with its features.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the app to not crash [* and *] function smoothly, especially when creating a new thread, so that I can use the app without interruptions and frustration, and continue to engage with its features."
+            }
+        ]
+    },
+    {
+        "story_id": 74,
+        "user_story": "As a user, I want to control the threads that appear in my app feed, so that I can avoid seeing irrelevant content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 75,
+        "user_story": "As a user, I want to the app to remain stable and functional when switching between accounts so that I can efficiently manage my accounts without experiencing frequent crashes and being forced to undergo a time-consuming uninstall and reinstall process.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the app to remain stable [* and *] functional when switching between accounts so that I can efficiently manage my accounts without experiencing frequent crashes and being forced to undergo a time-consuming uninstall and reinstall process."
+            }
+        ]
+    },
+    {
+        "story_id": 76,
+        "user_story": "As a user, I want to be able to update my username on the app when desired, so that I can easily revise and personalize my account information.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 77,
+        "user_story": "As a user, I want to be able to create an account on the app without requiring an existing Instagram account, so that I can use the apps features, such as threads, without having to use Instagram.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 78,
+        "user_story": "As a user, I want to the app to clearly display a warning about the account syncing feature with my Instagram account before installation or log in, so that I can make an informed decision about using the app and taking data risks into consideration.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 79,
+        "user_story": "As a user, I want to be able to easily distinguish between threads and regular posts on the app, so that I can quickly identify and engage with relevant content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 80,
+        "user_story": "As a user, I want to the app to preserve my current feed view when it refreshes, so that I can continue browsing without losing my place.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 81,
+        "user_story": "As an Instagram user, I want to be able to create and share original, innovative, and creative content that showcases the apps unique idea, so that I can feel proud of the app and share it with others.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an Instagram user, I want to be able to create [* and *] share original, innovative, and creative content that showcases the apps unique idea, so that I can feel proud of the app and share it with others."
+            }
+        ]
+    },
+    {
+        "story_id": 82,
+        "user_story": "As a user, I want to have the same features across all my accounts within the app, so that I can maintain a consistent experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 83,
+        "user_story": "As a user, I want to have the option to see a FRIENDS ONLY feed with posts from users Ive explicitly added as friends, so that I can control the conversation and focus on interactions with people I care about.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 84,
+        "user_story": "As a user of the app, I want to the ability to categorize posts as close friends So that I can share personal content without it being visible to extended family.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 85,
+        "user_story": "As a user, I want to the app to function as expected in its current state, so that I can use it without encountering errors or issues.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 86,
+        "user_story": "As a user, I want to the app to smoothly refresh and display conversations when the home button is pressed, so that I can easily navigate through threads without experiencing choppy scrolling.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the app to smoothly refresh [* and *] display conversations when the home button is pressed, so that I can easily navigate through threads without experiencing choppy scrolling."
+            }
+        ]
+    },
+    {
+        "story_id": 87,
+        "user_story": "As a user, I want to be able to control which content is displayed on my timeline, so that I can view only the updates from people Im interested in and follow, and avoid seeing unnecessary or unwanted content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 88,
+        "user_story": "As a user, I want to be able to disable the video posting feature so that the app no longer appears identical to Instagram, ensuring a unique experience for users.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 89,
+        "user_story": "As a user, I want to have a reliable social media platform that operates smoothly, so that I can use it without interruptions or errors.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 90,
+        "user_story": "As a user, I want to be able to report or block annoying or unwanted interactions from other users so that I can maintain a comfortable and distraction-free experience in the app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to report [* or *] block annoying or unwanted interactions from other users so that I can maintain a comfortable [* and *] distraction-free experience in the app."
+            }
+        ]
+    },
+    {
+        "story_id": 91,
+        "user_story": "As an Instagram user, I want to the app to auto-follow accounts from my Instagram list without exception, so that I can easily connect with my existing network.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 92,
+        "user_story": "As an end-user, I want to discover a new app that offers a unique experience, so that I can find something exciting and engaging to use.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 93,
+        "user_story": "As a user, I would like to view current and upcoming trends within the app, and for video playback to only start when I initiate it, so that I can easily keep up with popular content and control my own experience.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 94,
+        "user_story": "As a user, I want to the app to successfully upload content, and display all my posts and comments within the app, so that I can use it effectively and have a complete experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 95,
+        "user_story": "As a user, I want to be able to use the app without it interfering with other apps, specifically Instagram, so that I can open Instagram without the app crashing or causing problems.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 96,
+        "user_story": "As a user, I want to be able to scroll through the feed seamlessly, without any glitches or freezes, so that I can continue using the app without interruptions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 97,
+        "user_story": "As a user, I want to the home screen to display fewer non-followed accounts threads to reduce clutter and improve the user experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the home screen to display fewer non-followed accounts threads to reduce clutter [* and *] improve the user experience."
+            }
+        ]
+    },
+    {
+        "story_id": 98,
+        "user_story": "As a user, I need the app to be stable and free from glitches that can cause seizures, so that I can use it without experiencing adverse effects.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 99,
+        "user_story": "As an Instagram user, I want to be able to use the Threads app without it interfering with my Instagram settings or functionality, so that I can enjoy a seamless experience across both platforms.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 100,
+        "user_story": "As a user, I want to the user interface of the social space to have a visually appealing design, so that I can enjoy using the integrated service.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 101,
+        "user_story": "As a user, I want to be able to remove ads from specific individuals so that I can manage my ads experience effectively.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 102,
+        "user_story": "As a user of the app, I want to the app to function smoothly on my device (Redmi Y2) without lag or freezing issues, so that I can access and navigate the home screen content without any disruptions or screen tearing.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user of the app, I want to the app to function smoothly on my device (Redmi Y2) without lag [* or *] freezing issues, so that I can access [* and *] navigate the home screen content without any disruptions or screen tearing."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user of the app, I want to the app to function smoothly on my device  [*(redmi y2)*]  without lag or freezing issues, so that I can access and navigate the home screen content without any disruptions or screen tearing."
+            }
+        ]
+    },
+    {
+        "story_id": 103,
+        "user_story": "As a user, I want to have a variety of themes in the app so that I can personalize my experience and make it more enjoyable.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 104,
+        "user_story": "As a user, I want to be able to download and install the app on my PC and Laptop through the Microsoft Store so that I can access the app on my desktop computers.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to download [* and *] install the app on my PC and Laptop through the Microsoft Store so that I can access the app on my desktop computers."
+            }
+        ]
+    },
+    {
+        "story_id": 105,
+        "user_story": "As a user, I want to be able to see a list of people who have followed me back in the app, so that I can easily identify mutual connections and know who shares my interests.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 106,
+        "user_story": "UNABLE_TO_EXTRACT_USER_STORY",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_role",
+                "message": "Add for who this story is"
+            }
+        ]
+    },
+    {
+        "story_id": 107,
+        "user_story": "As a user, I want to the app to only show me users Ive followed so that I can view content from people Im interested in, not cluttering my home feed with unnecessary information about others.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 108,
+        "user_story": "UNABLE_TO_EXTRACT_USER_STORY",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_role",
+                "message": "Add for who this story is"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            }
+        ]
+    },
+    {
+        "story_id": 109,
+        "user_story": "As a user of the META app, I want to see new features and updates in the future, so that I can continue to have a great experience with the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 110,
+        "user_story": "As a user of the app, I want to experience a smooth scrolling animation without lag, so that I can navigate through content easily and have a more enjoyable user experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 111,
+        "user_story": "As a social media user, I want to be able to connect and share content with my friends using the app, so that I can easily stay in touch with them.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a social media user, I want to be able to connect [* and *] share content with my friends using the app, so that I can easily stay in touch with them."
+            }
+        ]
+    },
+    {
+        "story_id": 112,
+        "user_story": "As a user, I want to be able to reply to a post quickly, so that I can easily engage with the content and have a seamless experience on the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 113,
+        "user_story": "As a user, I want to be able to upload and post multiple pictures without the app freezing or logging me out, so that I can easily share my content without interruptions.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to upload [* and *] post multiple pictures without the app freezing [* or *] logging me out, so that I can easily share my content without interruptions."
+            }
+        ]
+    },
+    {
+        "story_id": 114,
+        "user_story": "As a user, I want to be able to obtain a permanent link to the app, so that I can easily access and share it without breaking or losing functionality.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 115,
+        "user_story": "As a user, I want to be able to sort the timeline between notifications and following posts, so that I can quickly view only the content that is relevant to me.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to sort the timeline between notifications [* and *] following posts, so that I can quickly view only the content that is relevant to me."
+            }
+        ]
+    },
+    {
+        "story_id": 116,
+        "user_story": "As a mobile user, I want to the Instagram app on my Android device to display content without screen overlap so that I can use the app effectively.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 117,
+        "user_story": "As a user, it is important to me that the app includes hashtags to categorize content, allows for search results to include relevant posts, and provides trending content.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 118,
+        "user_story": "As an app user, I want to the app to refresh without errors and display a complete set of features, so that I can have a seamless and engaging experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an app user, I want to the app to refresh without errors [* and *] display a complete set of features, so that I can have a seamless and engaging experience."
+            }
+        ]
+    },
+    {
+        "story_id": 119,
+        "user_story": "As a user, I want to the app to display a consistent error message (Sorry, something went wrong, Try again) when I interact with posts, so that I can easily identify and attempt to resolve issues that occur when loading a users feed.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user, I want to the app to display a consistent error message  [*(sorry, something went wrong, try again)*]  when I interact with posts, so that I can easily identify and attempt to resolve issues that occur when loading a users feed."
+            }
+        ]
+    },
+    {
+        "story_id": 120,
+        "user_story": "As a user, I want to be able to view content on the app without it being distorted or multiplied by bugs, so that I can use the app without frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to view content on the app without it being distorted [* or *] multiplied by bugs, so that I can use the app without frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 121,
+        "user_story": "As a user who has previously used the developers apps, I want to see a functioning app that meets my expectations, so that I can rely on the developers track record.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 122,
+        "user_story": "As a user, I want to be able to post content without any issues with speed, glitches, or errors so that I can use the app effectively.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 123,
+        "user_story": "As a user, I want to be able to successfully open the app and reach the login screen upon initial app launch, so that I can proceed with my desired actions such as logging in and using the apps features.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to successfully open the app [* and *] reach the login screen upon initial app launch, so that I can proceed with my desired actions such as logging in and using the apps features."
+            }
+        ]
+    },
+    {
+        "story_id": 124,
+        "user_story": "As a user, I want to be able to use the app without errors for more than a day after downloading it, so that I can fully experience its features without interruptions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 125,
+        "user_story": "As a user, I want to be able to select my preferred language to ensure that posts and content are relevant and visible to me, so that I can better engage with the app and its community.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to select my preferred language to ensure that posts [* and *] content are relevant and visible to me, so that I can better engage with the app and its community."
+            }
+        ]
+    },
+    {
+        "story_id": 126,
+        "user_story": "As a user, I want to filter my feed to only show content from users I have chosen to follow, so that I can avoid irrelevant and unwanted information.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 127,
+        "user_story": "As an early user of the Threads app, I want to be able to create and share engaging content with others so that I can build lasting memories and personal connections within the community.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an early user of the Threads app, I want to be able to create [* and *] share engaging content with others so that I can build lasting memories and personal connections within the community."
+            }
+        ]
+    },
+    {
+        "story_id": 128,
+        "user_story": "As a user, I want to be able to efficiently use the app, without it wasting my time and energy, so that I can accomplish my tasks quickly.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 129,
+        "user_story": "As a user of a social media app, I want to experience a feature set that is comparable to or exceeds that of Twitter, in order to feel confident in replacing Twitter as my primary social media platform.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 130,
+        "user_story": "As a user, I want to be able to chat with my friends within the app, so that I can easily communicate with them without having to leave the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 131,
+        "user_story": "As a user, I want to be able to create and participate in polls within the app, so that I can engage with the community in a more comprehensive way.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 132,
+        "user_story": "As an user, I want to the app to continuously receive updates with new features, so that my overall user experience can be enriched and improved over time.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 133,
+        "user_story": "As a new user, I want to easily navigate the app so that I can quickly explore its features and become familiar with its functionality.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 134,
+        "user_story": "As a user, I want to see more content from accounts I follow on the platform, and have features like gifs, hashtags, and trending tabs, so that I can engage with my preferred content and have a comparable experience to other social media platforms.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to see more content from accounts I follow on the platform, [* and *] have features like gifs, hashtags, and trending tabs, so that I can engage with my preferred content and have a comparable experience to other social media platforms."
+            }
+        ]
+    },
+    {
+        "story_id": 135,
+        "user_story": "As a user, I want to experience an ad-free app interface, so that I can use the app without interruptions and have a positive user experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 136,
+        "user_story": "As a user, I want to be able to create a new account successfully in the application, so that I can access its features and use the app without interruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 137,
+        "user_story": "As a social media user who doesnt primarily use Instagram, I want to be able to quickly discover and explore non-Instagram related content on the app, so that I can engage with content that interests me without feeling obligated to use my primary social media platform.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 138,
+        "user_story": "As a user, I want to be able to connect with celebrities safely, so that I can utilize the app without compromising my online security.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 139,
+        "user_story": "As a social media user, I want to receive notifications when I start seeing unfamiliar content in my feed, so that I can take action to restore my feed to its previous state of showing content from people I follow.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 140,
+        "user_story": "As a user, I want to be able to enable video sound without having to click on the \ud83d\udd07 button every time, so that I can have a more seamless viewing experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 141,
+        "user_story": "As a user, I want to the app to have a more intuitive and visually appealing layout, specifically with clearer separation between individual tweets and threads, so that I can easily navigate and engage with the content.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the app to have a more intuitive [* and *] visually appealing layout, specifically with clearer separation between individual tweets and threads, so that I can easily navigate and engage with the content."
+            }
+        ]
+    },
+    {
+        "story_id": 142,
+        "user_story": "As a user, I want to the app to notify me when my account has been disabled and provide a valid reason, so that I can take corrective action and restore access to my account.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the app to notify me when my account has been disabled [* and *] provide a valid reason, so that I can take corrective action and restore access to my account."
+            }
+        ]
+    },
+    {
+        "story_id": 143,
+        "user_story": "As a user, I want to view trending topics on threads within the app, so that I can stay up-to-date with popular discussions and topics of interest.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 144,
+        "user_story": "As a user, I want to be able to seamlessly switch between multiple accounts within the app, similar to how Instagram handles multi-account login, so that I can easily manage and access different accounts with a smooth and intuitive experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 145,
+        "user_story": "As a user, I want to be able to download and install an app without being prompted for sensitive financial information, so that I can evaluate the apps features and functionality before committing to a purchase.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to download [* and *] install an app without being prompted for sensitive financial information, so that I can evaluate the apps features and functionality before committing to a purchase."
+            }
+        ]
+    },
+    {
+        "story_id": 146,
+        "user_story": "As a social media user, I want to share my name across multiple social media platforms, so that I can have a consistent identity across different platforms, but the app crashes with me taking the same user name on the social media platforms, I want to the app to not interfere with other existing social media accounts functionality.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As a social media user, [* I want to *] share my name across multiple social media platforms, so that I can have a consistent identity across different platforms, but the app crashes with me taking the same user name on the social media platforms, [* I want to *] the app to not interfere with other existing social media accounts functionality."
+            }
+        ]
+    },
+    {
+        "story_id": 147,
+        "user_story": "As a user, I want to have a social media app that offers a clean and understandable user experience, so that I can easily use it and replace existing social media platforms like Twitter.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 148,
+        "user_story": "As a social media user, I want to be able to compare my followers across different platforms, so that I can perceive my social presence accurately and feel better about my online influence.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 149,
+        "user_story": "As a user, I want to be able to easily find and follow people on the app after migration, so that I can stay connected with the content I care about.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 150,
+        "user_story": "As a user, I want to be able to create a secondary account so that I can maintain personal and professional separation online.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 151,
+        "user_story": "As a user, I want to be able to access the app from my desktop or via a website so that I can use the apps functionality without having to rely on my mobile device.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 152,
+        "user_story": "As a user, I want to the ability to translate in-app content to assist non-native speakers and improve overall user experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to the ability to translate in-app content to assist non-native speakers [* and *] improve overall user experience."
+            }
+        ]
+    },
+    {
+        "story_id": 153,
+        "user_story": "As a user, I want to be able to use the app without any performance issues, so that I can navigate through the feed seamlessly.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 154,
+        "user_story": "As a social media user, I want to experience an immersive and interactive platform that offers a superior social network experience compared to existing social media tools, so that I can engage deeply and feel like I am part of a unique community that stands out in the ever-evolving world of social media.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a social media user, I want to experience an immersive [* and *] interactive platform that offers a superior social network experience compared to existing social media tools, so that I can engage deeply and feel like I am part of a unique community that stands out in the ever-evolving world of social media."
+            }
+        ]
+    },
+    {
+        "story_id": 155,
+        "user_story": "As a user, I want to the app to have a distinct visual design that differentiates it from Instagram, while incorporating a sign-up option similar to Instagram, so that I can easily navigate and identify the app without confusion.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 156,
+        "user_story": "As a user, I want to experience a platform with minimalistic and positive content, so that I can easily find happiness in everyday things.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 157,
+        "user_story": "As an application user, I want to the application to remain stable and responsive when writing long posts or uploading videos, so that I can complete my tasks without interruptions.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an application user, I want to the application to remain stable [* and *] responsive when writing long posts [* or *] uploading videos, so that I can complete my tasks without interruptions."
+            }
+        ]
+    },
+    {
+        "story_id": 158,
+        "user_story": "As an app user, I want to the app to remain stable and functional when scrolling through posts to avoid frustration and loss of work, and I want to easily find and view my friends posts and profiles within the app to maintain a positive user experience.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an app user, I want to the app to remain stable [* and *] functional when scrolling through posts to avoid frustration and loss of work, and I want to easily find and view my friends posts and profiles within the app to maintain a positive user experience."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As an app user, [* I want to *] the app to remain stable and functional when scrolling through posts to avoid frustration and loss of work, and [* I want to *] easily find and view my friends posts and profiles within the app to maintain a positive user experience."
+            }
+        ]
+    },
+    {
+        "story_id": 159,
+        "user_story": "As a mobile user, I want to be able to open the Instagram app without issues, so that I can access my social media account without interruption, but instead, the apps connectivity with Instagram is causing it to crash, preventing me from accessing my account.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 160,
+        "user_story": "As a user of a social media app, I want to be able to filter out content that I dont want to see, so that I can curate my timeline with the information that is most relevant to me.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 161,
+        "user_story": "As a user, I want to have a smooth and stable experience when using the app for the first time, so that I can evaluate its potential to meet my needs in the future.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to have a smooth [* and *] stable experience when using the app for the first time, so that I can evaluate its potential to meet my needs in the future."
+            }
+        ]
+    },
+    {
+        "story_id": 162,
+        "user_story": "As a user, I want to be able to edit previous posts for corrections (e.g. spelling mistakes) and upload other images to share with my audience without being restricted by size or other limitations.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to edit previous posts for corrections (e.g. spelling mistakes) [* and *] upload other images to share with my audience without being restricted by size [* or *] other limitations."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "punctuation",
+                "message": "As a user, I want to be able to edit previous posts for corrections (e [*.g. spelling mistakes) and upload other images to share with my audience without being restricted by size or other limitations.*]"
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user, I want to be able to edit previous posts for corrections  [*(e.g. spelling mistakes)*]  and upload other images to share with my audience without being restricted by size or other limitations."
+            }
+        ]
+    },
+    {
+        "story_id": 163,
+        "user_story": "As a user, it should not be possible for me to experience jerky or non-functioning scrolling in the app, where the content layout appears disorganized and images are the only visible content.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_role",
+                "message": "Add for who this story is"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            }
+        ]
+    },
+    {
+        "story_id": 164,
+        "user_story": "As a user, I want to be able to smoothly scroll through posts in the app without any visual scrambling, so that I can easily consume and engage with the content presented to me.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 165,
+        "user_story": "As a user, I want to see only the content from people I follow in my feed, so that I can more easily find and engage with posts from friends and interests that are relevant to me.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 166,
+        "user_story": "As a new user, I want to download the app without prior knowledge, so that I can discover its features and functionality.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 167,
+        "user_story": "As a user, I want to the default tab on the home feed to prioritize posts from mutual friends instead of random profiles from the broader network, so that I can see more relevant content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 168,
+        "user_story": "As a user, I want to be able to create an account directly within the Threads app without requiring me to create an Instagram account first, so that I can access the full features of the app without the need for additional sign-up steps.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 169,
+        "user_story": "As a user, a key feature request is to have a dedicated page or feed that displays only the posts from the people I am following within the app, providing a curated and personalized experience.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_role",
+                "message": "Add for who this story is"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            }
+        ]
+    },
+    {
+        "story_id": 170,
+        "user_story": "As an end user, I want to be able to select a multi-line text in a right-to-left language without the app crashing, so that I can easily copy or perform other operations with the selected text.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 171,
+        "user_story": "As a user, I want to be able to scroll and navigate through threads in my messaging app without causing the thread content to roll up, so that I can easily read and interact with messages.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to scroll [* and *] navigate through threads in my messaging app without causing the thread content to roll up, so that I can easily read and interact with messages."
+            }
+        ]
+    },
+    {
+        "story_id": 172,
+        "user_story": "As a user, I want to the app to be widely available to the public, so that more people can use and benefit from it.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 173,
+        "user_story": "As a user, I want to be able to create an account without encountering errors after inserting the verification code, so that I can access the apps features and use it effectively.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 174,
+        "user_story": "As a concerned citizen, I want to report and flag social media apps with questionable and harmful privacy policies for data selling, so that I can help prevent harm from toxic social media platforms.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a concerned citizen, I want to report [* and *] flag social media apps with questionable and harmful privacy policies for data selling, so that I can help prevent harm from toxic social media platforms."
+            }
+        ]
+    },
+    {
+        "story_id": 175,
+        "user_story": "As an app user, I want to be able to create new threads on the platform without it becoming overwhelmed or spoiled, so that I can engage in meaningful discussions without the apps functionality deteriorating.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an app user, I want to be able to create new threads on the platform without it becoming overwhelmed [* or *] spoiled, so that I can engage in meaningful discussions without the apps functionality deteriorating."
+            }
+        ]
+    },
+    {
+        "story_id": 176,
+        "user_story": "As a user, I want to see a broad set of features and functionality in the app similar to Twitters current capabilities, so that I can effectively utilize the app for social networking and engagement.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 177,
+        "user_story": "As a social media user, I want to see a clear and customizable feed of content from accounts and pages I follow, so that I can quickly identify relevant information and avoid unnecessary clutter.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a social media user, I want to see a clear [* and *] customizable feed of content from accounts and pages I follow, so that I can quickly identify relevant information and avoid unnecessary clutter."
+            }
+        ]
+    },
+    {
+        "story_id": 178,
+        "user_story": "As a user, I want to be able to access all features of the app without encountering errors, so that I can smoothly navigate and use the apps functionality.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 179,
+        "user_story": "As a user, I want to be able to unhide a thread ID that I accidentally hid in the app, so that I can access the ID again.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 180,
+        "user_story": "As a user, when I log in to the app, I want to see a populated home screen with news threads from accounts I follow, so that I can stay informed and engaged with my selected content on the first-time use.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 181,
+        "user_story": "As a user, I want to be able to seamlessly integrate the app with my existing social media accounts without causing any disruptions, so that I can maintain a smooth and uninterrupted experience on my Instagram account.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 182,
+        "user_story": "As a user, I want to be able to find codewords for specific names, so that I can send discreet messages.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 183,
+        "user_story": "As a user, I want to experience a social media platform with a relaxed atmosphere and the necessary core features, so that I can interact and share content without feeling overwhelmed.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 184,
+        "user_story": "As a user, I want to be able to upload photos within the app without errors, so that I can fully utilize the apps features and functionality.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 185,
+        "user_story": "As a user, I want to the application to continue playing video content after clicking the unmute button, so that I can watch the video uninterrupted.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 186,
+        "user_story": "As an app user, I want to be able to easily view and navigate through photos and videos without encountering difficulties, so that I can quickly and efficiently access the content Im looking for.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an app user, I want to be able to easily view [* and *] navigate through photos and videos without encountering difficulties, so that I can quickly and efficiently access the content Im looking for."
+            }
+        ]
+    },
+    {
+        "story_id": 187,
+        "user_story": "As a user, I want to be able to write content in the app without it crashing, so that I can multitask and complete my tasks without interruptions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 188,
+        "user_story": "As a user, I want to be able to share conversations easily and efficiently through a user-friendly interface, so that I can effectively utilize the apps features.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 189,
+        "user_story": "As an App User, I want to be able to view and interact with the application without experiencing widespread issues.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As an App User, I want to be able to view [* and *] interact with the application without experiencing widespread issues."
+            }
+        ]
+    },
+    {
+        "story_id": 190,
+        "user_story": "As a concerned user, I want to the app to prevent white supremacists and scammers from creating fake accounts, to ensure a safe and trustworthy environment where information is accurate and reliable.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a concerned user, I want to the app to prevent white supremacists [* and *] scammers from creating fake accounts, to ensure a safe and trustworthy environment where information is accurate and reliable."
+            }
+        ]
+    },
+    {
+        "story_id": 191,
+        "user_story": "As a user, I want to be able to view the main feed of the app without encountering a crash, so that I can engage with the app content seamlessly.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 192,
+        "user_story": "As a user, I want to the app to load my profile and other pages without errors, so that I can access my content and interact with the app smoothly.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 193,
+        "user_story": "As a user, I want to use the app without interfering with the performance of other installed apps, so that I can smoothly navigate and interact with my installed applications.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 194,
+        "user_story": "As a user, I want to be able to search for photos to post efficiently, so that I can find the desired image quickly and easily without having to browse through my entire gallery.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 195,
+        "user_story": "As a user, I want to be able to sign in to my existing social media account and have my profile transferred to a new app, without the option to create a new account, so that I can leverage my existing relationships and expand the apps user base.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user, I want to be able to sign in to my existing social media account [* and *] have my profile transferred to a new app, without the option to create a new account, so that I can leverage my existing relationships and expand the apps user base."
+            }
+        ]
+    },
+    {
+        "story_id": 196,
+        "user_story": "As a user, I want to the app to display posts clearly without any visual distortions, so that I can easily read and engage with the content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 197,
+        "user_story": "As an app user, I want to the post button to be relocated to the top of the screen, so that: - When the keyboard is present, I can easily access and click on the post button without interference.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "punctuation",
+                "message": "As an app user, I want to the post button to be relocated to the top of the screen, so that [*: - When the keyboard is present, I can easily access and click on the post button without interference.*]"
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As an app user, [* I want to *] the post button to be relocated to the top of the screen, so that: - When the keyboard is present, [* I can *] easily access and click on the post button without interference."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 198,
+        "user_story": "As a user of the Thread app, I want to be able to add more accounts (such as Instagram) and interact with them through the app, so that I can seamlessly manage all my social interactions in one place and use familiar features like double-tapping to like threads.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user of the Thread app, I want to be able to add more accounts  [*(such as instagram)*]  and interact with them through the app, so that I can seamlessly manage all my social interactions in one place and use familiar features like double-tapping to like threads."
+            }
+        ]
+    },
+    {
+        "story_id": 199,
+        "user_story": "As a user, I want to be transparent about the data collected by the app, so that I know what personal information is being stored, to maintain trust and control over my personal data.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 200,
+        "user_story": "UNABLE_TO_EXTRACT_USER_STORY",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_means",
+                "message": "Add what you want to achieve"
+            },
+            {
+                "defect_type": "well_formed",
+                "sub_type": "no_role",
+                "message": "Add for who this story is"
+            },
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            }
+        ]
+    }
+]

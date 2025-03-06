@@ -1,0 +1,1919 @@
+[
+    {
+        "story_id": 1,
+        "user_story": "As a Threads user who does not want to use my Instagram username, I want to be able to create a unique Threads username, independent of my Instagram account, so that I can have a separate online identity on the Threads platform.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 2,
+        "user_story": "As a Threads user, I want to increase the character limit for posts, so that I can express my opinions and thoughts more comprehensively without being constrained by a 480-character limit.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 3,
+        "user_story": "As a Threads user, I want to be able to send direct messages (DM) and find posts I have liked, and add hashtags, so that I can have a more comprehensive and engaging social media experience similar to other platforms.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to send direct messages (DM) [* and *] find posts I have liked, and add hashtags, so that I can have a more comprehensive and engaging social media experience similar to other platforms."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a Threads user, I want to be able to send direct messages  [*(dm)*]  and find posts I have liked, and add hashtags, so that I can have a more comprehensive and engaging social media experience similar to other platforms."
+            }
+        ]
+    },
+    {
+        "story_id": 4,
+        "user_story": "As a concerned user of the Threads app, I want to the app to clearly and concisely explain the data collection practices and associated permissions, including explicit examples of how this data will be used, and to provide a simple, transparent, and easily accessible way to review and revoke permissions, so that I feel secure and in control of my personal data.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a concerned user of the Threads app, I want to the app to clearly [* and *] concisely explain the data collection practices and associated permissions, including explicit examples of how this data will be used, and to provide a simple, transparent, and easily accessible way to review and revoke permissions, so that I feel secure and in control of my personal data."
+            }
+        ]
+    },
+    {
+        "story_id": 5,
+        "user_story": "As a user experiencing political polarization on the Threads app, I want to see a way to filter or mute conversations about specific topics or groups of users, so that emotionally charged or unproductive interactions are minimized and I can have a more positive and productive social experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As a user experiencing political polarization on the Threads app, [* I want to *] see a way to filter or mute conversations about specific topics or groups of users, so that emotionally charged or unproductive interactions are minimized and [* I can *] have a more positive and productive social experience."
+            }
+        ]
+    },
+    {
+        "story_id": 6,
+        "user_story": "As a user seeking a text-based social media platform similar to Twitter, I want to be able to quickly access and engage in conversations with other users, so that I can connect with a similar community to the one I find on Twitter.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 7,
+        "user_story": "As a user of a social media app looking for a smooth and aesthetically pleasing experience, I want to the Threads app interface to be visually appealing and intuitive, so that I can easily and enjoyably engage in real-time conversations and view updates.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user of a social media app looking for a smooth [* and *] aesthetically pleasing experience, I want to the Threads app interface to be visually appealing and intuitive, so that I can easily and enjoyably engage in real-time conversations and view updates."
+            }
+        ]
+    },
+    {
+        "story_id": 8,
+        "user_story": "As a user frustrated by the current features and functionality of the Threads app, I want to see a return to the core strengths of similar platforms like Orkut, including enhanced features for in-depth discussion threads and interactive elements within the app, so that I experience a more engaging and fulfilling social network experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user frustrated by the current features [* and *] functionality of the Threads app, I want to see a return to the core strengths of similar platforms like Orkut, including enhanced features for in-depth discussion threads and interactive elements within the app, so that I experience a more engaging and fulfilling social network experience."
+            }
+        ]
+    },
+    {
+        "story_id": 9,
+        "user_story": "As a user with a Redmi Y2 mobile device, I want to the Threads app to be compatible with my device, so that I can use the app without experiencing issues.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 10,
+        "user_story": "As a Threads app user, I want to the app to load quickly and smoothly upon opening, so that I can access and utilize the existing post screen without experiencing delays or application freezes.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 11,
+        "user_story": "As a user with a 4GB RAM Redmi Note 6 Pro, I want to the Threads app to not display duplicate characters or words and crash, so that I can have a stable and reliable text-based conversation experience without unexpected app shutdowns.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user with a 4GB RAM Redmi Note 6 Pro, I want to the Threads app to not display duplicate characters [* or *] words [* and *] crash, so that I can have a stable and reliable text-based conversation experience without unexpected app shutdowns."
+            }
+        ]
+    },
+    {
+        "story_id": 12,
+        "user_story": "As a new user of the Threads app, I want to easily and intuitively access the core features of the app, so that I can quickly begin engaging in text-based conversations and sharing updates with minimal friction and confusion.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 13,
+        "user_story": "As a Threads app user, I want to the app to display scrolling text without leaving persistent trails, so that I can smoothly and easily read and navigate content without visual interference.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 14,
+        "user_story": "As a Threads user, I want to see only posts from people I follow on the home page, and have the option to organize these posts into lists, so that I can easily filter and prioritize content relevant to me and manage my social connections.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to see only posts from people I follow on the home page, [* and *] have the option to organize these posts into lists, so that I can easily filter and prioritize content relevant to me and manage my social connections."
+            }
+        ]
+    },
+    {
+        "story_id": 15,
+        "user_story": "As a user attempting to use the Threads app for the first time, I want to be able to successfully log in and access the platform without experiencing repeated application crashes, so that I can engage in real-time text-based conversations and share updates without interruption.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user attempting to use the Threads app for the first time, I want to be able to successfully log in [* and *] access the platform without experiencing repeated application crashes, so that I can engage in real-time text-based conversations and share updates without interruption."
+            }
+        ]
+    },
+    {
+        "story_id": 16,
+        "user_story": "As a Threads user who values a focused platform for real-time text-based conversations, I want Threads to remain ad-free and bot-free, and without direct messages (DMs), so that I can continue to enjoy a clean and focused experience similar to the initial Threads concept.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a Threads user who values a focused platform for real-time text-based conversations, I want Threads to remain ad-free and bot-free, and without direct messages  [*(dms)*] , so that I can continue to enjoy a clean and focused experience similar to the initial Threads concept."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 17,
+        "user_story": "As a Threads user with an existing Instagram account, I want my Instagram account homepage to function correctly after creating a Threads profile, so that I can seamlessly access and update my Instagram content without disruption.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 18,
+        "user_story": "As a user without an existing Instagram account, I want to be able to sign up for Threads using alternative social media accounts like Facebook, so that I can access the features of the Threads app without needing a pre-existing Instagram account.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 19,
+        "user_story": "As a user engaging with a text-based community, I want to easily understand and interact with the Threads apps user interface, so that I can quickly connect with and share updates with members of my community.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user engaging with a text-based community, I want to easily understand [* and *] interact with the Threads apps user interface, so that I can quickly connect with and share updates with members of my community."
+            }
+        ]
+    },
+    {
+        "story_id": 20,
+        "user_story": "As a Threads user interested in specific content creators, I want to easily find and follow users known for posting high-quality or interesting content, so that I can engage with relevant and engaging conversations and content.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user interested in specific content creators, I want to easily find [* and *] follow users known for posting high-quality [* or *] interesting content, so that I can engage with relevant and engaging conversations and content."
+            }
+        ]
+    },
+    {
+        "story_id": 21,
+        "user_story": "As a Threads user, I want to the app to be stable and not crash, so that I can reliably use the app for real-time text conversations and updates without interruptions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 22,
+        "user_story": "As a Threads user, I want to be able to send private messages within the Threads app, so that I can have conversations with other users without needing to leave the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 23,
+        "user_story": "As a Threads user who enjoys interacting with specific accounts, I want to be able to pin my posts and favorite certain accounts I follow, so that I can easily highlight important updates and maintain a more focused feed.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user who enjoys interacting with specific accounts, I want to be able to pin my posts [* and *] favorite certain accounts I follow, so that I can easily highlight important updates and maintain a more focused feed."
+            }
+        ]
+    },
+    {
+        "story_id": 24,
+        "user_story": "As a Threads user, I want to be able to successfully upload photos to my threads, so that I can share images with other users.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 25,
+        "user_story": "As a Threads user, I want a tab to view only the threads Im following, and a separate tab to browse all threads (explore), and a Trends tab to see currently trending or viral content, so that I can easily discover new and relevant conversations and stay up-to-date with the latest trends within Threads.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want a tab to view only the threads Im following, [* and *] a separate tab to browse all threads (explore), and a Trends tab to see currently trending [* or *] viral content, so that I can easily discover new and relevant conversations and stay up-to-date with the latest trends within Threads."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a Threads user, I want a tab to view only the threads Im following, and a separate tab to browse all threads  [*(explore)*] , and a Trends tab to see currently trending or viral content, so that I can easily discover new and relevant conversations and stay up-to-date with the latest trends within Threads."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 26,
+        "user_story": "As a user who has previously been dissatisfied with other social media apps, I want to experience a visually appealing and engaging text-based conversation app, so that I can find a superior alternative to existing platforms like Twitter.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user who has previously been dissatisfied with other social media apps, I want to experience a visually appealing [* and *] engaging text-based conversation app, so that I can find a superior alternative to existing platforms like Twitter."
+            }
+        ]
+    },
+    {
+        "story_id": 27,
+        "user_story": "As a Threads user, I want to be able to post updates without the app crashing, so that I can successfully share my thoughts and updates in real-time.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 28,
+        "user_story": "As a Threads user, I want to be able to change my profile picture, so that I can customize my profile and enhance my user experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 29,
+        "user_story": "As a Threads user, I want to be able to reliably upload images to my posts, so that I can share photos and other visual content effectively.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 30,
+        "user_story": "As a Threads user experiencing persistent bugs and data management concerns, I want to have more control over the disappearance of threads, the syncing of my bio with Instagram despite corrections, and the permanence of my data, so that I can enjoy a more stable, consistent, and trustworthy experience with better data privacy and ownership.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user experiencing persistent bugs [* and *] data management concerns, I want to have more control over the disappearance of threads, the syncing of my bio with Instagram despite corrections, and the permanence of my data, so that I can enjoy a more stable, consistent, and trustworthy experience with better data privacy and ownership."
+            }
+        ]
+    },
+    {
+        "story_id": 31,
+        "user_story": "As a Threads user, I want to be able to filter my front page feed by user, topic, or other relevant criteria, so that I can control the content I see and reduce the amount of irrelevant or distracting information.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 32,
+        "user_story": "As a Threads app user, I want to the app to be free of bugs, so that I can have a positive experience and feel my time is well-spent.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 33,
+        "user_story": "As a user interested in connecting with others through text-based updates, I want an easy-to-use and enjoyable social media platform integrated with my Instagram feed, so that I can easily share and discuss topics with my Instagram connections.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user interested in connecting with others through text-based updates, I want an easy-to-use [* and *] enjoyable social media platform integrated with my Instagram feed, so that I can easily share and discuss topics with my Instagram connections."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 34,
+        "user_story": "As a Threads user who already follows many Instagram accounts, I want to be able to follow all my existing Instagram accounts on Threads without the risk of account suspension, so that I can seamlessly migrate my social connections and avoid losing my existing Instagram network.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 35,
+        "user_story": "As a Threads user, I want to the ability to delete my Threads profile without affecting my Instagram profile, so that I can choose to discontinue using Threads without losing my Instagram account data or connections.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 36,
+        "user_story": "As a user of Threads, I want a more engaging and enjoyable experience, so that I am motivated to use the app frequently and consider it a viable alternative to Twitter.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 37,
+        "user_story": "As a Threads app user, I want to be able to use hashtags, follow a feed of other users posts, view posts in chronological order, embed GIFs, access the app on a desktop client, manage multiple accounts, see both my set name and username displayed, and have customizable app icon and theme support, so that I can experience a more engaging, comprehensive, and personalized social media experience comparable to other well-established platforms.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to be able to use hashtags, follow a feed of other users posts, view posts in chronological order, embed GIFs, access the app on a desktop client, manage multiple accounts, see both my set name [* and *] username displayed, and have customizable app icon and theme support, so that I can experience a more engaging, comprehensive, and personalized social media experience comparable to other well-established platforms."
+            }
+        ]
+    },
+    {
+        "story_id": 38,
+        "user_story": "As a Threads user, I want to be able to search for specific topics and see more of the people I follow, and have reliable access to my following list, so that I can easily discover and engage with content relevant to my interests and stay connected with people I am following.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to search for specific topics [* and *] see more of the people I follow, and have reliable access to my following list, so that I can easily discover and engage with content relevant to my interests and stay connected with people I am following."
+            }
+        ]
+    },
+    {
+        "story_id": 39,
+        "user_story": "As a user with an older mobile device, I want to the Threads app to be compatible with my device and display stably when scrolling and interacting with UI elements, so that I can reliably use the apps features without encountering glitches and disruptions.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user with an older mobile device, I want to the Threads app to be compatible with my device [* and *] display stably when scrolling and interacting with UI elements, so that I can reliably use the apps features without encountering glitches and disruptions."
+            }
+        ]
+    },
+    {
+        "story_id": 40,
+        "user_story": "As a user concerned about content moderation, I want to the platform to have a more transparent and effective process for reporting and removing accounts suspected of facilitating or promoting illegal activities such as human trafficking, so that I feel safer and more confident sharing my opinions without fear of being censored for expressing legitimate concerns.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user concerned about content moderation, I want to the platform to have a more transparent [* and *] effective process for reporting and removing accounts suspected of facilitating [* or *] promoting illegal activities such as human trafficking, so that I feel safer and more confident sharing my opinions without fear of being censored for expressing legitimate concerns."
+            }
+        ]
+    },
+    {
+        "story_id": 41,
+        "user_story": "As a Threads user, I want to be able to follow specific users and see only their posts in a dedicated Following feed, and customize the apps theme/color scheme, so that I can have a more engaging and visually appealing experience using the app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to follow specific users [* and *] see only their posts in a dedicated Following feed, and customize the apps theme [*/*] color scheme, so that I can have a more engaging and visually appealing experience using the app."
+            }
+        ]
+    },
+    {
+        "story_id": 42,
+        "user_story": "As a Threads user who only wants to see posts from people I follow, I want to the ability to filter my feed to only display posts from accounts Ive chosen to follow, so that I can control the content I see in my feed and avoid being overwhelmed by posts from accounts I dont follow.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 43,
+        "user_story": "As a Threads app user, I want to the app to load quickly and smoothly, so that I can have a positive and responsive experience using the app without encountering performance issues that could lead me to believe my device has been compromised.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 44,
+        "user_story": "As a Threads app user with multiple Instagram accounts, I want to be able to add and sync all my connected Instagram accounts to my Threads profile, so that I can easily manage and share content across both platforms within the Threads app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user with multiple Instagram accounts, I want to be able to add [* and *] sync all my connected Instagram accounts to my Threads profile, so that I can easily manage and share content across both platforms within the Threads app."
+            }
+        ]
+    },
+    {
+        "story_id": 45,
+        "user_story": "As a Threads user who wants to see only content from people I follow, I want a dedicated Following feed, so that I can easily and quickly browse content from my connections without being overwhelmed by unrelated posts.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 46,
+        "user_story": "As a frustrated user of social media apps, I want a clear and transparent explanation of the data collected by Threads, and a reduced data collection footprint, so that I feel more secure and trust the apps privacy practices.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a frustrated user of social media apps, I want a clear [* and *] transparent explanation of the data collected by Threads, and a reduced data collection footprint, so that I feel more secure and trust the apps privacy practices."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 47,
+        "user_story": "As a new user of the Threads app, I want to be able to delete my account easily and immediately after installation if I change my mind, so that I am not tricked into using an app I do not want.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a new user of the Threads app, I want to be able to delete my account easily [* and *] immediately after installation if I change my mind, so that I am not tricked into using an app I do not want."
+            }
+        ]
+    },
+    {
+        "story_id": 48,
+        "user_story": "As a user seeking a Twitter alternative, I want a robust and intuitive search function for posts, so that I can easily find relevant Threads content and avoid the restrictive format and rules associated with the platform.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 49,
+        "user_story": "As a user with limited Instagram followers, I want to be able to find and connect with other users who share my interest, so that I can build a community and have engaging conversations.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 50,
+        "user_story": "As a frustrated Threads user, I want a unique and innovative feature set that distinguishes Threads from other social media platforms, so that I am not driven to other platforms due to perceived redundancy and lack of originality.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a frustrated Threads user, I want a unique [* and *] innovative feature set that distinguishes Threads from other social media platforms, so that I am not driven to other platforms due to perceived redundancy and lack of originality."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 51,
+        "user_story": "As a Threads user, I want a unique interface and features distinct from other social media platforms, so that I experience a fresh and innovative social networking experience.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want a unique interface [* and *] features distinct from other social media platforms, so that I experience a fresh and innovative social networking experience."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 52,
+        "user_story": "As a new Threads user, I want to the ability to independently create and manage a Threads account without linking it to my Instagram account, so that I can choose to use the platform without the constraint of a linked Instagram account and retain control over my data.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a new Threads user, I want to the ability to independently create [* and *] manage a Threads account without linking it to my Instagram account, so that I can choose to use the platform without the constraint of a linked Instagram account and retain control over my data."
+            }
+        ]
+    },
+    {
+        "story_id": 53,
+        "user_story": "As a concerned user of the Threads app, I want to understand the specific data collection and sharing practices of the Threads app, so that I can make an informed decision about whether or not to continue using the app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a concerned user of the Threads app, I want to understand the specific data collection [* and *] sharing practices of the Threads app, so that I can make an informed decision about whether [* or *] not to continue using the app."
+            }
+        ]
+    },
+    {
+        "story_id": 54,
+        "user_story": "As a user who values curated content in my timeline, I want to the Threads app to prioritize posts from users I follow, reducing the appearance of posts from users I do not follow, so that I can maintain a focused and relevant feed and avoid feeling overwhelmed by irrelevant content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 55,
+        "user_story": "As a Threads user with multiple Instagram accounts, I want to the Threads app to be available as a parallel app, so that I can easily access and manage multiple accounts without having to repeatedly log in and out.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 56,
+        "user_story": "As a Threads app user with a Huawei P20 Pro device, I want to the app to consistently function without crashing when commenting on threads or tagging accounts, so that I can participate in conversations and connect with other users without interruption.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user with a Huawei P20 Pro device, I want to the app to consistently function without crashing when commenting on threads [* or *] tagging accounts, so that I can participate in conversations [* and *] connect with other users without interruption."
+            }
+        ]
+    },
+    {
+        "story_id": 57,
+        "user_story": "As a Threads Android user, I want to be able to download images shared within the app, so that I can save and share these images outside of the Threads app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 58,
+        "user_story": "As a Threads user, I want to be able to easily post updates to threads without extensive searching, so that I can quickly share my thoughts and updates with my chosen communities.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 59,
+        "user_story": "As a Threads user experiencing image and text flickering when scrolling, I want to the application to be stable and display content smoothly, so that I can use the app reliably and enjoy the experience without frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user experiencing image [* and *] text flickering when scrolling, I want to the application to be stable and display content smoothly, so that I can use the app reliably and enjoy the experience without frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 60,
+        "user_story": "As a Threads user attempting to access the platform, I want to avoid account suspension based on arbitrary or unexplained criteria, so that I can use the app without unnecessary hurdles or penalties.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 61,
+        "user_story": "As a Threads app user, I want to the app installation process to be faster, and the reach of my posts to be improved, so that I can quickly share updates and have them seen by a wider audience in a timely manner.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to the app installation process to be faster, [* and *] the reach of my posts to be improved, so that I can quickly share updates and have them seen by a wider audience in a timely manner."
+            }
+        ]
+    },
+    {
+        "story_id": 62,
+        "user_story": "As a user seeking a platform for diverse perspectives, I want to be able to express my views without fear of censorship or account suspension, so that I can engage in open and unfiltered conversation with others.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 63,
+        "user_story": "As a Threads app user, I want to the app logo and name changed, so that the app feels more unique and appealing to me and other users.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to the app logo [* and *] name changed, so that the app feels more unique and appealing to me and other users."
+            }
+        ]
+    },
+    {
+        "story_id": 64,
+        "user_story": "As a Threads user, I want to be able to follow hashtags and see recent posts in the search section, so that I can easily find and engage with relevant conversations and stay up-to-date on the latest content.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to follow hashtags [* and *] see recent posts in the search section, so that I can easily find and engage with relevant conversations and stay up-to-date on the latest content."
+            }
+        ]
+    },
+    {
+        "story_id": 65,
+        "user_story": "As a Threads user on Android, I want to be able to upload photos without the app force closing, even after clearing the app cache and reinstalling, so that I can share my updates and participate in conversations effectively.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 66,
+        "user_story": "As a user who follows people who post in languages I dont understand, I want to be able to translate posts into my native language, so that I can understand and engage with the content Im following.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 67,
+        "user_story": "As a Threads user, I want to be able to initiate private chat conversations with other users, whether known or unknown, so that I can have direct, one-on-one communication and connect with individuals outside of the public thread environment.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 68,
+        "user_story": "As a user seeking a functional and reliable social media platform, I want to avoid experiencing buggy behavior and unnecessary features, so that I can maintain a productive social media experience and avoid wasted time.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user seeking a functional [* and *] reliable social media platform, I want to avoid experiencing buggy behavior and unnecessary features, so that I can maintain a productive social media experience and avoid wasted time."
+            }
+        ]
+    },
+    {
+        "story_id": 69,
+        "user_story": "As a user who wants to post text updates, I want to the Threads app to consistently allow me to compose and post messages without crashing, so that I can easily share my thoughts and updates in real-time without needing to use external note-taking applications.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 70,
+        "user_story": "As a Threads user, I want to be able to successfully attach and share files with my posts without the app crashing, so that I can share relevant information and documents with my connections.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to successfully attach [* and *] share files with my posts without the app crashing, so that I can share relevant information and documents with my connections."
+            }
+        ]
+    },
+    {
+        "story_id": 71,
+        "user_story": "As a Threads app user, I want to be able to scroll through the feed without posts overlapping or being displayed in an incorrect or distorted layout, so that I can easily read and view all posts without frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to be able to scroll through the feed without posts overlapping [* or *] being displayed in an incorrect or distorted layout, so that I can easily read [* and *] view all posts without frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 72,
+        "user_story": "As a Threads user, I want to be able to delete my Threads account independently of my Instagram account, so that I can easily discontinue use of the Threads app without impacting my Instagram presence.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 73,
+        "user_story": "As a Threads app user on Android 9 with a ColorOS device, I want to the app to function without overlaying other apps and causing text to appear as a mushy text biriyani when scrolling, so that I can use the app effectively and comfortably.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user on Android 9 with a ColorOS device, I want to the app to function without overlaying other apps [* and *] causing text to appear as a mushy text biriyani when scrolling, so that I can use the app effectively and comfortably."
+            }
+        ]
+    },
+    {
+        "story_id": 74,
+        "user_story": "As a Threads user, I want to be able to delete my own posts, so that I can manage the content I share on the platform and maintain a positive user experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 75,
+        "user_story": "As a user experiencing motion sickness, I want to the Threads app interface to be redesigned with reduced visual motion and potentially a customizable layout, so that I can use the app without experiencing dizziness and have a more enjoyable and comfortable interaction with the platform.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 76,
+        "user_story": "As a Threads user located in Australia, I want to be able to receive the login confirmation code via the appropriate method for my region, so that I can successfully log into my account.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 77,
+        "user_story": "As a user of the Threads app, I want a clean, intuitive, and easy-to-navigate user interface, so that I can have a pleasant and efficient experience using the app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 78,
+        "user_story": "As a user without an existing Instagram account, I want to be able to create a Threads account without needing an associated Instagram account, so that I can use the Threads app to engage in real-time text-based conversations and updates without having to use a separate Instagram account.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 79,
+        "user_story": "As a Threads user, I want to the app to clearly define and publicly display its content moderation policies, so that I can understand the criteria used to determine acceptable content and avoid potentially censored posts.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to the app to clearly define [* and *] publicly display its content moderation policies, so that I can understand the criteria used to determine acceptable content and avoid potentially censored posts."
+            }
+        ]
+    },
+    {
+        "story_id": 80,
+        "user_story": "As a Threads user located in the United States, I want to be able to limit my feed to only follow accounts of my friends, so that I can reduce the amount of irrelevant or spam content I see in my feed and focus on conversations from individuals I know and trust.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 81,
+        "user_story": "As a Threads user with an existing Instagram account, I want Threads to automatically recognize and log me in using my Instagram username and password, so that I can quickly access my Threads account and avoid the frustration of repeated login attempts.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user with an existing Instagram account, I want Threads to automatically recognize [* and *] log me in using my Instagram username and password, so that I can quickly access my Threads account and avoid the frustration of repeated login attempts."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 82,
+        "user_story": "As a Threads user, I want to be able to respond to comments without the app crashing, so that I can engage in conversations seamlessly and enjoy the platform without disruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 83,
+        "user_story": "As a Threads user who previously had the Instagram thread badge visible in their bio, I want to be able to re-add the thread badge to my Instagram bio, so that I can easily communicate my Threads activity to my Instagram followers.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 84,
+        "user_story": "As a Threads user, I want to be able to delete my Threads account independently of my Instagram account, so that I can manage my social media presence more effectively and avoid having to delete my entire Instagram account.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            }
+        ]
+    },
+    {
+        "story_id": 85,
+        "user_story": "As a Threads user, I want to avoid accidental profile refresh causing a loss of Threads content and a display of Instagram data, so that I can consistently access and view my Threads updates and participate in conversations without interruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 86,
+        "user_story": "As a Threads user, I want to be able to scroll through my feed without encountering a looping screen glitch, so that I can smoothly view and interact with content without interruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 87,
+        "user_story": "As a Threads user, I want to be able to upload pictures within the app, so that I can share visually engaging content and enhance my conversations.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 88,
+        "user_story": "As a Threads user who wants to share stories with close friends, I want a close friends option for posting stories, so that I can share content with a select group of contacts rather than publicly sharing my updates.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 89,
+        "user_story": "As a Threads app user, I want to the app to be stable and display content consistently, so that I can effectively read and participate in conversations without experiencing frequent crashes or display issues.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 90,
+        "user_story": "As a non-Instagram user, I want to be able to install and sign up for Threads on my desktop without needing an Instagram account, so that I can access the platforms features from my desktop seamlessly.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a non-Instagram user, I want to be able to install [* and *] sign up for Threads on my desktop without needing an Instagram account, so that I can access the platforms features from my desktop seamlessly."
+            }
+        ]
+    },
+    {
+        "story_id": 91,
+        "user_story": "As a non-Instagram user, I want to be able to sign up for and use Threads without needing a pre-existing Instagram account, so that I can easily access and engage with the Threads platform without feeling misled or like Ive been subjected to a bait-and-switch tactic.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a non-Instagram user, I want to be able to sign up for [* and *] use Threads without needing a pre-existing Instagram account, so that I can easily access and engage with the Threads platform without feeling misled [* or *] like Ive been subjected to a bait-and-switch tactic."
+            }
+        ]
+    },
+    {
+        "story_id": 92,
+        "user_story": "As a Threads app user on Android, I want to be able to select images from my photo albums to attach to my posts, so that I can share photos directly related to my text updates and conversations more easily.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 93,
+        "user_story": "As a user of the Threads app, I want a more engaging and visually appealing design, so that I am motivated to use the platform and find it distinct from other social media apps.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user of the Threads app, I want a more engaging [* and *] visually appealing design, so that I am motivated to use the platform and find it distinct from other social media apps."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 94,
+        "user_story": "As a user posting images, I want to be able to post images without the app crashing, so that I can share my updates and photos in a seamless way.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 95,
+        "user_story": "As a Threads app user, I want to the app to display text consistently with its shadows while scrolling, so that the user experience is smooth and visually appealing.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 96,
+        "user_story": "As a Threads user who does not have an existing Instagram account, I want to be able to create a Threads account without needing an Instagram login, so that I can use Threads without needing an associated Instagram account.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 97,
+        "user_story": "As a user concerned about data consumption, I want to the ability to disable automatic video playback (Reels/Videos) on Threads, so that I can control my data usage and avoid unnecessary data consumption.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user concerned about data consumption, I want to the ability to disable automatic video playback  [*(reels/videos)*]  on Threads, so that I can control my data usage and avoid unnecessary data consumption."
+            }
+        ]
+    },
+    {
+        "story_id": 98,
+        "user_story": "As a user of the Threads app who enjoys gambling-related content, I want to see more slots and gambling-related advertisements integrated into the apps feed, so that I can discover and access these types of games more easily.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user of the Threads app who enjoys gambling-related content, I want to see more slots [* and *] gambling-related advertisements integrated into the apps feed, so that I can discover and access these types of games more easily."
+            }
+        ]
+    },
+    {
+        "story_id": 99,
+        "user_story": "As a user of the Threads app, I want to be able to control the appearance of threads from accounts I do not follow, so that I can avoid unwanted content and maintain a focused and enjoyable experience within the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 100,
+        "user_story": "As a Threads app user, I want to the app to be stable and not crash, so that I can reliably use the app for real-time text-based conversations and sharing updates without interruptions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 101,
+        "user_story": "As a Threads user, I want to see a following feed and a home feed, so that I can easily view updates from accounts I follow and see a curated stream of general content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 102,
+        "user_story": "As a Threads user on Android, I want to be able to save photos I post, zoom in on photos and maintain the zoom level, and search for specific threads in addition to user profiles, so that I can easily manage and find relevant content within the app.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user on Android, I want to be able to save photos I post, zoom in on photos [* and *] maintain the zoom level, and search for specific threads in addition to user profiles, so that I can easily manage and find relevant content within the app."
+            }
+        ]
+    },
+    {
+        "story_id": 103,
+        "user_story": "As a Threads user, I want to be able to clear my timeline of posts from users I dont follow, so that I can see more content from my actual followers and reduce the clutter of posts from unknown users.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 104,
+        "user_story": "As a Threads user, I want to be able to filter content on my feed, including the ability to see posts only from accounts I follow, so that I can easily access relevant and engaging content and avoid unwanted posts.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 105,
+        "user_story": "As a Threads user, I want to be able to successfully post content and view replies to posts made by other users, so that I can participate in and engage with the threaded conversations as intended.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to successfully post content [* and *] view replies to posts made by other users, so that I can participate in and engage with the threaded conversations as intended."
+            }
+        ]
+    },
+    {
+        "story_id": 106,
+        "user_story": "As a user of the Threads app, I want to be able to control the content I see in my feed, so that I am presented with threads from people I already know or follow.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 107,
+        "user_story": "As a Threads app user experiencing performance issues, I want to the app to load quickly and smoothly without freezing, so that I can have a seamless real-time text-based conversation and share updates without interruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 108,
+        "user_story": "As a Threads user who follows other users, I want to receive notifications for posts from my followers within a reasonable timeframe (e.g., < 1 hour), so that I can maintain an active and timely connection with my followed accounts and the content they share.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a Threads user who follows other users, I want to receive notifications for posts from my followers within a reasonable timeframe  [*(e.g., < 1 hour)*] , so that I can maintain an active and timely connection with my followed accounts and the content they share."
+            }
+        ]
+    },
+    {
+        "story_id": 109,
+        "user_story": "As a Threads app user, I want to the app to be stable and not crash or freeze frequently, so that I can enjoy a seamless and uninterrupted experience engaging in real-time text-based conversations and sharing updates without frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to the app to be stable [* and *] not crash [* or *] freeze frequently, so that I can enjoy a seamless and uninterrupted experience engaging in real-time text-based conversations and sharing updates without frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 110,
+        "user_story": "As a Threads user, I want to be able to see the text Im typing in the comment input field when the keyboard is displayed, and view profile pictures in the same way as Instagram, so that I can easily and comfortably compose comments and identify other users.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 111,
+        "user_story": "As a user wanting to communicate with existing contacts, I want to have the ability to seamlessly integrate with Messenger, so that I can continue my existing conversations and maintain a consistent communication flow within the Threads app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 112,
+        "user_story": "As a user passionate about connecting with like-minded individuals, I want to find and join communities based on shared interests, so that I can engage in real-time conversations and build meaningful connections with others who share my passions.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user passionate about connecting with like-minded individuals, I want to find [* and *] join communities based on shared interests, so that I can engage in real-time conversations and build meaningful connections with others who share my passions."
+            }
+        ]
+    },
+    {
+        "story_id": 113,
+        "user_story": "As a Threads user who wants to engage with content through hashtags and comments, I want to see a functioning hashtag system that effectively filters posts and receive notifications when my comments are posted, so that I can easily discover and participate in relevant discussions.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user who wants to engage with content through hashtags [* and *] comments, I want to see a functioning hashtag system that effectively filters posts and receive notifications when my comments are posted, so that I can easily discover and participate in relevant discussions."
+            },
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user who wants to engage with content through hashtags [* and *] comments, I want to see a functioning hashtag system that effectively filters posts and receive notifications when my comments are posted, so that I can easily discover and participate in relevant discussions."
+            }
+        ]
+    },
+    {
+        "story_id": 114,
+        "user_story": "As a Threads app user, I want to the apps initial display to be clearly visible and readable after opening the app, so that I can easily see and interact with the content.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to the apps initial display to be clearly visible [* and *] readable after opening the app, so that I can easily see and interact with the content."
+            }
+        ]
+    },
+    {
+        "story_id": 115,
+        "user_story": "As a Threads user, I want to be able to seamlessly switch between my linked Instagram accounts without having to re-enter my name and bio or manually copy them from Instagram, so that I can quickly and easily manage multiple accounts within Threads.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to seamlessly switch between my linked Instagram accounts without having to re-enter my name [* and *] bio [* or *] manually copy them from Instagram, so that I can quickly and easily manage multiple accounts within Threads."
+            }
+        ]
+    },
+    {
+        "story_id": 116,
+        "user_story": "As a user of Instagram who is already satisfied with their existing social media experience, I want Threads to offer a distinct value proposition beyond Instagrams functionalities, so that my time and privacy are not wasted by simply mirroring a platform I already use.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 117,
+        "user_story": "As a Threads app user, I want to the app to avoid logging me out unexpectedly, and not force-close the app, so that I can continue my conversations and sharing updates without interruption.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to the app to avoid logging me out unexpectedly, [* and *] not force-close the app, so that I can continue my conversations and sharing updates without interruption."
+            }
+        ]
+    },
+    {
+        "story_id": 118,
+        "user_story": "As a user seeking a platform for open expression, I want to be able to share my opinions and thoughts without fear of content moderation or censorship, so that I can freely communicate with others without limitations.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user seeking a platform for open expression, I want to be able to share my opinions [* and *] thoughts without fear of content moderation [* or *] censorship, so that I can freely communicate with others without limitations."
+            }
+        ]
+    },
+    {
+        "story_id": 119,
+        "user_story": "As a user, I want to be able to express appreciation for the app, so that I can provide positive feedback and potentially encourage others to use the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 120,
+        "user_story": "As a Threads user, I want to be able to use hashtags and pin threads to the top of my feed, so that I can better organize and prioritize important conversations and updates within the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 121,
+        "user_story": "As a Threads user, I want my feed to only display posts from accounts I follow, so that I can control the content I see and avoid irrelevant posts.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 122,
+        "user_story": "As a Threads user, I want to the app to correctly display posts and associated images without overlapping content when a post is opened, so that I can easily view the content of each post, images, and text, without confusion or frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to the app to correctly display posts [* and *] associated images without overlapping content when a post is opened, so that I can easily view the content of each post, images, and text, without confusion [* or *] frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 123,
+        "user_story": "As a Threads Android user, I want to the app to stop vibrating and display smoothly when scrolling, so that I can use the app without interruption and view content without discomfort.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 124,
+        "user_story": "As a Threads user who follows multiple accounts, I want to see a feed that prioritizes posts from the accounts I follow, followed by suggested posts from other users, so that I can easily and quickly discover relevant content from my followed accounts and other interesting posts.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 125,
+        "user_story": "As a Threads user on Android, I want to be able to select images directly from my Android photo albums when posting or replying to a thread, instead of being presented with a default gallery view that scrolls through all my images, so that I can more easily and quickly find the desired image and post it efficiently.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user on Android, I want to be able to select images directly from my Android photo albums when posting [* or *] replying to a thread, instead of being presented with a default gallery view that scrolls through all my images, so that I can more easily [* and *] quickly find the desired image and post it efficiently."
+            }
+        ]
+    },
+    {
+        "story_id": 126,
+        "user_story": "As a user interested in curated content, I want to be able to create a personalized feed of posts I find interesting, so that I can easily discover relevant conversations and updates.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 127,
+        "user_story": "As a user who is experiencing a visual issue with posts, I want to see posts clearly and without unintended visual distortions (e.g. shaking or blurring), so that I can easily read and engage with content within the app.",
+        "defect_count": 3,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user who is experiencing a visual issue with posts, I want to see posts clearly [* and *] without unintended visual distortions (e.g. shaking [* or *] blurring), so that I can easily read and engage with content within the app."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "punctuation",
+                "message": "As a user who is experiencing a visual issue with posts, I want to see posts clearly and without unintended visual distortions (e [*.g. shaking or blurring), so that I can easily read and engage with content within the app.*]"
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user who is experiencing a visual issue with posts, I want to see posts clearly and without unintended visual distortions  [*(e.g. shaking or blurring)*] , so that I can easily read and engage with content within the app."
+            }
+        ]
+    },
+    {
+        "story_id": 128,
+        "user_story": "As a Threads user, I want to the app to consistently display accurate follower lists and retain posted threads, so that I can reliably connect with my intended network and share updates without experiencing data inconsistencies.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to the app to consistently display accurate follower lists [* and *] retain posted threads, so that I can reliably connect with my intended network and share updates without experiencing data inconsistencies."
+            }
+        ]
+    },
+    {
+        "story_id": 129,
+        "user_story": "As a new user of Threads, I want a clearer onboarding process and more intuitive navigation, so that I can easily understand and use the apps features within a reasonable timeframe.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 130,
+        "user_story": "As a Threads user, I want to be able to scroll through the feed without threads overlapping and obscuring content, so that I can easily read and participate in conversations without frustration.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to scroll through the feed without threads overlapping [* and *] obscuring content, so that I can easily read and participate in conversations without frustration."
+            }
+        ]
+    },
+    {
+        "story_id": 131,
+        "user_story": "As a user who values informal communication and avoids private messaging, I want to be able to engage in real-time text-based conversations and share updates in a straightforward, non-private manner, so that I can enjoy a positive and focused social experience.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user who values informal communication [* and *] avoids private messaging, I want to be able to engage in real-time text-based conversations and share updates in a straightforward, non-private manner, so that I can enjoy a positive and focused social experience."
+            },
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user who values informal communication [* and *] avoids private messaging, I want to be able to engage in real-time text-based conversations and share updates in a straightforward, non-private manner, so that I can enjoy a positive and focused social experience."
+            }
+        ]
+    },
+    {
+        "story_id": 132,
+        "user_story": "As a user of Instagram, I want to understand the unique value proposition of Threads compared to Instagram, so that I can decide if Threads is a worthwhile alternative for my social media needs.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 133,
+        "user_story": "As a Threads app user, I want a richer feature set with more discoverable content and people to follow, so that I can engage in meaningful and diverse conversations and have a more engaging social media experience, and feel confident in the apps data privacy practices.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want a richer feature set with more discoverable content [* and *] people to follow, so that I can engage in meaningful and diverse conversations and have a more engaging social media experience, and feel confident in the apps data privacy practices."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 134,
+        "user_story": "As a Threads app user, I want to be able to use built-in translator, GIFs, and private messaging features, so that I can communicate more effectively and easily with others and utilize the full potential of the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 135,
+        "user_story": "As a new user of Threads, I want to quickly and easily create a new post, so that I can share my thoughts and updates with my network immediately.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a new user of Threads, I want to quickly [* and *] easily create a new post, so that I can share my thoughts and updates with my network immediately."
+            }
+        ]
+    },
+    {
+        "story_id": 136,
+        "user_story": "As a new Threads user, I want to be able to successfully log in and register using my chosen authentication method (email/SMS 2FA), so that I can access and use the platform without experiencing frustrating delays and start using the app without difficulty.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a new Threads user, I want to be able to successfully log in [* and *] register using my chosen authentication method (email [*/*] SMS 2FA), so that I can access and use the platform without experiencing frustrating delays and start using the app without difficulty."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a new Threads user, I want to be able to successfully log in and register using my chosen authentication method  [*(email/sms 2fa)*] , so that I can access and use the platform without experiencing frustrating delays and start using the app without difficulty."
+            }
+        ]
+    },
+    {
+        "story_id": 137,
+        "user_story": "As a user interested in international celebrities, I want a translation button for posts and comments, so that I can easily understand conversations and updates regarding my favorite international idols and actors.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 138,
+        "user_story": "As a Threads app user, I want to be able to customize the app icon with themes, so that I can easily identify and differentiate the app from other applications on my Android device.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 139,
+        "user_story": "As a user seeking a cleaner social media environment, I want a robust filter for accounts and content, so that I can curate a more welcoming and focused conversation experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 140,
+        "user_story": "As a Threads app user who also uses Instagram, I want to the Threads app to maintain my existing Instagram login session and not force a logout upon logging into Instagram, so that I can maintain uninterrupted access to my Instagram account and avoid account violations or disruptions in my communication with friends.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user who also uses Instagram, I want to the Threads app to maintain my existing Instagram login session [* and *] not force a logout upon logging into Instagram, so that I can maintain uninterrupted access to my Instagram account and avoid account violations [* or *] disruptions in my communication with friends."
+            }
+        ]
+    },
+    {
+        "story_id": 141,
+        "user_story": "As a user of the Threads app on Android, I want to the app to be more stable and have fewer crashes, so that I can reliably use the app without interruptions and enjoy the experience of real-time conversations and updates.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user of the Threads app on Android, I want to the app to be more stable [* and *] have fewer crashes, so that I can reliably use the app without interruptions and enjoy the experience of real-time conversations and updates."
+            }
+        ]
+    },
+    {
+        "story_id": 142,
+        "user_story": "As a multilingual user of the Threads app, I want to be able to translate threads and search for threads and hashtags without returning user accounts in the search results, so that I can easily communicate and discover relevant content in multiple languages.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a multilingual user of the Threads app, I want to be able to translate threads [* and *] search for threads and hashtags without returning user accounts in the search results, so that I can easily communicate and discover relevant content in multiple languages."
+            }
+        ]
+    },
+    {
+        "story_id": 143,
+        "user_story": "As a new user of the Threads app, I want to see basic features implemented, such as specific example features, e.g., direct messaging, post scheduling, or ability to save posts, so that I can engage with the app more effectively and consider it a valuable tool for real-time conversations and sharing updates.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a new user of the Threads app, I want to see basic features implemented, such as specific example features, e.g., direct messaging, post scheduling, [* or *] ability to save posts, so that I can engage with the app more effectively [* and *] consider it a valuable tool for real-time conversations and sharing updates."
+            }
+        ]
+    },
+    {
+        "story_id": 144,
+        "user_story": "As a Sony Xperia XZ1 SOV36 user, I want to the Threads app to correctly handle activity stacking on my device, so that I can scroll through threads without experiencing screen freezes or application instability.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 145,
+        "user_story": "As a user with a low follower count on Threads, I want to see a feature that provides a more meaningful experience and engagement, so that I can feel included and not discouraged from using the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 146,
+        "user_story": "As a Threads user, I want to be able to delete my Threads account independently of my Instagram account, so that I can easily and cleanly stop using the Threads app without being forced to also delete my Instagram account.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "unique",
+                "sub_type": "identical",
+                "message": "Remove all duplicate user stories"
+            }
+        ]
+    },
+    {
+        "story_id": 147,
+        "user_story": "As a Threads user, I want to be able to search for trending topics and filter search results to show only posts from accounts I follow without any suggested accounts, and have a bookmark feature with folder options for threads, so that I can easily find important or interesting content and manage my feeds more effectively.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to search for trending topics [* and *] filter search results to show only posts from accounts I follow without any suggested accounts, and have a bookmark feature with folder options for threads, so that I can easily find important [* or *] interesting content and manage my feeds more effectively."
+            }
+        ]
+    },
+    {
+        "story_id": 148,
+        "user_story": "As a user of the Threads app, I want to be able to initiate and participate in real-time text-based conversations with other users, so that I can more easily connect and socialize with people around the world.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user of the Threads app, I want to be able to initiate [* and *] participate in real-time text-based conversations with other users, so that I can more easily connect and socialize with people around the world."
+            }
+        ]
+    },
+    {
+        "story_id": 149,
+        "user_story": "As a Threads app user, I want to control the content I see in my feed, so that I can focus on the updates from the people and accounts I follow.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 150,
+        "user_story": "As a user experiencing frequent app glitches on first launch, I want to the Threads app to be free of initial launch glitches, so that I can reliably start and use the app without frustration.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 151,
+        "user_story": "As a Threads app user, I want to the app to load without visual distortion after launching, so that I can successfully browse and interact with the apps content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 152,
+        "user_story": "As a Threads user, I want to the photo and video quality to be maintained upon upload, so that the shared content appears as intended by the user.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to the photo [* and *] video quality to be maintained upon upload, so that the shared content appears as intended by the user."
+            }
+        ]
+    },
+    {
+        "story_id": 153,
+        "user_story": "As a Threads user, I want to be able to reliably mention other users (@) and post updates without the post unexpectedly disappearing, so that I can successfully communicate with others and share my thoughts and updates.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a Threads user, I want to be able to reliably mention other users  [*(@)*]  and post updates without the post unexpectedly disappearing, so that I can successfully communicate with others and share my thoughts and updates."
+            }
+        ]
+    },
+    {
+        "story_id": 154,
+        "user_story": "As a frustrated Threads user, I want to the app to be stable and free of glitches, so that I can reliably use the app to communicate with friends and family.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 155,
+        "user_story": "As a satisfied user of the Threads app, I want to experience a positive and welcoming community atmosphere, so that I feel encouraged to share updates and engage in conversations.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a satisfied user of the Threads app, I want to experience a positive [* and *] welcoming community atmosphere, so that I feel encouraged to share updates and engage in conversations."
+            }
+        ]
+    },
+    {
+        "story_id": 156,
+        "user_story": "As a Threads user, I want a chat option, trending threads, and the ability to report accounts, and I want to ensure there are no vulgar videos in Threads, so that I can have a safe, engaging, and focused text-based social experience.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want a chat option, trending threads, [* and *] the ability to report accounts, and I want to ensure there are no vulgar videos in Threads, so that I can have a safe, engaging, and focused text-based social experience."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As a Threads user, [* I want *] a chat option, trending threads, and the ability to report accounts, and [* I want to *] ensure there are no vulgar videos in Threads, so that I can have a safe, engaging, and focused text-based social experience."
+            }
+        ]
+    },
+    {
+        "story_id": 157,
+        "user_story": "As a Threads user, I want to see only the posts of people I follow in my feed, so that I am not shown content from users I have not chosen to interact with.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 158,
+        "user_story": "As a Threads user, I want to the ability to hide posts from users I dont follow, so that I can curate my feed to only see content from people I choose to engage with.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 159,
+        "user_story": "As a user seeking an alternative to Twitter, I want to the Threads app to reduce its frequent glitches and improve its content, so that I have a engaging and reliable social media experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a user seeking an alternative to Twitter, I want to the Threads app to reduce its frequent glitches [* and *] improve its content, so that I have a engaging and reliable social media experience."
+            }
+        ]
+    },
+    {
+        "story_id": 160,
+        "user_story": "As a Threads user, I want to the home screen text display to be fixed, so that I can view the content of posts without the words becoming scattered or distorted.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 161,
+        "user_story": "As a user late to adopting new social media platforms, I want to easily import my Instagram profile data into Threads, so that I can quickly and seamlessly join existing conversations and networks without starting from scratch.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 162,
+        "user_story": "As a Threads user, I want to experience a consistently positive and enjoyable user experience, so that I am motivated to continue using and engaging with the app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 163,
+        "user_story": "As a Threads user, I want to be able to easily switch accounts without delay, and have a dedicated messaging feature, so that I can seamlessly and efficiently manage multiple accounts and engage in real-time conversations with friends and followers.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to easily switch accounts without delay, [* and *] have a dedicated messaging feature, so that I can seamlessly and efficiently manage multiple accounts and engage in real-time conversations with friends and followers."
+            }
+        ]
+    },
+    {
+        "story_id": 164,
+        "user_story": "As a Threads user, I want to be able to reliably prevent accidental text selections and copying, so that I can avoid unintentionally copying text that I do not wish to share.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 165,
+        "user_story": "As a user of Threads, I want to see a clear value proposition differentiating it from Instagram in terms of functionality or features, so that I am motivated to retain the app beyond its initial novelty.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 166,
+        "user_story": "As a Threads user, I want to be able to edit my posts after publishing, so that I can correct errors or update information.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 167,
+        "user_story": "As a Threads user, I want a simplified user interface with clear and intuitive navigation, so that I can easily create and manage posts and conversations without feeling overwhelmed or confused.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 168,
+        "user_story": "As a Threads user, I want to be able to share GIFs in conversations, so that I can express myself more vividly and engagingly in real-time discussions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 169,
+        "user_story": "As a Threads user experiencing performance issues, I want to the application to be free of bugs and lag, so that I can enjoy a smooth and responsive user experience.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 170,
+        "user_story": "As a Threads user with a large Instagram following, I want to be able to search for and use hashtags in order to discover and connect with other users who are not already following me on Instagram, so that I can broaden my network and increase engagement on the Threads platform.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As a Threads user with a large Instagram following, I want to be able to search for and use hashtags [* in order to *] discover and connect with other users who are not already following me on Instagram, [* so that *] I can broaden my network and increase engagement on the Threads platform."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 171,
+        "user_story": "As a Threads user, I want to be able to send direct messages (DM) and have a system for flagging content as Not Safe For Work (NSFW), so that I can have private conversations and control the content I see.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to send direct messages (DM) [* and *] have a system for flagging content as Not Safe For Work (NSFW), so that I can have private conversations and control the content I see."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a Threads user, I want to be able to send direct messages  [*(dm)*]  and have a system for flagging content as Not Safe For Work  [*(nsfw)*] , so that I can have private conversations and control the content I see."
+            }
+        ]
+    },
+    {
+        "story_id": 172,
+        "user_story": "As a Threads user who also uses Instagram, I want a seamless integration between the Instagram and Threads apps, allowing me to access Threads from within Instagram, so that I can avoid maintaining separate accounts and optimize my social media experience.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user who also uses Instagram, I want a seamless integration between the Instagram [* and *] Threads apps, allowing me to access Threads from within Instagram, so that I can avoid maintaining separate accounts and optimize my social media experience."
+            },
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    },
+    {
+        "story_id": 173,
+        "user_story": "As a Threads user, I want to be able to open and use the Threads app without it crashing, so that I can continue engaging in real-time conversations and sharing updates without interruption.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to be able to open [* and *] use the Threads app without it crashing, so that I can continue engaging in real-time conversations and sharing updates without interruption."
+            }
+        ]
+    },
+    {
+        "story_id": 174,
+        "user_story": "As a frustrated user, I want to the Threads app to be more stable and reliable, so that I can have a seamless experience without frequent glitches.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 175,
+        "user_story": "As a Threads app user with a Mi Mix 2 device, I want to the app to be optimized for smooth scrolling without displaying shaded or shadowy text and images, so that I can enjoy a stable and visually clear user experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user with a Mi Mix 2 device, I want to the app to be optimized for smooth scrolling without displaying shaded [* or *] shadowy text [* and *] images, so that I can enjoy a stable and visually clear user experience."
+            }
+        ]
+    },
+    {
+        "story_id": 176,
+        "user_story": "As a user seeking a distinct social networking experience, I want to the Threads app to be developed as a standalone application separate from Instagram, so that I can have a dedicated space for text-based conversations and updates without the distractions and complexities of the Instagram platform.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 177,
+        "user_story": "As a Threads user, I want to be able to upload photos to a thread without the app crashing, so that I can share visual content with my connections effectively and efficiently.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 178,
+        "user_story": "As a Threads user, I want to the app to have more features and functionalities added, so that the app becomes more competitive and appealing to users compared to other similar social media platforms.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user, I want to the app to have more features [* and *] functionalities added, so that the app becomes more competitive and appealing to users compared to other similar social media platforms."
+            }
+        ]
+    },
+    {
+        "story_id": 179,
+        "user_story": "As a Threads app user, I want to the app to be stable and free of glitches, so that I can reliably and seamlessly have real-time conversations and share updates without interruptions.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 180,
+        "user_story": "As a new Threads user, I want to be able to create an account without experiencing graphical glitches and overlapping text on the initial login screen, so that the user experience is not disrupted and I can comfortably use the app.",
+        "defect_count": 2,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a new Threads user, I want to be able to create an account without experiencing graphical glitches [* and *] overlapping text on the initial login screen, so that the user experience is not disrupted and I can comfortably use the app."
+            },
+            {
+                "defect_type": "minimal",
+                "sub_type": "indicator_repetition",
+                "message": "As a new Threads user, [* I want to *] be able to create an account without experiencing graphical glitches and overlapping text on the initial login screen, so that the user experience is not disrupted and [* I can *] comfortably use the app."
+            }
+        ]
+    },
+    {
+        "story_id": 181,
+        "user_story": "As a Threads user who also uses Instagram, I want to be able to seamlessly switch between my Threads and Instagram accounts within the app, so that I can easily and quickly manage my conversations and posts across both platforms without needing to manually log out and log back into each app.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 182,
+        "user_story": "As a Threads user who also uses Instagram, I want to be automatically followed by my Instagram followers and follow my Instagram following, so that I can easily connect with my existing social network in Threads.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user who also uses Instagram, I want to be automatically followed by my Instagram followers [* and *] follow my Instagram following, so that I can easily connect with my existing social network in Threads."
+            }
+        ]
+    },
+    {
+        "story_id": 183,
+        "user_story": "As a Threads app user, I want to the algorithm to improve my contents visibility and engagement (views and likes), so that I can connect with more people and share my updates effectively.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a Threads app user, I want to the algorithm to improve my contents visibility and engagement  [*(views and likes)*] , so that I can connect with more people and share my updates effectively."
+            }
+        ]
+    },
+    {
+        "story_id": 184,
+        "user_story": "As a Threads user with a Galaxy device, I want to be able to reply to a thread post, upload an image attachment, and view the image without the app crashing, so that I can share visual content within the threads seamlessly and effectively.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 185,
+        "user_story": "As a Threads user experiencing data display issues, I want to receive a timely response from support, so that I can resolve the issue and understand the cause of the data display problem.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 186,
+        "user_story": "As a Threads user, I want to be able to consistently view my notifications and other users profiles, so that I can stay informed about conversations and updates without interruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 187,
+        "user_story": "As a user of the Threads app who wants to initiate private conversations, I want to be able to send direct messages (DMs), so that I can have private, one-on-one conversations with other users without sharing my content publicly.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "minimal",
+                "sub_type": "brackets",
+                "message": "As a user of the Threads app who wants to initiate private conversations, I want to be able to send direct messages  [*(dms)*] , so that I can have private, one-on-one conversations with other users without sharing my content publicly."
+            }
+        ]
+    },
+    {
+        "story_id": 188,
+        "user_story": "As a Threads app user who also uses Instagram, I want to have access to Reels and other Instagram features within the Threads app, so that I can seamlessly share and engage with content I already create and consume on Instagram.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 189,
+        "user_story": "As a Threads user who wants to share images in threads, I want to the app to reliably and consistently allow me to attach pictures without crashing or freezing, so that I can seamlessly share visual updates and maintain a smooth user experience.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads user who wants to share images in threads, I want to the app to reliably [* and *] consistently allow me to attach pictures without crashing [* or *] freezing, so that I can seamlessly share visual updates and maintain a smooth user experience."
+            }
+        ]
+    },
+    {
+        "story_id": 190,
+        "user_story": "As a Threads app user, I want to the Threads app to have more frequent and engaging updates and features, so that the app feels distinct from Instagram and maintains user interest.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "atomic",
+                "sub_type": "conjunctions",
+                "message": "As a Threads app user, I want to the Threads app to have more frequent [* and *] engaging updates and features, so that the app feels distinct from Instagram and maintains user interest."
+            }
+        ]
+    },
+    {
+        "story_id": 191,
+        "user_story": "As a user posting images, I want to the app to allow me to post images without crashing, so that I can share images in real-time conversations with other users without interruption.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 192,
+        "user_story": "As a Threads user, I want to receive notifications for new messages and updates in a timely manner, so that I can participate in conversations and stay informed about the latest activity in my thread and network in real-time.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 193,
+        "user_story": "As a Threads user, I want to the app to be free of bugs and operate smoothly, so that I have a positive and efficient experience using the app for real-time text-based conversations and updates.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 194,
+        "user_story": "As a Threads user, I want to be able to filter my feed to only display posts from accounts I follow, so that I can reduce the amount of content I see that is not relevant to my interests.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 195,
+        "user_story": "As a user of the Threads app, I want to receive multiple notifications for new mentions and updates in a single conversation thread, so that I dont miss important interactions and can more effectively engage with the conversation threads compared to a single-notification-per-event system.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 196,
+        "user_story": "As a Threads user, I want to be able to see a notification badge on my profile indicating new threads, so that I can quickly and easily identify and access new conversations.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 197,
+        "user_story": "As a Threads user who also uses Instagram, I want to be able to share Instagram posts directly into a new Thread, so that I can quickly create a discussion based on content from my Instagram feed and share it with my Threads community.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 198,
+        "user_story": "As a Threads user, I want to be able to sign in with multiple accounts, so that I can manage separate conversations and content streams for different profiles.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 199,
+        "user_story": "As a Threads user, I want to filter threads to only show posts from people I follow, so that I can prioritize content from my network and reduce exposure to irrelevant content.",
+        "defect_count": 0,
+        "defects": []
+    },
+    {
+        "story_id": 200,
+        "user_story": "As a Threads user, I want more app updates to address minor bugs, so that the app runs smoothly and consistently.",
+        "defect_count": 1,
+        "defects": [
+            {
+                "defect_type": "uniform",
+                "sub_type": "uniform",
+                "message": "Use the most common template: As a, I want to, So that"
+            }
+        ]
+    }
+]
