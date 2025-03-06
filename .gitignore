@@ -2,6 +2,9 @@ input/user_stories.txt
 output/user_stories_evaluated.txt
 __pycache__/*
 _temp/*
+_tmp/.bak/*
 deprecated/*
 pyrightconfig.json
 *.pyc
+_analysis_*
+_analysis/.bak

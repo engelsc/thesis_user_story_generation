@@ -1,0 +1,623 @@
+
+###########################################################################
+#    Story-Level DataFrame:
+###########################################################################
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3200 entries, 0 to 3199
+Data columns (total 6 columns):
+ #   Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   model         3200 non-null   object
+ 1   prompt_level  3200 non-null   int64 
+ 2   story_id      3200 non-null   int64 
+ 3   user_story    3200 non-null   object
+ 4   defect_count  3200 non-null   int64 
+ 5   defects       3200 non-null   object
+dtypes: int64(3), object(3)
+memory usage: 150.1+ KB
+None
+
+###########################################################################
+#    Defect-Level DataFrame:
+###########################################################################
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3399 entries, 0 to 3398
+Data columns (total 8 columns):
+ #   Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   model         3399 non-null   object
+ 1   prompt_level  3399 non-null   int64 
+ 2   story_id      3399 non-null   int64 
+ 3   user_story    3399 non-null   object
+ 4   defect_count  3399 non-null   int64 
+ 5   defect_type   1289 non-null   object
+ 6   sub_type      1289 non-null   object
+ 7   message       1289 non-null   object
+dtypes: int64(3), object(5)
+memory usage: 212.6+ KB
+None
+
+###########################################################################
+#    Summary of Valid and Invalid Stories by Group:
+###########################################################################
+
+          model  prompt_level  total_stories  invalid_count  valid_stories  invalid_ratio
+0   geminiflash             1            200              0            200          0.000
+1   geminiflash             2            200              0            200          0.000
+2   geminiflash             3            200              4            196          0.020
+3   geminiflash             4            200              0            200          0.000
+4           gpt             1            200              0            200          0.000
+5           gpt             2            200              0            200          0.000
+6           gpt             3            200              0            200          0.000
+7           gpt             4            200              0            200          0.000
+8       llama31             1            200              3            197          0.015
+9       llama31             2            200              1            199          0.005
+10      llama31             3            200              1            199          0.005
+11      llama31             4            200              1            199          0.005
+12    ministral             1            200              0            200          0.000
+13    ministral             2            200              1            199          0.005
+14    ministral             3            200              0            200          0.000
+15    ministral             4            200              0            200          0.000
+
+###########################################################################
+#    Valid and Invalid Stories Count
+###########################################################################
+
+Total stories: 3200
+Total valid stories: 3189
+Total defects of valid stories: 1262
+
+###########################################################################
+#    Story-Level Descriptive Analysis
+###########################################################################
+
+
+###########################################################################
+#    Total Number of Defects Per Group:
+###########################################################################
+
+          model  prompt_level  total_defects
+0   geminiflash             1            111
+1   geminiflash             2            123
+2   geminiflash             3            117
+3   geminiflash             4            105
+4           gpt             1             93
+5           gpt             2             44
+6           gpt             3             49
+7           gpt             4             65
+8       llama31             1             85
+9       llama31             2             86
+10      llama31             3             90
+11      llama31             4             99
+12    ministral             1             44
+13    ministral             2             44
+14    ministral             3             51
+15    ministral             4             56
+
+###########################################################################
+#    Count of Stories with at Least One Defect:
+###########################################################################
+
+          model  prompt_level  stories_with_defects
+0   geminiflash             1                    79
+1   geminiflash             2                   102
+2   geminiflash             3                    91
+3   geminiflash             4                    87
+4           gpt             1                    81
+5           gpt             2                    42
+6           gpt             3                    46
+7           gpt             4                    59
+8       llama31             1                    65
+9       llama31             2                    78
+10      llama31             3                    81
+11      llama31             4                    84
+12    ministral             1                    43
+13    ministral             2                    41
+14    ministral             3                    48
+15    ministral             4                    52
+
+###########################################################################
+#    Aggregated Story-Level Defect Count Statistics:
+###########################################################################
+
+          model  prompt_level  count      mean  median       std  min  max
+0   geminiflash             1    200  0.555000     0.0  0.793805    0    4
+1   geminiflash             2    200  0.615000     1.0  0.684924    0    3
+2   geminiflash             3    196  0.596939     0.0  0.727335    0    3
+3   geminiflash             4    200  0.525000     0.0  0.672037    0    3
+4           gpt             1    200  0.465000     0.0  0.625083    0    3
+5           gpt             2    200  0.220000     0.0  0.438820    0    2
+6           gpt             3    200  0.245000     0.0  0.464817    0    2
+7           gpt             4    200  0.325000     0.0  0.539286    0    3
+8       llama31             1    197  0.431472     0.0  0.736528    0    3
+9       llama31             2    199  0.432161     0.0  0.572228    0    2
+10      llama31             3    199  0.452261     0.0  0.582993    0    2
+11      llama31             4    199  0.497487     0.0  0.642552    0    3
+12    ministral             1    200  0.220000     0.0  0.427215    0    2
+13    ministral             2    199  0.221106     0.0  0.450989    0    2
+14    ministral             3    200  0.255000     0.0  0.470192    0    2
+15    ministral             4    200  0.280000     0.0  0.492762    0    2
+
+###########################################################################
+#    Proportion of Stories with Zero Defects
+###########################################################################
+
+Total Stories: 3189
+Total Stories with Zero Defects: 2110
+Total Proportion of Zero Defects: 66.16%
+
+
+###########################################################################
+#    Proportion of Stories with Zero Defects over all Groups:
+###########################################################################
+
+          model  prompt_level  total_count  zero_count  zero_defect_ratio
+0   geminiflash             1          200         121           0.605000
+1   geminiflash             2          200          98           0.490000
+2   geminiflash             3          196         105           0.535714
+3   geminiflash             4          200         113           0.565000
+4           gpt             1          200         119           0.595000
+5           gpt             2          200         158           0.790000
+6           gpt             3          200         154           0.770000
+7           gpt             4          200         141           0.705000
+8       llama31             1          197         132           0.670051
+9       llama31             2          199         121           0.608040
+10      llama31             3          199         118           0.592965
+11      llama31             4          199         115           0.577889
+12    ministral             1          200         157           0.785000
+13    ministral             2          199         158           0.793970
+14    ministral             3          200         152           0.760000
+15    ministral             4          200         148           0.740000
+
+###########################################################################
+#    Defect-Level Descriptive Analysis
+###########################################################################
+
+
+###########################################################################
+#    Defect Summary (Total defects per model per prompt level):
+###########################################################################
+
+          model  prompt_level  defect_count
+0   geminiflash             1           232
+1   geminiflash             2           221
+2   geminiflash             3           222
+3   geminiflash             4           218
+4           gpt             1           212
+5           gpt             2           202
+6           gpt             3           203
+7           gpt             4           206
+8       llama31             1           217
+9       llama31             2           207
+10      llama31             3           208
+11      llama31             4           214
+12    ministral             1           201
+13    ministral             2           202
+14    ministral             3           203
+15    ministral             4           204
+
+###########################################################################
+#    Defect Type Counts:
+###########################################################################
+
+          model  prompt_level  defect_type  count
+0   geminiflash             1       atomic     28
+1   geminiflash             1      minimal     48
+2   geminiflash             1      uniform     31
+3   geminiflash             1       unique      4
+4   geminiflash             2       atomic     81
+5   geminiflash             2      minimal     16
+6   geminiflash             2      uniform     24
+7   geminiflash             2       unique      2
+8   geminiflash             3       atomic     94
+9   geminiflash             3      minimal      8
+10  geminiflash             3      uniform     15
+11  geminiflash             4       atomic     76
+12  geminiflash             4      minimal      9
+13  geminiflash             4      uniform     20
+14          gpt             1       atomic     44
+15          gpt             1      minimal     10
+16          gpt             1      uniform     37
+17          gpt             1       unique      1
+18          gpt             1  well_formed      1
+19          gpt             2       atomic     30
+20          gpt             2      minimal      3
+21          gpt             2      uniform     10
+22          gpt             2       unique      1
+23          gpt             3       atomic     38
+24          gpt             3      uniform     11
+25          gpt             4       atomic     50
+26          gpt             4      minimal      6
+27          gpt             4      uniform      8
+28          gpt             4       unique      1
+29      llama31             1       atomic     50
+30      llama31             1      minimal     12
+31      llama31             1      uniform      8
+32      llama31             1       unique      6
+33      llama31             1  well_formed      9
+34      llama31             2       atomic     72
+35      llama31             2      minimal     12
+36      llama31             2      uniform      2
+37      llama31             3       atomic     78
+38      llama31             3      minimal      6
+39      llama31             3      uniform      6
+40      llama31             4       atomic     82
+41      llama31             4      minimal      7
+42      llama31             4      uniform      9
+43      llama31             4  well_formed      1
+44    ministral             1       atomic     38
+45    ministral             1      minimal      4
+46    ministral             1      uniform      2
+47    ministral             2       atomic     37
+48    ministral             2      minimal      2
+49    ministral             2      uniform      5
+50    ministral             3       atomic     33
+51    ministral             3      minimal      9
+52    ministral             3      uniform      9
+53    ministral             4       atomic     40
+54    ministral             4      minimal      7
+55    ministral             4      uniform      8
+56    ministral             4       unique      1
+
+###########################################################################
+#    Defekt Type Counts by Model:
+###########################################################################
+
+
+Model: geminiflash
+  defect_type  count
+0      atomic    279
+1     minimal     81
+2     uniform     90
+3      unique      6
+
+Model: gpt
+   defect_type  count
+4       atomic    162
+5      minimal     19
+6      uniform     66
+7       unique      3
+8  well_formed      1
+
+Model: llama31
+    defect_type  count
+9        atomic    282
+10      minimal     37
+11      uniform     25
+12       unique      6
+13  well_formed     10
+
+Model: ministral
+   defect_type  count
+14      atomic    148
+15     minimal     22
+16     uniform     24
+17      unique      1
+
+###########################################################################
+#    Defekt Type Counts by Prompt Level:
+###########################################################################
+
+
+Prompt Level: 1
+   defect_type  count
+0       atomic    160
+1      minimal     74
+2      uniform     78
+3       unique     11
+4  well_formed     10
+
+Prompt Level: 2
+  defect_type  count
+5      atomic    220
+6     minimal     33
+7     uniform     41
+8      unique      3
+
+Prompt Level: 3
+   defect_type  count
+9       atomic    243
+10     minimal     23
+11     uniform     41
+
+Prompt Level: 4
+    defect_type  count
+12       atomic    248
+13      minimal     29
+14      uniform     45
+15       unique      2
+16  well_formed      1
+
+###########################################################################
+#    Defect Subtype Counts by Model:
+###########################################################################
+
+
+Model: geminiflash
+                  defect_combined  count
+0           atomic - conjunctions    279
+1              minimal - brackets     28
+2  minimal - indicator_repetition     52
+3           minimal - punctuation      1
+4               uniform - uniform     90
+5              unique - identical      6
+
+Model: gpt
+                   defect_combined  count
+6            atomic - conjunctions    162
+7               minimal - brackets      5
+8   minimal - indicator_repetition     14
+9                uniform - uniform     66
+10              unique - identical      3
+11          well_formed - no_means      1
+
+Model: llama31
+                   defect_combined  count
+12           atomic - conjunctions    282
+13              minimal - brackets     25
+14  minimal - indicator_repetition      8
+15           minimal - punctuation      4
+16               uniform - uniform     25
+17              unique - identical      6
+18          well_formed - no_means      8
+19           well_formed - no_role      2
+
+Model: ministral
+                   defect_combined  count
+20           atomic - conjunctions    148
+21              minimal - brackets     11
+22  minimal - indicator_repetition     10
+23           minimal - punctuation      1
+24               uniform - uniform     24
+25              unique - identical      1
+
+###########################################################################
+#    Defect Subtype Counts by Prompt Level:
+###########################################################################
+
+
+Prompt Level: 1
+                  defect_combined  count
+0           atomic - conjunctions    160
+1              minimal - brackets     12
+2  minimal - indicator_repetition     59
+3           minimal - punctuation      3
+4               uniform - uniform     78
+5              unique - identical     11
+6          well_formed - no_means      8
+7           well_formed - no_role      2
+
+Prompt Level: 2
+                   defect_combined  count
+8            atomic - conjunctions    220
+9               minimal - brackets     23
+10  minimal - indicator_repetition      7
+11           minimal - punctuation      3
+12               uniform - uniform     41
+13              unique - identical      3
+
+Prompt Level: 3
+                   defect_combined  count
+14           atomic - conjunctions    243
+15              minimal - brackets     16
+16  minimal - indicator_repetition      7
+17               uniform - uniform     41
+
+Prompt Level: 4
+                   defect_combined  count
+18           atomic - conjunctions    248
+19              minimal - brackets     18
+20  minimal - indicator_repetition     11
+21               uniform - uniform     45
+22              unique - identical      2
+23          well_formed - no_means      1
+
+###########################################################################
+#    Kruskal-Wallis Test: Defect Count across Prompt Levels within each Model:
+###########################################################################
+
+For model ministral, group sizes by prompt level: [200, 199, 200, 200]
+Kruskal–Wallis Test for model ministral across prompt levels:
+Statistic = 2.121220380224893, p-value = 0.5476316797039722
+
+For model llama31, group sizes by prompt level: [197, 199, 199, 199]
+Kruskal–Wallis Test for model llama31 across prompt levels:
+Statistic = 3.5638556887943484, p-value = 0.31257419862846514
+
+For model geminiflash, group sizes by prompt level: [200, 200, 196, 200]
+Kruskal–Wallis Test for model geminiflash across prompt levels:
+Statistic = 3.4738461499992654, p-value = 0.32417006298395584
+
+For model gpt, group sizes by prompt level: [200, 200, 200, 200]
+Kruskal–Wallis Test for model gpt across prompt levels:
+Statistic = 24.004016332755377, p-value = 2.4931794733317515e-05
+
+
+###########################################################################
+#    Chi-Square Test for Independence between defect types and model:
+###########################################################################
+
+Contingency Table:
+defect_type  atomic  minimal  uniform  unique  well_formed
+model                                                     
+geminiflash     279       81       90       6            0
+gpt             162       19       66       3            1
+llama31         282       37       25       6           10
+ministral       148       22       24       1            0
+Expected Frequencies:
+[[314.71949287  57.45166403  74.07290016   5.78129952   3.97464342]
+ [173.23375594  31.62361331  40.7725832    3.1822504    2.18779715]
+ [248.46275753  45.35657686  58.47860539   4.56418384   3.13787639]
+ [134.58399366  24.5681458   31.67591125   2.47226624   1.69968304]]
+Chi2 statistic: 89.87891511283331
+p-value: 5.2111819044637586e-14
+Degrees of freedom: 12
+
+###########################################################################
+#    Chi-Square Test for Independence between defect types and prompt level:
+###########################################################################
+
+Contingency Table:
+defect_type   atomic  minimal  uniform  unique  well_formed
+prompt_level                                               
+1                160       74       78      11           10
+2                220       33       41       3            0
+3                243       23       41       0            0
+4                248       29       45       2            1
+Expected Frequencies:
+[[229.82805071  41.9548336   54.09270998   4.22187005   2.90253566]
+ [204.98177496  37.41917591  48.24484945   3.76545166   2.58874802]
+ [211.88351823  38.67908082  49.86925515   3.89223455   2.67591125]
+ [224.3066561   40.94690967  52.79318542   4.12044374   2.83280507]]
+Chi2 statistic: 118.43672037728759
+p-value: 1.2661742741858997e-19
+Degrees of freedom: 12
+
+###########################################################################
+#    Chi-Square Test for Independence between Prompt Level and Defect Type Within Each Model:
+###########################################################################
+
+
+Model: ministral
+Contingency Table:
+defect_type   atomic  minimal  uniform  unique
+prompt_level                                  
+1                 38        4        2       0
+2                 37        2        5       0
+3                 33        9        9       0
+4                 40        7        8       1
+Expected Frequencies:
+[[33.39487179  4.96410256  5.41538462  0.22564103]
+ [33.39487179  4.96410256  5.41538462  0.22564103]
+ [38.70769231  5.75384615  6.27692308  0.26153846]
+ [42.5025641   6.31794872  6.89230769  0.28717949]]
+Chi2 statistic: 11.902750671968587
+p-value: 0.2188474580372914
+Degrees of freedom: 9
+
+Model: llama31
+Contingency Table:
+defect_type   atomic  minimal  uniform  unique  well_formed
+prompt_level                                               
+1                 50       12        8       6            9
+2                 72       12        2       0            0
+3                 78        6        6       0            0
+4                 82        7        9       0            1
+Expected Frequencies:
+[[66.58333333  8.73611111  5.90277778  1.41666667  2.36111111]
+ [67.36666667  8.83888889  5.97222222  1.43333333  2.38888889]
+ [70.5         9.25        6.25        1.5         2.5       ]
+ [77.55       10.175       6.875       1.65        2.75      ]]
+Chi2 statistic: 58.11994736101498
+p-value: 4.9578794870468546e-08
+Degrees of freedom: 12
+
+Model: geminiflash
+Contingency Table:
+defect_type   atomic  minimal  uniform  unique
+prompt_level                                  
+1                 28       48       31       4
+2                 81       16       24       2
+3                 94        8       15       0
+4                 76        9       20       0
+Expected Frequencies:
+[[67.91447368 19.71710526 21.90789474  1.46052632]
+ [75.25657895 21.84868421 24.27631579  1.61842105]
+ [71.58552632 20.78289474 23.09210526  1.53947368]
+ [64.24342105 18.65131579 20.72368421  1.38157895]]
+Chi2 statistic: 102.12257901559413
+p-value: 5.851076065752949e-18
+Degrees of freedom: 9
+
+Model: gpt
+Contingency Table:
+defect_type   atomic  minimal  uniform  unique  well_formed
+prompt_level                                               
+1                 44       10       37       1            1
+2                 30        3       10       1            0
+3                 38        0       11       0            0
+4                 50        6        8       1            0
+Expected Frequencies:
+[[60.02390438  7.03984064 24.45418327  1.11155378  0.37051793]
+ [28.39840637  3.33067729 11.56972112  0.52589641  0.1752988 ]
+ [31.62549801  3.70916335 12.88446215  0.58565737  0.19521912]
+ [41.95219124  4.92031873 17.09163347  0.77689243  0.25896414]]
+Chi2 statistic: 26.968790019634383
+p-value: 0.00780753164381049
+Degrees of freedom: 12
+
+###########################################################################
+#    Chi-Square Test for Independence between defect subtypes and model:
+###########################################################################
+
+Contingency Table:
+sub_type     brackets  conjunctions  identical  indicator_repetition  \
+model                                                                  
+geminiflash        28           279          6                    52   
+gpt                 5           162          3                    14   
+llama31            25           282          6                     8   
+ministral          11           148          1                    10   
+
+sub_type     no_means  no_role  punctuation  uniform  
+model                                                 
+geminiflash         0        0            1       90  
+gpt                 1        0            0       66  
+llama31             8        2            4       25  
+ministral           0        0            1       24  
+Expected Frequencies:
+[[2.49318542e+01 3.14719493e+02 5.78129952e+00 3.03518225e+01
+  3.25198098e+00 7.22662441e-01 2.16798732e+00 7.40729002e+01]
+ [1.37234548e+01 1.73233756e+02 3.18225040e+00 1.67068146e+01
+  1.79001585e+00 3.97781300e-01 1.19334390e+00 4.07725832e+01]
+ [1.96830428e+01 2.48462758e+02 4.56418384e+00 2.39619651e+01
+  2.56735341e+00 5.70522979e-01 1.71156894e+00 5.84786054e+01]
+ [1.06616482e+01 1.34583994e+02 2.47226624e+00 1.29793978e+01
+  1.39064976e+00 3.09033281e-01 9.27099842e-01 3.16759113e+01]]
+Chi2 statistic: 113.00555399532661
+p-value: 1.3478848674555729e-14
+Degrees of freedom: 21
+
+###########################################################################
+#    Chi-Square Test for Independence between Between Defect Presence and Model:
+###########################################################################
+
+Contingency Table for Model vs. Defect Presence:
+has_defect   False  True 
+model                    
+geminiflash    437    359
+gpt            572    228
+llama31        486    308
+ministral      615    184
+
+Chi-Square Test for Independence between Model and Defect Presence:
+Chi2 statistic: 105.68464440980726
+p-value: 9.308283677970558e-23
+Degrees of freedom: 3
+Expected Frequencies:
+[[526.67293823 269.32706177]
+ [529.3195359  270.6804641 ]
+ [525.34963939 268.65036061]
+ [528.65788648 270.34211352]]
+
+###########################################################################
+#    Contingency Table for Prompt Level vs. Defect Presence:
+###########################################################################
+
+has_defect    False  True 
+prompt_level              
+1               529    268
+2               535    263
+3               529    266
+4               517    282
+
+Chi-Square Test for Independence between Prompt Level and Defect Presence:
+Chi2 statistic: 1.1001090453725795
+p-value: 0.7770477596915853
+Degrees of freedom: 3
+Expected Frequencies:
+[[527.33458765 269.66541235]
+ [527.99623706 270.00376294]
+ [526.01128881 268.98871119]
+ [528.65788648 270.34211352]]
