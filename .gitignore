@@ -8,3 +8,4 @@ pyrightconfig.json
 *.pyc
 _analysis_*
 _analysis/.bak
+backup-repo.git/*
